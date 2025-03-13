@@ -1,0 +1,14 @@
+services:
+  nextjs:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+
+  flask-api:
+    build: ./flask-api
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./flask-api:/app
