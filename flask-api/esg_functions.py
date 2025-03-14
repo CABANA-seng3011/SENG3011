@@ -1,9 +1,7 @@
 from db import run_sql
 
-# Find out how to turn /get?company_name=meow&metric_name=meow into an SQL query
-
 # Creates an sql query based on the columns and parameters received
-def create_sql_query(table, columns, params):
+def create_sql_query(table, columns, conditions):
     # Check if table is valid
     allowed_tables = ["esg", "environmental_opportunity", "environmental_risk", "governance_opportunity", 
                       "governance_risk", "social_opportunity", "social_risk"]
@@ -17,15 +15,32 @@ def create_sql_query(table, columns, params):
     sql = "SELECT {} FROM {}".format(columns, table)
 
     # Conditions (WHERE, AND)
-    conditions = []
-    for k, v in params.items():
-        conditions.append("{} = '{}'".format(k, v))
-    if conditions:
-        sql += " WHERE " + " AND ".join(conditions)
+    conditions_sql = []
+    for k, v in conditions.items():
+        conditions_sql.append("{} = '{}'".format(k, v))
+    if conditions_sql:
+        sql += " WHERE " + " AND ".join(conditions_sql)
     return sql
 
+def get_industry(company):
+    sql = """
+    SELECT industry FROM industry
+    WHERE company = '{}'
+    """.format(company)
+    try:
+        return run_sql(sql)
+    except Exception as e:
+        return e
 
-# Another parameter for sorting? limit?
+def get_companies(industry):
+    sql = """
+    SELECT company FROM industry
+    WHERE industry = '{}'
+    """.format(industry)
+    try:
+        return run_sql(sql)
+    except Exception as e:
+        return e
 
 # Implement /getIndustry
 
