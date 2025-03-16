@@ -4,11 +4,14 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./frontend:/app
+      - ./frontend/cabana:/cabana
 
   flask-api:
     build: ./flask-api
     ports:
-      - "5000:5000"
+      - "5900:5000"
     volumes:
-      - ./flask-api:/app
+      - ./flask-api:/flask-api
+    environment:
+      - FLASK_APP=index.py
+
