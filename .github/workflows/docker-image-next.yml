@@ -17,8 +17,13 @@ jobs:
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
-    - name: Build the Docker image
-      run: docker build -t cicd-pipeline .
+    - name: Build the Flask API Docker image
+      run: docker build -t flask-api -f flask-api/Dockerfile .
+
+    - name: Build the Frontend Docker image
+      run: docker build -t nextjs-app -f frontend/Dockerfile .
 
     - name: Push to Dockerhub
       run: docker push bpetselis01/cicd-pipeline:latest
+
+
