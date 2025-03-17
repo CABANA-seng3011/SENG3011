@@ -15,18 +15,18 @@ jobs:
     steps:
       - name: Pull Latest Docker Images
         run: |
-          sudo docker pull bpetselis01/flask-api:latest
-          sudo docker pull bpetselis01/nextjs:latest
+          docker pull bpetselis01/flask-api:latest
+          docker pull bpetselis01/nextjs:latest
 
       - name: Remove Old Containers
         run: |
-          sudo docker rm -f flask-api-container || true
-          sudo docker rm -f nextjs-container || true
+          docker rm -f flask-api-container || true
+          docker rm -f nextjs-container || true
 
       - name: Run Flask API Container
         run: |
-          sudo docker run -d -p 5900:5000 --name flask-api-container bpetselis01/flask-api:latest
+          docker run -d -p 5900:5000 --name flask-api-container bpetselis01/flask-api:latest
 
       - name: Run Next.js Container
         run: |
-          sudo docker run -d -p 3000:3000 --name nextjs-container bpetselis01/nextjs:latest
+          docker run -d -p 3000:3000 --name nextjs-container bpetselis01/nextjs:latest
