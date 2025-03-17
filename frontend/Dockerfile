@@ -11,6 +11,9 @@
 # EXPOSE 3000
 # CMD ["yarn", "dev"]
 
+# ---------------------------- ABOVE IS NOOR's CODE ----------------------------
+# ---------------------------- BELOW IS BYRON's CODE ----------------------------
+
 # Use Node official image
 FROM node:20
 
