@@ -18,10 +18,10 @@ jobs:
           sudo docker pull bpetselis01/flask-api:latest
           sudo docker pull bpetselis01/nextjs:latest
 
-      # - name: Remove Old Containers
-      #   run: |
-      #     sudo docker rm -f flask-api-container || true
-      #     sudo docker rm -f nextjs-container || true
+      - name: Remove Old Containers
+        run: |
+          sudo docker rm -f flask-api-container || true
+          sudo docker rm -f nextjs-container || true
 
       - name: Run Flask API Container
         run: |
