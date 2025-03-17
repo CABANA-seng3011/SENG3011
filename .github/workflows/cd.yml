@@ -5,7 +5,8 @@ on:
     workflows: ["CI Pipeline"]
     types:
       - completed
-  workflow_dispatch: 
+  push:
+    branches: [ "deployment_test_byron" ] 
 
 jobs:
   build:
