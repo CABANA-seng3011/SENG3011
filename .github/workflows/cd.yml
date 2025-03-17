@@ -16,7 +16,7 @@ jobs:
       - name: Pull Latest Docker Images
         run: |
           sudo docker pull bpetselis01/flask-api:latest
-          sudo docker pull bpetselis01/nextjs-app:latest
+          sudo docker pull bpetselis01/nextjs:latest
 
       # - name: Remove Old Containers
       #   run: |
@@ -29,4 +29,4 @@ jobs:
 
       - name: Run Next.js Container
         run: |
-          sudo docker run -d -p 3000:3000 --name nextjs-container bpetselis01/nextjs-app:latest
+          sudo docker run -d -p 3000:3000 --name nextjs-container bpetselis01/nextjs:latest
