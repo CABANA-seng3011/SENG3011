@@ -1,0 +1,27 @@
+name: CD Pipeline
+
+on:
+  workflow_run:
+    workflows: ["CI Pipeline"]
+    types:
+      - completed
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Pull Latest Docker Images
+        run: |
+          sudo docker pull bpetselis01/flask-api:latest
+          sudo docker pull bpetselis01/nextjs-app:latest
+
+      - name: Remove Old Containers
+        run: |
+          sudo docker rm -f flask-api-container || true
+          sudo docker rm -f nextjs-container || true
+
+      - name: Run Containers with Docker Compose
+        run: |
+          sudo docker-compose down || true
+          sudo docker-compose up -d
