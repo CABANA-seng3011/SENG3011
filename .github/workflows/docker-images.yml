@@ -1,0 +1,33 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "deployment_test_byron" ]  # Change to the branch you want to trigger builds
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Login to DockerHub
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        run: echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+
+      # Build and push Flask API Docker image
+      - name: Build the Flask API Docker image
+        run: docker build -t bpetselis01/flask-api:latest -f flask-api/Dockerfile .
+
+      - name: Push to DockerHub
+        run: docker push bpetselis01/flask-api:latest
+
+      # Build and push Next.js Docker image
+      - name: Build Next.js Docker image
+        run: docker build -t bpetselis01/nextjs:latest -f frontend/Dockerfile .
+
+      - name: Push Next.js Docker image
+        run: docker push bpetselis01/nextjs:latest
