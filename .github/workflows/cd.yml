@@ -9,22 +9,24 @@ on:
     branches: [ "deployment_test_byron" ] 
 
 jobs:
-  deploy:
+  build:
     runs-on: self-hosted
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
       - name: Pull Latest Docker Images
         run: |
-          docker pull bpetselis01/flask-api:latest
-          docker pull bpetselis01/nextjs:latest
+          sudo docker pull bpetselis01/flask-api:latest
+          sudo docker pull bpetselis01/nextjs:latest
 
-      - name: Stop and Remove Old Containers
+      - name: Remove Old Containers
         run: |
-          docker-compose down || true
+          sudo docker rm -f flask-api-container || true
+          sudo docker rm -f nextjs-container || true
 
-      - name: Start Services with Docker Compose
+      - name: Run Flask API Container
         run: |
-          docker-compose up -d
+          sudo docker run -d -p 5900:5000 --name flask-api-container bpetselis01/flask-api:latest
+
+      - name: Run Next.js Container
+        run: |
+          sudo docker run -d -p 3000:3000 --name nextjs-container bpetselis01/nextjs:latest
