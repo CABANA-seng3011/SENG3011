@@ -7,4 +7,8 @@ app = Flask(__name__)
 def hello():
     return 'Hello, World!'
 
+@app.route("/")
+def home():
+    return "Hello, Flask is running!"
+
 # dummy commit 10
