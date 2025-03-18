@@ -24,3 +24,10 @@ jobs:
 
       - name: Push to DockerHub
         run: docker push bpetselis01/flask-api:latest
+
+      # Build and push NextJS Docker image
+      - name: Build the NextJS Docker image
+        run: docker build -t bpetselis01/nextjs -f frontend/Dockerfile .
+
+      - name: Push to DockerHub
+        run: docker push bpetselis01/nextjs:latest
