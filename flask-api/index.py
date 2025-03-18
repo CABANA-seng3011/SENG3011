@@ -20,27 +20,32 @@ def get():
     conditions.pop("category")
     conditions.pop("columns")
 
-    # Other possible parameters: limit, sort
+    # TODO: Other possible parameters: limit, sort
     try:
         sql = create_sql_query(category, columns, conditions)
-        print(sql)
         res = run_sql(sql)
+        return jsonify(res)
     except Exception as e:
         return jsonify(e) # TODO: Return a better exception object
-
-    return jsonify(res)
 
 @app.route('/getIndustry', methods=['GET'])
 def getIndustry():
     company = request.args.get("company")
-    res = get_industry(company)
-    return jsonify(res)
-
+    try:
+        res = run_sql(get_industry(company))
+        return jsonify(res)
+    except Exception as e:
+        return jsonify(e)
+    
+# TODO: Fix data for the industry table, add escape characters to the & or replace with 'and'
 @app.route('/getCompanies', methods=['GET'])
 def getCompanies():
     industry = request.args.get("industry")
-    res = get_companies(industry)
-    return jsonify(res)
+    try:
+        res = run_sql(get_companies(industry))
+        return jsonify(res)
+    except Exception as e:
+        return jsonify(e)
 
 if __name__ == "__main__":
     app.run(debug=True)

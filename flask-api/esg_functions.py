@@ -27,22 +27,14 @@ def get_industry(company):
     SELECT industry FROM industry
     WHERE company = '{}'
     """.format(company)
-    try:
-        return run_sql(sql)
-    except Exception as e:
-        return e
+    return sql
 
 def get_companies(industry):
     sql = """
     SELECT company FROM industry
     WHERE industry = '{}'
     """.format(industry)
-    try:
-        return run_sql(sql)
-    except Exception as e:
-        return e
-
-# Implement /getIndustry
+    return sql
 
 # Tests:
 # sql_runner (Create a really simple table to show that the connection works)
