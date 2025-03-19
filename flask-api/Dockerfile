@@ -16,12 +16,15 @@
 # # Run the app
 # CMD ["flask", "run", "--host=0.0.0.0"]
 
+# ---------------------------- ABOVE IS NOOR's CODE ----------------------------
+# ---------------------------- BELOW IS BYRON's CODE ----------------------------
+
 FROM python:3.12
 
 WORKDIR /flask-api
 
 # Copy the dependencies file and install dependencies
-COPY requirements.txt requirements.txt
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the app
