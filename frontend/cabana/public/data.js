@@ -6,7 +6,7 @@ ESG Pillars that can be filtered are:
 OPP + RISK for each
 */
 
-const esgDesc = 'Each ESG Pillar contains a category of Opportunity and Risk.'
+const esgDesc = 'Each ESG Pillar contains a category of Opportunity and Risk. Opportunity is '
 const enviroDesc = ''
 
 export { enviroDesc, esgDesc }
