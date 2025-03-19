@@ -1,4 +1,5 @@
 from db import run_sql
+import json
 import re
 
 # CONSTANTS #####################################
@@ -22,6 +23,21 @@ def create_sql_query(table, columns, conditions):
     if conditions_sql:
         sql += " WHERE " + " AND ".join(conditions_sql)
     return sql
+
+def create_adage_data_model(events):
+    data_info = {
+        "data_source": "Eurofidai Clarity AI ESG data",
+        "dataset_type": "Environmental, Social, and Governance (ESG) metrics for 70,000 companies", 
+        "dataset_id": "db-esg-data.us-east-1.rds.amazonaws.com",
+        "time_object": { 
+            "timestamp": "2025-02-25 00:00:00.000000", 
+            "timezone": "GMT+11",
+            "info": "Data is current as of 25 Feb, 2025",
+            "period_covered": "Q1 2016 - Q4 2024"
+        },
+        "events": events
+    }
+    return json.dumps(data_info)
 
 def get_industry(company):
     sql = """
