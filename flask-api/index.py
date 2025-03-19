@@ -5,10 +5,14 @@ from db import run_sql
 # To run the app: flask --app index run
 app = Flask(__name__)
 
+@app.route("/")
+def home():
+    return "Hello, Flask! It's Byron Petselis"
+
 # Reachable through: curl http://127.0.0.1:5000/hello
 @app.route('/hello')
 def hello():
-    return 'Hello, World!'
+    return 'Hello, World! Its CABANA'
 
 # TODO: Error checking for all routes
 # Example of use: 
