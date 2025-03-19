@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from esg_functions import create_sql_query, get_industry, get_companies, valid_category, valid_columns, ALLOWED_COLUMNS, create_column_array
+from esg_functions import create_sql_query, get_industry, get_companies, valid_category, valid_columns, ALLOWED_COLUMNS, create_column_array, create_adage_data_model
 from db import run_sql
 
 # To run the app: flask --app index run
@@ -49,9 +49,9 @@ def get():
         if columns:
             sql = create_sql_query(category, columns, conditions)
             res = run_sql(sql, create_column_array(columns))
-        return jsonify(res)
+            print(create_adage_data_model(res))
+        return jsonify(create_adage_data_model(res))
     except Exception as e:
-        print(e)
         return jsonify(e) # TODO: Return a better exception object for all routes
     # TODO: Make sure the return object is a nice json, probably need to add a function in db.py to parse the results from SQL
     
@@ -71,7 +71,7 @@ def slow_get():
     try:
         sql = create_sql_query("esg", columns, conditions)
         res = run_sql(sql, create_column_array(columns))
-        return jsonify(res)
+        return jsonify(create_adage_data_model(res))
     except Exception as e:
         return jsonify(e)
 
