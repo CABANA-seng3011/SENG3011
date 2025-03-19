@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from esg_functions import create_sql_query, get_industry, get_companies, valid_category, valid_columns, ALLOWED_COLUMNS, create_column_array, create_adage_data_model
 from db import run_sql
 
-# dummy commit 3
+# dummy commit 4
 
 # To run the app: flask --app index run
 app = Flask(__name__)
