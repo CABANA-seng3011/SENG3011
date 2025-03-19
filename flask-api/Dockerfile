@@ -1,9 +1,17 @@
-# Use Python official image
 FROM python:3.12
 
-WORKDIR /app
-# COPY requirements.txt ./
-# RUN pip install -r requirements.txt
+WORKDIR /flask-api
+
+# Install dependencies
+RUN pip install flask
+
+# Copy the app code
 COPY . .
+
+# Set the Flask app environment variable
+ENV FLASK_APP=index.py
+
 EXPOSE 5000
+
+# Run the app
 CMD ["flask", "run", "--host=0.0.0.0"]
