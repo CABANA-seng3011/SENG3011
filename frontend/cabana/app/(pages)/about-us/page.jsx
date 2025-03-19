@@ -2,39 +2,54 @@
 
 import { Container, Typography, Stack } from '@mui/material';
 import FlipCard from '../../../components/FlipCard';
-import { esgDesc } from '../../../public/data';
+import Header from '../../../components/Header';
+import Footer from '../../../components/Footer';
+import Panel from '../../../components/Panel';
+import { enviroDesc, socialDesc, govDesc, esgDesc1, esgDesc2 } from '../../../public/data';
+
 
 export default function ESGPage() {
   return (
-    <Container 
-      maxWidth='lg'
-      height='100vh'
-      py='4'
-    >
-      <Typography 
-        textAlign='center' 
-        variant='h2' 
-        className='mb-12 font-bold'
+    <>
+      <Header/>
+      <Panel text="The ESG Pillars" />
+      <Container 
+        maxWidth='lg'
+        height='100vh'
+        py='4'
       >
-        ESG Pillars
-      </Typography>
-      <Typography 
-        textAlign='center' 
-        variant='body' 
-        className='mb-12 font-bold'
-      >
-        {esgDesc}
-      </Typography>
-      <Stack 
-        direction='row' 
-        spacing={6} 
-        justifyContent='center' 
-        alignItems='center'
-      >
-        <FlipCard imagePath='/enviro.jpeg' imageAlt='Graphic of a tree' cardTitle='Environmental' description='hello' />
-        <FlipCard imagePath='/social.jpg' imageAlt='Graphic of people and a globe' cardTitle='Social' description='hello' />
-        <FlipCard imagePath='/govern.png' imageAlt='Graphic of people and a cog'  cardTitle='Governance' description='hello' />
-      </Stack>
-    </Container>
+        <Typography 
+          textAlign="center" 
+          variant="h6" 
+          sx={{
+            margin: '30px 0', 
+            fontWeight: 'bold',
+          }}
+        >
+          {esgDesc1}
+        </Typography>
+        <Typography 
+          textAlign="center" 
+          variant="h6" 
+          sx={{
+            margin: '30px 0',
+            fontWeight: 'bold',
+          }}
+        >
+          {esgDesc2}
+        </Typography>
+        <Stack 
+          direction='row' 
+          spacing={6} 
+          justifyContent='center' 
+          alignItems='center'
+        >
+          <FlipCard imagePath='/enviro.jpeg' imageAlt='Graphic of a tree' cardTitle='Environmental' description={enviroDesc} />
+          <FlipCard imagePath='/social.jpg' imageAlt='Graphic of people and a globe' cardTitle='Social' description={socialDesc} />
+          <FlipCard imagePath='/govern.png' imageAlt='Graphic of people and a cog'  cardTitle='Governance' description={govDesc} />
+        </Stack>
+      </Container>
+      <Footer/>
+    </>
   );
 }
