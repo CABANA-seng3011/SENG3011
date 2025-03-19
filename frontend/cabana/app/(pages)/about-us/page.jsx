@@ -5,7 +5,11 @@ import FlipCard from '../../../components/FlipCard';
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
 import Panel from '../../../components/Panel';
-import { enviroDesc, socialDesc, govDesc, esgDesc1, esgDesc2 } from '../../../public/data';
+import { esgDesc1, esgDesc2 } from '../../../public/data';
+
+const enviroDesc = 'The environmental pillar focuses on sustainability efforts and the impact of organisational practices on the planet.'
+const socialDesc = 'The social pillar addresses community well-being, labor practices, and social responsibility.'
+const govDesc = 'The governance pillar emphasises corporate transparency, leadership integrity, and regulatory compliance.'
 
 
 export default function ESGPage() {
