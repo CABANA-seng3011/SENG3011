@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from esg_functions import create_sql_query, get_industry, get_companies, valid_category
+from esg_functions import create_sql_query, get_industry, get_companies, valid_category, valid_columns, ALLOWED_COLUMNS, create_column_array
 from db import run_sql
 
 # dummy commit 3
@@ -34,49 +34,63 @@ def get():
         category (String): One of the ESG pillars that correspond to a table in the database
         [optional] columns (String): A comma separating each column that the user wants to retrieve
             Eg, "company_name, metric_name, metric_value"
-        [optional] conditions (String): 
-        
+        [optional] conditions (String): 0 or more conditions to restrict your search
+            Eg, "company_name=Tervita+Corp" OR "metric_value=SOXEMISSIONS"
     """
     # Separate parameters into category, column and conditions
     category = request.args.get("category")
     columns = request.args.get("columns")
     conditions = request.args.to_dict()
-    conditions.pop("category")
-    conditions.pop("columns")
 
     if not valid_category(category):
         return jsonify("Error 400: Invalid category")
-
+    else:
+        conditions.pop("category")
+    
+    if columns and not valid_columns(columns):
+        return jsonify("Error 400: Invalid columns")
+    elif columns:
+        conditions.pop("columns")
+    else:
+        columns = ",".join(ALLOWED_COLUMNS)
+    
     # TODO: Other possible parameters: limit, sort
     try:
-        sql = create_sql_query(category, columns, conditions)
-        res = run_sql(sql)
+        if columns:
+            sql = create_sql_query(category, columns, conditions)
+            res = run_sql(sql, create_column_array(columns))
         return jsonify(res)
     except Exception as e:
-        return jsonify(e) # TODO: Return a better exception object
+        print(e)
+        return jsonify(e) # TODO: Return a better exception object for all routes
     # TODO: Make sure the return object is a nice json, probably need to add a function in db.py to parse the results from SQL
     
 @app.route('/slowget', methods=['GET'])
 def slow_get():
-    # Separate parameters into category, column and conditions
+    # Separate parameters into column and conditions
     columns = request.args.get("columns")
     conditions = request.args.to_dict()
-    conditions.pop("columns")
 
-    # TODO: Other possible parameters: limit, sort
+    if columns and not valid_columns(columns):
+        return jsonify("Error 400: Invalid columns")
+    elif columns:
+        conditions.pop("columns")
+    else:
+        columns = ",".join(ALLOWED_COLUMNS)
+
     try:
         sql = create_sql_query("esg", columns, conditions)
-        res = run_sql(sql)
+        res = run_sql(sql, create_column_array(columns))
         return jsonify(res)
     except Exception as e:
-        return jsonify(e) # TODO: Return a better exception object
+        return jsonify(e)
 
 # Example of use: curl "http://127.0.0.1:5000/getIndustry?company=PrimeCity+Investment+PLC"
 @app.route('/getIndustry', methods=['GET'])
 def getIndustry():
     company = request.args.get("company")
     try:
-        res = run_sql(get_industry(company))
+        res = run_sql(get_industry(company), ["industry"])
         return jsonify(res)
     except Exception as e:
         return jsonify(e)
@@ -87,7 +101,7 @@ def getIndustry():
 def getCompanies():
     industry = request.args.get("industry")
     try:
-        res = run_sql(get_companies(industry))
+        res = run_sql(get_companies(industry), ["company"])
         return jsonify(res)
     except Exception as e:
         return jsonify(e)

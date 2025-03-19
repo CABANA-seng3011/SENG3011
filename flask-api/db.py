@@ -1,8 +1,16 @@
 from dotenv import load_dotenv, find_dotenv
 import os
 import psycopg2
+import json
 
-def run_sql(sql):
+def run_sql(sql, columns):
+    """
+    Established a connection to our team's AWS RDS instance, then runs a given SQL query.
+
+    Args:
+        sql (String): The SQL query
+        columns ([String]): An array of column names in the SELECT statement
+    """
     load_dotenv(find_dotenv())
 
     try:
@@ -15,15 +23,18 @@ def run_sql(sql):
             password=os.getenv("DB_PASSWORD")
         )
         cursor = conn.cursor()
-
-        # Execute the SQL Query
         cursor.execute(sql)
-        rows = cursor.fetchall()
+        rows = []
+
+        row = cursor.fetchone()
+        while row is not None:
+            rows.append(dict(zip(columns, row)))
+            row = cursor.fetchone()
 
         # Close connection and return results
         cursor.close()
         conn.close()
-        return rows
+        return json.dumps(rows)
 
     except Exception as e:
         print("Error:", e)
