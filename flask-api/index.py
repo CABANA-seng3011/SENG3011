@@ -12,7 +12,7 @@ def home():
     return "Hello, Flask! It's Byron Petselis"
 
 @app.route("/dummy")
-def home():
+def dummy():
     return "Hello, Flask! This is a dummy route for CD Testing"
 
 # Reachable through: curl http://127.0.0.1:5000/hello
