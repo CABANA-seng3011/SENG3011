@@ -1,0 +1,5 @@
+# .gitignore
+
+# Environments
+.env
+.DS_Store
