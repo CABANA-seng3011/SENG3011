@@ -1,9 +1,10 @@
 FROM python:3.12
 
-WORKDIR /flask-api
+WORKDIR /
 
 # Install dependencies
-RUN pip install flask
+COPY ./requirements.txt requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the app code
 COPY . .
