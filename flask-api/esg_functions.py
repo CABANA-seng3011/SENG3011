@@ -32,7 +32,8 @@ def create_adage_data_model(events):
         "time_object": { 
             "timestamp": "2025-02-25 00:00:00.000000", 
             "timezone": "GMT+11",
-            "info": "Data is current as of 25 Feb, 2025" 
+            "info": "Data is current as of 25 Feb, 2025",
+            "period_covered": "Q1 2016 - Q4 2024"
         },
         "events": events
     }
