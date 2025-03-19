@@ -3,24 +3,14 @@ from esg_functions import create_sql_query, get_industry, get_companies, valid_c
 from db import run_sql
 from flask_cors import CORS
 
-# dummy commit 4
-
 # To run the app: flask --app index run
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/")
-def home():
-    return "Hello, Flask! It's Byron Petselis"
-
-@app.route("/dummy")
-def dummy():
-    return "Hello, Flask! This is a dummy route for CD Testing"
-
 # Reachable through: curl http://127.0.0.1:5000/hello
 @app.route('/hello')
 def hello():
-    return 'Hello, World! Its CABANA'
+    return 'Hello, World!'
 
 # TODO: Error checking for all routes
 # Example of use: 
@@ -109,4 +99,4 @@ def getCompanies():
         return jsonify(e)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)
