@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Container, TextField, Button, MenuItem, Typography, Checkbox, ListItemText, Select, InputLabel, FormControl } from '@mui/material';
 
-export default function ESGDataPage() {
+export default function getRouteDemo() {
   const [category, setCategory] = useState('environmental_risk');
   const [columns, setColumns] = useState([]); // Array to hold selected columns
   const [conditions, setConditions] = useState({}); // Store conditions for each column
@@ -70,12 +70,12 @@ export default function ESGDataPage() {
     });
 
     try {
-      const response = await fetch(`http://127.0.0.1:5900/get?${params.toString()}`);
+      const response = await fetch(`http://127.0.0.1:5000/get?${params.toString()}`);
       if (!response.ok) throw new Error('Failed to fetch data');
       
       const result = await response.json();
       console.log("Fetched data:", result); // Debugging line to inspect the structure
-      setData(result.events || result.data || []); // Adjusting based on actual response structure
+      setData(result.events || []); // We only care about the "events" part for now
     } catch (err) {
       setError(err.message);
     }
@@ -153,7 +153,7 @@ export default function ESGDataPage() {
 
       {error && <Typography color='error'>{error}</Typography>}
 
-      {/* Display the fetched data in a table */}
+      {/* Display the fetched events data in a table */}
       {data && data.length > 0 ? (
         <div className="mt-6 w-full">
           <table className='border-collapse border border-gray-300 w-full'>
