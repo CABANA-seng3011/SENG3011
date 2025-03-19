@@ -44,13 +44,14 @@ FROM node:20
 WORKDIR /cabana
 
 # Copy only package.json and yarn.lock first (dependency caching)
-COPY cabana/package.json cabana/yarn.lock ./
+COPY package*.json ./
+COPY yarn*.lock ./
 
 # Install dependencies
 RUN yarn install
 
 # Copy the rest of the application code
-COPY cabana ./
+COPY . .
 
 # Expose Next.js port
 EXPOSE 3000
