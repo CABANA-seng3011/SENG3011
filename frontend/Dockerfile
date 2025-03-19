@@ -35,17 +35,19 @@
 # # Start the Next.js app
 # CMD ["yarn", "dev"]
 
+# ---------------------------- BELOW IS BYRON's CODE ----------------------------
+
 # Use Node official image
 FROM node:20
 
 # Set the working directory inside the container
-WORKDIR /app
+WORKDIR /cabana
 
-# Copy package.json and yarn.lock first (dependency caching)
+# Copy only package.json and yarn.lock first (dependency caching)
 COPY cabana/package.json cabana/yarn.lock ./
 
 # Install dependencies
-RUN yarn install --frozen-lockfile
+RUN yarn install
 
 # Copy the rest of the application code
 COPY cabana ./
