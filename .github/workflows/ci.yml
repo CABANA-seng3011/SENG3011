@@ -20,7 +20,7 @@ jobs:
 
       # Build and push Flask API Docker image
       - name: Build the Flask API Docker image
-        # run: docker build -t bpetselis01/flask-api -f flask-api/Dockerfile .
+        # run: docker build -t bpetselis01/flask-api -f flask-api/Dockerfile . # This is the original command
         run: docker build -t bpetselis01/flask-api -f flask-api/Dockerfile flask-api
 
       - name: Push to DockerHub
