@@ -24,8 +24,8 @@ FROM python:3.12
 WORKDIR /flask-api
 
 # Copy the dependencies file and install dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+COPY flask-api/requirements.txt /flask-api/requirements.txt
+RUN pip install --no-cache-dir -r /flask-api/requirements.txt
 
 # Copy the rest of the app
 COPY . .
