@@ -1,0 +1,15 @@
+# sudo su -
+# yum update -y
+# yum install -y httpd
+# systemctl status httpd
+# mkdir aws_assg3
+# cd aws_assg3
+# wget https://github.com/CABANA-seng3011/SENG3011.git
+# wget https://github.com/CABANA-seng3011/SENG3011/archive/refs/heads/main.zip
+# unzip main.zip
+# cd SENG3011-main
+# mv * /var/www/html/
+# cd /var/www/html
+# systemctl status httpd
+# systemctl enable httpd
+# systemctl start httpd
