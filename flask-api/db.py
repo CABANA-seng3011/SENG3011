@@ -1,7 +1,6 @@
 from dotenv import load_dotenv, find_dotenv
 import os
 import psycopg2
-import json
 
 def run_sql(sql, columns):
     """
@@ -34,7 +33,7 @@ def run_sql(sql, columns):
         # Close connection and return results
         cursor.close()
         conn.close()
-        return json.dumps(rows)
+        return rows
 
     except Exception as e:
         print("Error:", e)
