@@ -1,17 +1,40 @@
 'use client';
 
-import { Container, Typography } from '@mui/material';
+import { Container, Typography, Stack } from '@mui/material';
 import FlipCard from '../../../components/FlipCard';
+import { esgDesc } from '../../../public/data';
 
 export default function ESGPage() {
   return (
-    <Container className='flex flex-col items-center justify-center h-screen'>
-      <Typography variant='h4' className='mb-8 font-bold'>
+    <Container 
+      maxWidth='lg'
+      height='100vh'
+      py='4'
+    >
+      <Typography 
+        textAlign='center' 
+        variant='h2' 
+        className='mb-12 font-bold'
+      >
         ESG Pillars
       </Typography>
-      <FlipCard imagePath='/favicon.ico' cardTitle='Environmental' description='hello' />
-      <FlipCard imagePath='/favicon.ico' cardTitle='Social' description='hello' />
-      <FlipCard imagePath='/favicon.ico' cardTitle='Governance' description='hello' />
+      <Typography 
+        textAlign='center' 
+        variant='body' 
+        className='mb-12 font-bold'
+      >
+        {esgDesc}
+      </Typography>
+      <Stack 
+        direction='row' 
+        spacing={6} 
+        justifyContent='center' 
+        alignItems='center'
+      >
+        <FlipCard imagePath='/enviro.jpeg' imageAlt='Graphic of a tree' cardTitle='Environmental' description='hello' />
+        <FlipCard imagePath='/social.jpg' imageAlt='Graphic of people and a globe' cardTitle='Social' description='hello' />
+        <FlipCard imagePath='/govern.png' imageAlt='Graphic of people and a cog'  cardTitle='Governance' description='hello' />
+      </Stack>
     </Container>
   );
 }

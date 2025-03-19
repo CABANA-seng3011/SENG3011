@@ -1,9 +1,8 @@
 'use client';
-
 import React, { useState } from 'react';
 import { Box, Typography } from '@mui/joy';
-import Image from "next/image";
-import AspectRatio from "@mui/joy/AspectRatio";
+import Image from 'next/image';
+import AspectRatio from '@mui/joy/AspectRatio';
 
 export default function FlipCard({cardTitle, imagePath, imageAlt, description}) {
 	const [isFlipped, setIsFlipped] = useState(false);
@@ -22,7 +21,7 @@ export default function FlipCard({cardTitle, imagePath, imageAlt, description}) 
     position: 'relative',
     width: '100%',
     height: '100%',
-    transition: 'transform 0.6s',
+    transition: 'transform 0.8s',
     transformStyle: 'preserve-3d',
     transform: isFlipped ? 'rotateY(180deg)' : 'none',
   };
