@@ -1,16 +1,17 @@
 from db import run_sql
+import re
+
+# CONSTANTS #####################################
+ALLOWED_CATEGORIES = ["esg", "environmental_opportunity", "environmental_risk", "governance_opportunity", 
+                      "governance_risk", "social_opportunity", "social_risk"]
+
+ALLOWED_COLUMNS = ["company_name", "perm_id", "data_type", "disclosure", "metric_description", "metric_name", "metric_unit",
+                       "metric_value", "metric_year", "nb_points_of_observations", "metric_period", "provider_name", 
+                       "reported_date", "pillar", "headquarter_country", "category"]
+#################################################
 
 # Creates an sql query based on the columns and parameters received
-def create_sql_query(table, columns, conditions):
-    # Check if table is valid
-    allowed_tables = ["esg", "environmental_opportunity", "environmental_risk", "governance_opportunity", 
-                      "governance_risk", "social_opportunity", "social_risk"]
-    if table.lower() not in allowed_tables:
-        raise Exception("Table {} does not exist. Check documentation for allowed tables", table)
-
-    if columns is None:
-        columns = "*"
-    
+def create_sql_query(table, columns, conditions):    
     # Base query (SELECT, FROM)
     sql = "SELECT {} FROM {}".format(columns, table)
 
@@ -36,7 +37,18 @@ def get_companies(industry):
     """.format(industry)
     return sql
 
-# Tests:
-# sql_runner (Create a really simple table to show that the connection works)
-# get
-# getIndustry
+def valid_category(category):
+    if category.lower() not in ALLOWED_CATEGORIES:
+        return False
+    else:
+        return True
+        
+def valid_columns(columns):    
+    for col in create_column_array(columns):
+        if col.lower() not in ALLOWED_COLUMNS:
+            return False
+    return True
+
+def create_column_array(columns):
+    columns_formatted = re.sub(' ', '', columns)
+    return columns_formatted.split(',')
