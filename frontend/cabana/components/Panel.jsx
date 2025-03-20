@@ -5,6 +5,7 @@ function Panel({ text }) {
   return (
     <Box sx={{ position: 'relative', maxWidth: '100%', height: '500px', overflow: 'hidden' }}>
       <Image
+        unoptimized
         src="/earth.webp"
         alt="Picture of the earth"
         width={3000}
