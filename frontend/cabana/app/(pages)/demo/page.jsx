@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Container, TextField, Button, MenuItem, Typography, Checkbox, ListItemText, Select, InputLabel, FormControl } from '@mui/material';
+import DataDisplay from '../../../components/DataDisplay';
 
 export default function getRouteDemo() {
   const [category, setCategory] = useState('environmental_risk');
@@ -10,6 +11,7 @@ export default function getRouteDemo() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [fetched, setFetched] = useState(false);
 
   const categories = [
     'environmental_opportunity',
@@ -69,18 +71,30 @@ export default function getRouteDemo() {
       if (value) params.append(key, value);
     });
 
+    // Send the request
     try {
       const response = await fetch(`http://127.0.0.1:5000/get?${params.toString()}`);
-      if (!response.ok) throw new Error('Failed to fetch data');
-      
       const result = await response.json();
-      console.log("Fetched data:", result); // Debugging line to inspect the structure
-      setData(result.events || []); // We only care about the "events" part for now
-    } catch (err) {
-      setError(err.message);
-    }
+      
+      console.log("API Response:", result); // Log the full response
 
-    setLoading(false);
+      const data = JSON.parse(result)
+      setData(data.events)
+      // // Check if events exists in the response
+      // if (result && result.events) {
+      //   setData(result.events); // Set the events data
+      //   setFetched(true);
+      // } else {
+      //   throw new Error('Events data not found in the response');
+      // }
+      console.log(data.events)
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      setError('Failed to fetch data');
+    } finally {
+      setLoading(false);
+      setFetched(true);
+    }
   };
 
   const handleColumnSelection = (event) => {
@@ -154,34 +168,7 @@ export default function getRouteDemo() {
       {error && <Typography color='error'>{error}</Typography>}
 
       {/* Display the fetched events data in a table */}
-      {data && data.length > 0 ? (
-        <div className="mt-6 w-full">
-          <table className='border-collapse border border-gray-300 w-full'>
-            <thead>
-              <tr>
-                {columns.map((col) => (
-                  <th key={col} className='border border-gray-300 p-2'>
-                    {availableColumns.find((column) => column.value === col)?.label}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {data.map((row, index) => (
-                <tr key={index}>
-                  {columns.map((col) => (
-                    <td key={col} className='border border-gray-300 p-2'>
-                      {row[col]}
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      ) : (
-        <Typography>No data to display</Typography>
-      )}
+      {!loading && fetched ? <DataDisplay data={data} /> : null}
     </Container>
   );
 }
