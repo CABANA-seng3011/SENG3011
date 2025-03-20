@@ -8,9 +8,10 @@ import { useRouter } from 'next/navigation';
 const pages = [
   { label: 'Home', path: '/' },
   { label: 'About Us', path: '/about-us' },
+  { label: '/get Demo', path: '/get-demo' }
 ];
 
-function ResponsiveAppBar() {
+function Header() {
   const router = useRouter();
   
   const handleNavigation = (path) => {
@@ -39,4 +40,4 @@ function ResponsiveAppBar() {
   );
 }
 
-export default ResponsiveAppBar;
+export default Header;
