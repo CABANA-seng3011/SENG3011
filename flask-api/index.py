@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from esg_functions import create_sql_query, get_industry, get_companies, valid_category, valid_columns, ALLOWED_COLUMNS, create_column_array
 from db import run_sql
+from finance_functions import get_stock_price
 
 # To run the app: flask --app index run
 app = Flask(__name__)
@@ -95,6 +96,19 @@ def getCompanies():
         return jsonify(res)
     except Exception as e:
         return jsonify(e)
+
+@app.route('/finance/stock-price', methods=['GET'])
+def getStockPrices():
+    company = request.args.get('company')
+    if not company:
+        return jsonify({"error": "No company name provided. Must include a company name as parameter"}), 400
+    
+    res = get_stock_price(company)
+    if "error" in res:
+        return jsonify(res), 500
+    else:
+        return jsonify(res), 200
+
 
 if __name__ == "__main__":
     app.run(debug=True)
