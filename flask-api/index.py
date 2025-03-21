@@ -2,11 +2,11 @@ from flask import Flask, request, jsonify
 from esg_functions import create_sql_query, get_industry, get_companies, valid_category, valid_columns, ALLOWED_COLUMNS, create_column_array, create_adage_data_model
 from db import run_sql, run_sql_raw
 import json
-
-# dummy commit 4
+from flask_cors import CORS
 
 # To run the app: flask --app index run
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/")
 def home():
@@ -108,4 +108,4 @@ def getCompanies():
         return jsonify(e)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)
