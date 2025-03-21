@@ -2,7 +2,7 @@ name: CI Pipeline
 
 on:
   push:
-    branches: [ "deployment_test_byron" ]  # Change to the branch you want to trigger builds
+    branches: [ "main" ]  # Change to the branch you want to trigger builds
 
 jobs:
   build-and-push:

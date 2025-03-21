@@ -2,7 +2,7 @@ name: Linting
 
 on:
   push:
-    branches: [ "deployment_test_byron" ]  # Runs on pushes to these branches
+    branches: [ "main" ]
 
 jobs:
   lint:
@@ -24,7 +24,7 @@ jobs:
         run: |
           cd frontend/cabana
           yarn install --frozen-lockfile
-          yarn add -D typescript  # 🔥 Explicitly install TypeScript
+          yarn add -D typescript
 
       - name: Run ESLint
         run: |
