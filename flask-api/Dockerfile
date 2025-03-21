@@ -21,7 +21,7 @@
 
 FROM python:3.12
 
-WORKDIR /flask-api
+WORKDIR /
 
 # Copy the dependencies file and install dependencies
 COPY requirements.txt .
