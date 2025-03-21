@@ -18,12 +18,13 @@ jobs:
         with:
           node-version: 20
           cache: 'yarn'
-          cache-dependency-path: frontend/cabana/yarn.lock  # 🔥 Important fix
+          cache-dependency-path: frontend/cabana/yarn.lock
 
       - name: Install dependencies
         run: |
           cd frontend/cabana
           yarn install --frozen-lockfile
+          yarn add -D typescript  # 🔥 Explicitly install TypeScript
 
       - name: Run ESLint
         run: |
