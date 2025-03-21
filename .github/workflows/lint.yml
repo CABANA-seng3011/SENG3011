@@ -2,7 +2,7 @@ name: Linting
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "deployment_test_byron" ]
 
 jobs:
   lint:
