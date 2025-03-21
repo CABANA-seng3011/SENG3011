@@ -1,0 +1,30 @@
+name: Linting
+
+on:
+  push:
+    branches: [ "deployment_test_byron" ]  # Runs on pushes to these branches
+
+jobs:
+  lint:
+    name: Run ESLint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: |
+          cd frontend/cabana
+          yarn install --frozen-lockfile
+
+      - name: Run ESLint
+        run: |
+          cd frontend/cabana
+          yarn lint
