@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from esg_functions import create_sql_query, get_industry, get_companies, valid_category, valid_columns, ALLOWED_COLUMNS, create_column_array, create_adage_data_model
-from db import run_sql
+from db import run_sql, run_sql_raw
+import json
 
 # dummy commit 4
 
@@ -20,7 +21,6 @@ def dummy():
 def hello():
     return 'Hello, World! Its CABANA'
 
-# TODO: Error checking for all routes
 # Example of use: 
 # curl "http://127.0.0.1:5000/get?category=environmental_risk&columns=company_name,+metric_name,+metric_value&company_name=Tervita+Corp"
 # Retrieves the columns: company_name, metric_name and metric value WHERE company_name is Tervita Corp
@@ -42,11 +42,13 @@ def get():
     columns = request.args.get("columns")
     conditions = request.args.to_dict()
 
-    if not valid_category(category):
+    # Check if category exists and is valid
+    if category and not valid_category(category):
         return jsonify("Error 400: Invalid category")
     else:
         conditions.pop("category")
     
+    # If columns exist, check if valid
     if columns and not valid_columns(columns):
         return jsonify("Error 400: Invalid columns")
     elif columns:
@@ -54,7 +56,6 @@ def get():
     else:
         columns = ",".join(ALLOWED_COLUMNS)
     
-    # TODO: Other possible parameters: limit, sort
     try:
         if columns:
             sql = create_sql_query(category, columns, conditions)
@@ -62,8 +63,8 @@ def get():
             print(create_adage_data_model(res))
         return jsonify(create_adage_data_model(res))
     except Exception as e:
-        return jsonify(e) # TODO: Return a better exception object for all routes
-    # TODO: Make sure the return object is a nice json, probably need to add a function in db.py to parse the results from SQL
+        # TODO: Return a better exception object for all routes
+        return jsonify(e)
     
 @app.route('/slowget', methods=['GET'])
 def slow_get():
@@ -95,14 +96,14 @@ def getIndustry():
     except Exception as e:
         return jsonify(e)
     
-# TODO: Fix data for the industry table, add escape characters to the & or replace with 'and'
 # Example of use: curl "http://127.0.0.1:5000/getCompanies?industry=Real+Estate"
 @app.route('/getCompanies', methods=['GET'])
 def getCompanies():
     industry = request.args.get("industry")
     try:
-        res = run_sql(get_companies(industry), ["company"])
-        return jsonify(res)
+        # TODO: Fix the formatting of this result
+        res = run_sql_raw(get_companies(industry))
+        return res
     except Exception as e:
         return jsonify(e)
 

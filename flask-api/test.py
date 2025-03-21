@@ -27,3 +27,14 @@ try:
     print(json.dumps(data, indent=2))
 except Exception as err:
     jsonify({'error': f'Error occurred: {err}'}), 500
+
+# Testing /getIndustry
+try:
+    params = {
+        "industry": "Real Estate"
+    }
+    response = requests.get('http://127.0.0.1:5000/getCompanies', params=params)
+    data = response.json()
+    print(json.dumps(data, indent=2))
+except Exception as err:
+    jsonify({'error': f'Error occurred: {err}'}), 500
