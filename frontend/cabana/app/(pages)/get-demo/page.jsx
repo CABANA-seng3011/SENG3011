@@ -1,8 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import { Container, TextField, Button, MenuItem, Typography, Checkbox, ListItemText, Select, InputLabel, FormControl } from '@mui/material';
+import { Box, TextField, Button, MenuItem, Typography, Checkbox, ListItemText, Select, InputLabel, FormControl } from '@mui/material';
 import DataDisplay from '../../../components/DataDisplay';
+import Panel from '../../../components/Panel';
+import Header from '../../../components/Header';
+
 
 export default function getRouteDemo() {
   const [category, setCategory] = useState('environmental_risk');
@@ -116,7 +119,9 @@ export default function getRouteDemo() {
   };
 
   return (
-    <Container className='flex flex-col items-center justify-center min-h-screen space-y-6'>
+    <Box className='flex flex-col items-center justify-center min-h-screen space-y-6'>
+      <Header />
+      <Panel text='Demo for /get'/>
       <Typography variant='h4' className='font-bold'>ESG Data Viewer</Typography>
       
       <TextField
@@ -169,6 +174,6 @@ export default function getRouteDemo() {
 
       {/* Display the fetched events data in a table */}
       {!loading && fetched ? <DataDisplay data={data} /> : null}
-    </Container>
+    </Box>
   );
 }

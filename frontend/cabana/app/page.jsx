@@ -6,10 +6,11 @@ import Searchbar from "../components/Searchbar";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Panel from '../components/Panel';
+import {Box} from '@mui/material';
 
 export default function Home() {
   return (
-    <>
+    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Header />
       <Panel text="ESG Data Hub" />
       
@@ -19,6 +20,6 @@ export default function Home() {
         </div>
       </div>
       <Footer />
-    </>
+    </Box >
   );
 }
