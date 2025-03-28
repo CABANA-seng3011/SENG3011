@@ -97,7 +97,7 @@ def getIndustry():
     try:
         res = run_sql(get_industry(company), ["industry"])
         if len(res) == 0:
-            res = f"No industry found for '{company}'. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/964329628/Available+Companies+for+Query for allowed companies."
+            res = f"No industry found for '{company}'. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/964329628/Available+Companies+and+Industries for allowed companies."
             return Response (res, 400)
         else:
             return jsonify(res)
@@ -113,7 +113,7 @@ def getCompanies():
     try:
         rows = run_sql_raw(get_companies(industry))
         if len(rows) == 0:
-            res = f"No companies found for '{industry}'." # TODO: Make a doc for allowed industries
+            res = f"No companies found for '{industry}'. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/964329628/Available+Companies+and+Industries for allowed industries"
             return Response (res, 400)
         else:
             res = create_companies_response(rows)
