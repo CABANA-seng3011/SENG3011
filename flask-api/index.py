@@ -1,12 +1,12 @@
-from flask import Flask, request, jsonify
-from esg_functions import create_sql_query, get_industry, get_companies, valid_category, valid_columns, ALLOWED_COLUMNS, create_column_array, create_adage_data_model
+from flask import Flask, request, jsonify, Response
+from esg_functions import create_sql_query, get_industry, get_companies, valid_category, valid_columns, ALLOWED_COLUMNS, create_column_array, create_adage_data_model, create_companies_response
 from db import run_sql, run_sql_raw
-import json
-from flask_cors import CORS
+
+# from flask_cors import CORS
 
 # To run the app: flask --app index run
 app = Flask(__name__)
-CORS(app)
+# CORS(app)
 
 @app.route("/")
 def home():
@@ -44,27 +44,28 @@ def get():
 
     # Check if category exists and is valid
     if category and not valid_category(category):
-        return jsonify("Error 400: Invalid category")
+        res = "Invalid category. Allowed categories are: \"environmental_opportunity\", \"environmental_risk\", \"governance_opportunity\", \"governance_risk\", \"social_opportunity\", \"social_risk\""
+        return Response (res, 400)
     else:
         conditions.pop("category")
     
     # If columns exist, check if valid
     if columns and not valid_columns(columns):
-        return jsonify("Error 400: Invalid columns")
+        res = "Invalid columns. Columns should be a comma-separated String of valid columns. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/961150999/Allowed+columns+for+get for valid columns."
+        return Response (res, 400)
     elif columns:
         conditions.pop("columns")
+    # If no columns provided, select ALL columns
     else:
         columns = ",".join(ALLOWED_COLUMNS)
     
+    sql = create_sql_query(category, columns, conditions)
     try:
-        if columns:
-            sql = create_sql_query(category, columns, conditions)
-            res = run_sql(sql, create_column_array(columns))
-            print(create_adage_data_model(res))
+        res = run_sql(sql, create_column_array(columns))
         return jsonify(create_adage_data_model(res))
     except Exception as e:
-        # TODO: Return a better exception object for all routes
-        return jsonify(e)
+        res = "SQL Exception likely caused by invalid conditions. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/960921696/get+and+slowget for instructions on how to use /get"
+        return Response (res, 500)
     
 @app.route('/slowget', methods=['GET'])
 def slow_get():
@@ -73,7 +74,8 @@ def slow_get():
     conditions = request.args.to_dict()
 
     if columns and not valid_columns(columns):
-        return jsonify("Error 400: Invalid columns")
+        res = "Invalid columns. Columns should be a comma-separated String of valid columns. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/961150999/Allowed+columns+for+get for valid columns."
+        return Response (res, 400)
     elif columns:
         conditions.pop("columns")
     else:
@@ -84,28 +86,42 @@ def slow_get():
         res = run_sql(sql, create_column_array(columns))
         return jsonify(create_adage_data_model(res))
     except Exception as e:
-        return jsonify(e)
+        res = "SQL Exception likely caused by invalid conditions. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/960921696/get+and+slowget for instructions on how to use /get"
+        return Response (res, 500)
 
 # Example of use: curl "http://127.0.0.1:5000/getIndustry?company=PrimeCity+Investment+PLC"
 @app.route('/getIndustry', methods=['GET'])
 def getIndustry():
     company = request.args.get("company")
+    
     try:
         res = run_sql(get_industry(company), ["industry"])
-        return jsonify(res)
+        if len(res) == 0:
+            res = f"No industry found for '{company}'. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/964329628/Available+Companies+for+Query for allowed companies."
+            return Response (res, 400)
+        else:
+            return jsonify(res)
+    
     except Exception as e:
-        return jsonify(e)
+        res = "SQL Exception occurred."
+        return Response (res, 500)
     
 # Example of use: curl "http://127.0.0.1:5000/getCompanies?industry=Real+Estate"
 @app.route('/getCompanies', methods=['GET'])
 def getCompanies():
     industry = request.args.get("industry")
     try:
-        # TODO: Fix the formatting of this result
-        res = run_sql_raw(get_companies(industry))
-        return res
+        rows = run_sql_raw(get_companies(industry))
+        if len(rows) == 0:
+            res = f"No companies found for '{industry}'." # TODO: Make a doc for allowed industries
+            return Response (res, 400)
+        else:
+            res = create_companies_response(rows)
+            return jsonify(res)
+        
     except Exception as e:
-        return jsonify(e)
+        res = "SQL Exception occurred."
+        return Response (res, 500)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)

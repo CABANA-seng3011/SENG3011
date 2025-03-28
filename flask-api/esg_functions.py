@@ -1,6 +1,6 @@
-from db import run_sql
-import json
+from db import run_sql, run_sql_raw
 import re
+import json
 
 # CONSTANTS #####################################
 ALLOWED_CATEGORIES = ["esg", "environmental_opportunity", "environmental_risk", "governance_opportunity", 
@@ -38,6 +38,13 @@ def create_adage_data_model(events):
         "events": events
     }
     return json.dumps(data_info)
+
+def create_companies_response(rows):
+    res = [row[0] for row in rows]
+    companies_response = {
+        "companies": res
+    }
+    return json.dumps(companies_response)
 
 def get_industry(company):
     sql = """

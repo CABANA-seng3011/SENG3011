@@ -36,7 +36,7 @@ def run_sql(sql, columns):
         return rows
 
     except Exception as e:
-        print("Error:", e)
+        raise e
 
 def run_sql_raw(sql):
     """
@@ -66,4 +66,4 @@ def run_sql_raw(sql):
         return rows
 
     except Exception as e:
-        print("Error:", e)
+        raise e
