@@ -2,11 +2,11 @@ from flask import Flask, request, jsonify, Response
 from esg_functions import create_sql_query, get_industry, get_companies, valid_category, valid_columns, ALLOWED_COLUMNS, create_column_array, create_adage_data_model, create_companies_response
 from db import run_sql, run_sql_raw
 
-# from flask_cors import CORS
+from flask_cors import CORS
 
 # To run the app: flask --app index run
 app = Flask(__name__)
-# CORS(app)
+CORS(app)
 
 @app.route("/")
 def home():
