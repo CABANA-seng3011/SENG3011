@@ -123,5 +123,9 @@ def getCompanies():
         res = "SQL Exception occurred."
         return Response (res, 500)
 
+# Vercel-specific handler
+def handler(event, context):
+    return app(event, context)
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
