@@ -6,7 +6,7 @@ on:
     types:
       - completed
   push:
-    branches: [ "main" ] 
+    branches: [ "deployment_test_byron" ] 
 
 jobs:
   build:
