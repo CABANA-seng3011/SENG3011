@@ -100,7 +100,10 @@ def getIndustry():
             res = f"No industry found for '{company}'. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/964329628/Available+Companies+and+Industries for allowed companies."
             return Response (res, 400)
         else:
-            return jsonify(res)
+            if len(res) == 1:
+                return jsonify(res[0])
+            else:
+                return jsonify(res)
     
     except Exception as e:
         res = "SQL Exception occurred."
