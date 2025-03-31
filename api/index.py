@@ -93,6 +93,10 @@ def slow_get():
 @app.route('/getIndustry', methods=['GET'])
 def getIndustry():
     company = request.args.get("company")
+
+    if not company:
+        res = "Invalid params, please specify a company. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/964329628/Available+Companies+and+Industries for allowed companies."
+        return Response (res, 400)
     
     try:
         res = run_sql(get_industry(company), ["industry"])
@@ -113,6 +117,10 @@ def getIndustry():
 @app.route('/getCompanies', methods=['GET'])
 def getCompanies():
     industry = request.args.get("industry")
+    if not industry:
+        res = "Invalid params, please specify an industry. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/964329628/Available+Companies+and+Industries for allowed industries."
+        return Response (res, 400)
+    
     try:
         rows = run_sql_raw(get_companies(industry))
         if len(rows) == 0:
