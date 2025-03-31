@@ -9,7 +9,7 @@ services:
   flask-api:
     build: ./flask-api
     ports:
-      - "5000:5000"
+      - "5050:5000"
     volumes:
       - ./flask-api:/flask-api
     env_file: 
