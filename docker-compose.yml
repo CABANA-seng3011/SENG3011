@@ -7,7 +7,7 @@ services:
       - ./frontend/cabana:/cabana
 
   flask-api:
-    build: ./flask-api
+    build: ./api
     ports:
       - "5000:5000"
     volumes:
