@@ -28,11 +28,5 @@ jobs:
           pip install pytest pytest-cov
 
       - name: Run Unit Tests
-        run: pytest tests --cov=src --cov-report=xml
-
-      - name: Upload Coverage Report
-        uses: codecov/codecov-action@v4
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          file: ./coverage.xml
-          fail_ci_if_error: true
+        working-directory: testing
+        run: pytest --cov=api --cov-report=html
