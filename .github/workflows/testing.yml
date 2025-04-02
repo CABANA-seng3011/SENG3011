@@ -27,8 +27,8 @@ jobs:
           pip install --no-cache-dir -r testing/requirements.txt
 
       - name: Set PYTHONPATH
-        run: echo "PYTHONPATH=$PYTHONPATH:$(pwd)/api" >> $GITHUB_ENV
+        run: echo "PYTHONPATH=$(pwd)/.." >> $GITHUB_ENV  # Use parent directory
 
       - name: Run Unit Tests
         working-directory: testing
-        run: pytest --cov=api --cov-report=html
+        run: pytest --cov=../api --cov-report=html --cov-report=term-missing  # Debug coverage output
