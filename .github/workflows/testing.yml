@@ -25,7 +25,6 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --no-cache-dir -r testing/requirements.txt
-          sudo apt-get update && sudo apt-get install -y wkhtmltopdf
 
       - name: Set PYTHONPATH
         run: echo "PYTHONPATH=$(pwd)/api" >> $GITHUB_ENV
@@ -34,13 +33,8 @@ jobs:
         working-directory: testing
         run: pytest --cov=../api --cov-report=html:unittest_report --cov-report=term-missing
 
-      - name: Convert Coverage Report to PDF
-        working-directory: testing
-        run: |
-          wkhtmltopdf unittest_report/index.html unittest_report.pdf
-
       - name: Upload Coverage Report
         uses: actions/upload-artifact@v4
         with:
-          name: coverage-report
-          path: testing/unittest_report.pdf
+          name: unittest_report
+          path: testing/unittest_report
