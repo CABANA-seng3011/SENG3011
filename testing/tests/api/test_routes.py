@@ -1,7 +1,7 @@
 import pytest
 from unittest.mock import patch
 from flask import Flask
-from api.index import app  # Importing the app from your index.py file
+from index import app  # Importing the app from your index.py file
 
 @pytest.fixture
 def client():
