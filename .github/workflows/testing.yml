@@ -31,7 +31,7 @@ jobs:
 
       - name: Run Unit Tests
         working-directory: testing
-        run: pytest --cov=../api --cov-report=pdf:unittest_report --cov-report=term-missing
+        run: pytest --cov=../api --cov-report=html:unittest_report --cov-report=term-missing
 
       - name: Debug Coverage Report Location
         working-directory: testing
