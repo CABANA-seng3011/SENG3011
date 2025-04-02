@@ -22,10 +22,9 @@ jobs:
         with:
           python-version: "3.13"
 
-      - name: Install API as a package
+      - name: Install dependencies
         run: |
           pip install --no-cache-dir -r testing/requirements.txt
-          pip install -e api  # Install api as an editable package
 
       - name: Set PYTHONPATH
         run: echo "PYTHONPATH=$PYTHONPATH:$(pwd)/api" >> $GITHUB_ENV
