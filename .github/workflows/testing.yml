@@ -27,14 +27,18 @@ jobs:
           pip install --no-cache-dir -r testing/requirements.txt
 
       - name: Set PYTHONPATH
-        run: echo "PYTHONPATH=$PYTHONPATH:$(pwd)/api" >> $GITHUB_ENV
+        run: echo "PYTHONPATH=$(pwd)/api" >> $GITHUB_ENV
 
       - name: Run Unit Tests
         working-directory: testing
-        run: pytest --cov-report=html --cov-report=term-missing  
+        run: pytest --cov=../api --cov-report=html:coverage_html --cov-report=term-missing
+
+      - name: Debug Coverage Report Location
+        working-directory: testing
+        run: ls -R  # List files to confirm where coverage was generated
 
       - name: Upload Coverage Report
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
-          path: testing/htmlcov/
+          path: testing/coverage_html 
