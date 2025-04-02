@@ -29,7 +29,7 @@ def test_hello_route(client):
     assert response.data.decode() == "Hello, World! Its CABANA"
 
 # /get error checks
-@patch("api.index.run_sql")  # Patch run_sql in the context of index.py where it's used
+@patch("index.run_sql")  # Patch run_sql in the context of index.py where it's used
 def test_get_route_invalid_columns(mock_run_sql, client):
     """Test the /get route with invalid columns."""
     # Make a GET request to the /get route with invalid columns
@@ -41,7 +41,7 @@ def test_get_route_invalid_columns(mock_run_sql, client):
     assert response.status_code == 400
     assert response.data.decode() == "Invalid columns. Columns should be a comma-separated String of valid columns. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/961150999/Allowed+columns+for+get for valid columns."
 
-@patch("api.index.run_sql")  # Patch run_sql in the context of index.py where it's used
+@patch("index.run_sql")  # Patch run_sql in the context of index.py where it's used
 def test_get_route_sql_exception(mock_run_sql, client):
     """Test the /get route when a SQL exception occurs."""
     # Simulate an exception in the run_sql function
