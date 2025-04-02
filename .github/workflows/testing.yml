@@ -4,11 +4,10 @@ on:
   push:
     branches:
       - main
-      - develop
+      - noor/s2_testing
   pull_request:
     branches:
       - main
-      - develop
 
 jobs:
   unit-tests:
@@ -25,7 +24,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install --no-cache-dir -r requirements.txt
+          pip install --no-cache-dir -r testing/requirements.txt
           pip install pytest pytest-cov
 
       - name: Run Unit Tests
