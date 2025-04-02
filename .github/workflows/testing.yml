@@ -22,7 +22,7 @@ jobs:
         with:
           python-version: "3.13"
 
-       - name: Install API as a package
+      - name: Install API as a package
         run: |
           pip install --no-cache-dir -r testing/requirements.txt
           pip install -e api  # Install api as an editable package
