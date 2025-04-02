@@ -33,12 +33,13 @@ jobs:
         working-directory: testing
         run: pytest --cov=../api --cov-report=html:unittest_report --cov-report=term-missing
 
-      - name: Debug Coverage Report Location
+      - name: Convert Coverage Report to PDF
         working-directory: testing
-        run: ls -R  # List files to confirm where coverage was generated
+        run: |
+          wkhtmltopdf unittest_report/index.html unittest_report.pdf
 
       - name: Upload Coverage Report
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
-          path: testing/unittest_report
+          path: testing/unittest_report.pdf
