@@ -1,7 +1,13 @@
 # .gitignore
-*/__pycache__
+.vscode
+
+# Cache
+**/__pycache__
+.pytest_cache
+.coverage
 
 # Environments
 .env
 .DS_Store
-.vercel
+.venv
+*/__init__.py
