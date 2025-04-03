@@ -89,8 +89,8 @@ def test_get_valid_columns(mock_run_sql, client):
 
     # Assertions
     assert response.status_code == 200
-    assert response.json == '{"data_source": "Eurofidai Clarity AI ESG data", "dataset_type": "Environmental, Social, and Governance (ESG) metrics...Q1 2016 - Q4 2024"}, "events": [{"company_name": "Tervita Corp", "metric_name": "SOXEMISSIONS", "metric_value": 100}]}'
-
+    assert response.json == '{"data_source": "Eurofidai Clarity AI ESG data", "dataset_type": "Environmental, Social, and Governance (ESG) metrics for 70,000 companies", "dataset_id": "db-esg-data.us-east-1.rds.amazonaws.com", "time_object": {"timestamp": "2025-02-25 00:00:00.000000", "timezone": "GMT+11", "info": "Data is current as of 25 Feb, 2025", "period_covered": "Q1 2016 - Q4 2024"}, "events": [{"company_name": "Tervita Corp", "metric_name": "SOXEMISSIONS", "metric_value": 100}]}'
+    
 ##########################################################################
 # /SLOWGET ROUTE
 # THE FOLLOWING TESTS CHECK THE /SLOWGET ROUTE
@@ -147,4 +147,4 @@ def test_slowget_valid_columns(mock_run_sql, client):
 
     # Assertions
     assert response.status_code == 200
-    assert response.json == '{"data_source": "Eurofidai Clarity AI ESG data", "dataset_type": "Environmental, Social, and Governance (ESG) metrics...Q1 2016 - Q4 2024"}, "events": [{"company_name": "Tervita Corp", "metric_name": "SOXEMISSIONS", "metric_value": 100}]}'
+    assert response.json == '{"data_source": "Eurofidai Clarity AI ESG data", "dataset_type": "Environmental, Social, and Governance (ESG) metrics for 70,000 companies", "dataset_id": "db-esg-data.us-east-1.rds.amazonaws.com", "time_object": {"timestamp": "2025-02-25 00:00:00.000000", "timezone": "GMT+11", "info": "Data is current as of 25 Feb, 2025", "period_covered": "Q1 2016 - Q4 2024"}, "events": [{"company_name": "Tervita Corp", "metric_name": "SOXEMISSIONS", "metric_value": 100}]}'
