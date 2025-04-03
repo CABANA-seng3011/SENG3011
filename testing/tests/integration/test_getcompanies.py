@@ -9,7 +9,7 @@ def client():
     with app.test_client() as client:
         yield client
 
-@patch("index.run_sql")
+@patch("index.run_sql_raw")
 def test_getCompanies_valid_industry(mock_run_sql, client):
     """Test the /getCompanies route with a valid industry."""
 
@@ -31,7 +31,7 @@ def test_getCompanies_no_industry(client):
         "Invalid params, please specify an industry. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/964329628/Available+Companies+and+Industries for allowed industries."
     )
 
-@patch("index.run_sql")
+@patch("index.run_sql_raw")
 def test_getCompanies_invalid_industry(mock_run_sql, client):
     """Test the /getCompanies route with an invalid industry."""
 
