@@ -45,6 +45,7 @@ def test_get_invalid_columns(mock_run_sql, client):
     assert response.status_code == 400
     assert response.data.decode() == "Invalid columns. Columns should be a comma-separated String of valid columns. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/961150999/Allowed+columns+for+get for valid columns."
 
+@patch("index.run_sql")
 def test_get_sql_exception(mock_run_sql, client):
     """Test the /get route when a SQL exception occurs."""
     # Simulate an exception in the run_sql function
@@ -59,6 +60,7 @@ def test_get_sql_exception(mock_run_sql, client):
     assert response.status_code == 500
     assert response.data.decode() == "SQL Exception likely caused by invalid conditions. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/960921696/get+and+slowget for instructions on how to use /get"
 
+@patch("index.run_sql")
 # Test the route if not proivded with ESG risk or opp
 def test_get_invalid_category(mock_run_sql, client):
     """Test the /get route with an invalid category."""
@@ -71,6 +73,7 @@ def test_get_invalid_category(mock_run_sql, client):
     assert response.status_code == 400
     assert response.data.decode() == "Invalid category. Allowed categories are: \"environmental_opportunity\", \"environmental_risk\", \"governance_opportunity\", \"governance_risk\", \"social_opportunity\", \"social_risk\""
 
+@patch("index.run_sql")
 # Check if several columns are selected, are they joined
 def test_get_valid_columns(mock_run_sql, client):
     """Test the /get route with valid columns."""
@@ -95,7 +98,8 @@ def test_get_valid_columns(mock_run_sql, client):
 # THE FOLLOWING TESTS CHECK THE /SLOWGET ROUTE
 ##########################################################################
 
-def test_slow_get_invalid_columns(mock_run_sql, client):
+@patch("index.run_sql")
+def test_slowget_invalid_columns(mock_run_sql, client):
     """Test the /slowget route with invalid columns."""
     response = client.get(
         "/slowget?columns=invalid_column&company_name=Tervita+Corp"
@@ -105,7 +109,8 @@ def test_slow_get_invalid_columns(mock_run_sql, client):
     assert response.status_code == 400
     assert response.data.decode() == "Invalid columns. Columns should be a comma-separated String of valid columns. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/961150999/Allowed+columns+for+get for valid columns."
 
-def test_slow_get_sql_exception(mock_run_sql, client):
+@patch("index.run_sql")
+def test_slowget_sql_exception(mock_run_sql, client):
     """Test the /slowget route when a SQL exception occurs."""
     # Simulate an exception in the run_sql function
     mock_run_sql.side_effect = Exception("SQL Exception occurred.")
@@ -115,8 +120,10 @@ def test_slow_get_sql_exception(mock_run_sql, client):
     )
     assert response.status_code == 500
     assert response.data.decode() == "SQL Exception likely caused by invalid conditions. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/960921696/get+and+slowget for instructions on how to use /get"
+
 # Test the route if not proivded with ESG risk or opp
-def test_slow_get_invalid_category(mock_run_sql, client):
+@patch("index.run_sql")
+def test_slowget_invalid_category(mock_run_sql, client):
     """Test the /slowget route with an invalid category."""
     # Make a GET request to the /slowget route with an invalid category
     response = client.get(
@@ -128,7 +135,8 @@ def test_slow_get_invalid_category(mock_run_sql, client):
     assert response.data.decode() == "Invalid category. Allowed categories are: \"environmental_opportunity\", \"environmental_risk\", \"governance_opportunity\", \"governance_risk\", \"social_opportunity\", \"social_risk\""
 
 # Check if several columns are selected, are they joined
-def test_slow_get_valid_columns(mock_run_sql, client):
+@patch("index.run_sql")
+def test_slowget_valid_columns(mock_run_sql, client):
     """Test the /slowget route with valid columns."""
     # Simulate a successful SQL query
     mock_run_sql.return_value = [
