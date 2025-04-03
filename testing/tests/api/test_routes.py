@@ -1,7 +1,7 @@
 import pytest
 from unittest.mock import patch
 from flask import Flask
-from index import app  # Importing the app from your index.py file
+from index import app # Import the Flask app from the index.py file
 
 @pytest.fixture
 def client():
@@ -28,11 +28,15 @@ def test_hello_route(client):
     assert response.status_code == 200
     assert response.data.decode() == "Hello, World! Its CABANA"
 
-# /get error checks
+##########################################################################
+# /GET ROUTE
+# THE FOLLOWING TESTS CHECK THE /GET ROUTE
+##########################################################################
+
 @patch("index.run_sql")  # Patch run_sql in the context of index.py where it's used
-def test_get_route_invalid_columns(mock_run_sql, client):
+def test_get_invalid_columns(mock_run_sql, client):
     """Test the /get route with invalid columns."""
-    # Make a GET request to the /get route with invalid columns
+
     response = client.get(
         "/get?category=environmental_risk&columns=invalid_column&company_name=Tervita+Corp"
     )
@@ -41,8 +45,7 @@ def test_get_route_invalid_columns(mock_run_sql, client):
     assert response.status_code == 400
     assert response.data.decode() == "Invalid columns. Columns should be a comma-separated String of valid columns. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/961150999/Allowed+columns+for+get for valid columns."
 
-@patch("index.run_sql")  # Patch run_sql in the context of index.py where it's used
-def test_get_route_sql_exception(mock_run_sql, client):
+def test_get_sql_exception(mock_run_sql, client):
     """Test the /get route when a SQL exception occurs."""
     # Simulate an exception in the run_sql function
     mock_run_sql.side_effect = Exception("SQL Exception occurred.")
@@ -55,3 +58,90 @@ def test_get_route_sql_exception(mock_run_sql, client):
     # Assertions
     assert response.status_code == 500
     assert response.data.decode() == "SQL Exception likely caused by invalid conditions. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/960921696/get+and+slowget for instructions on how to use /get"
+
+# Test the route if not proivded with ESG risk or opp
+def test_get_invalid_category(mock_run_sql, client):
+    """Test the /get route with an invalid category."""
+    # Make a GET request to the /get route with an invalid category
+    response = client.get(
+        "/get?category=invalid_category&columns=company_name,metric_name,metric_value&company_name=Tervita+Corp"
+    )
+
+    # Assertions
+    assert response.status_code == 400
+    assert response.data.decode() == "Invalid category. Allowed categories are: \"environmental_opportunity\", \"environmental_risk\", \"governance_opportunity\", \"governance_risk\", \"social_opportunity\", \"social_risk\""
+
+# Check if several columns are selected, are they joined
+def test_get_valid_columns(mock_run_sql, client):
+    """Test the /get route with valid columns."""
+    # Simulate a successful SQL query
+    mock_run_sql.return_value = [
+        {"company_name": "Tervita Corp", "metric_name": "SOXEMISSIONS", "metric_value": 100}
+    ]
+
+    # Make a GET request to the /get route with valid columns
+    response = client.get(
+        "/get?category=environmental_risk&columns=company_name,metric_name,metric_value&company_name=Tervita+Corp"
+    )
+
+    # Assertions
+    assert response.status_code == 200
+    assert response.json == [
+        {"company_name": "Tervita Corp", "metric_name": "SOXEMISSIONS", "metric_value": 100}
+    ]
+
+##########################################################################
+# /SLOWGET ROUTE
+# THE FOLLOWING TESTS CHECK THE /SLOWGET ROUTE
+##########################################################################
+
+def test_slow_get_invalid_columns(mock_run_sql, client):
+    """Test the /slowget route with invalid columns."""
+    response = client.get(
+        "/slowget?columns=invalid_column&company_name=Tervita+Corp"
+    )
+
+    # Assertions
+    assert response.status_code == 400
+    assert response.data.decode() == "Invalid columns. Columns should be a comma-separated String of valid columns. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/961150999/Allowed+columns+for+get for valid columns."
+
+def test_slow_get_sql_exception(mock_run_sql, client):
+    """Test the /slowget route when a SQL exception occurs."""
+    # Simulate an exception in the run_sql function
+    mock_run_sql.side_effect = Exception("SQL Exception occurred.")
+    # Make a GET request to the /slowget route
+    response = client.get(
+        "/slowget?columns=company_name,metric_name,metric_value&company_name=Tervita+Corp"
+    )
+    assert response.status_code == 500
+    assert response.data.decode() == "SQL Exception likely caused by invalid conditions. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/960921696/get+and+slowget for instructions on how to use /get"
+# Test the route if not proivded with ESG risk or opp
+def test_slow_get_invalid_category(mock_run_sql, client):
+    """Test the /slowget route with an invalid category."""
+    # Make a GET request to the /slowget route with an invalid category
+    response = client.get(
+        "/slowget?category=invalid_category&columns=company_name,metric_name,metric_value&company_name=Tervita+Corp"
+    )
+
+    # Assertions
+    assert response.status_code == 400
+    assert response.data.decode() == "Invalid category. Allowed categories are: \"environmental_opportunity\", \"environmental_risk\", \"governance_opportunity\", \"governance_risk\", \"social_opportunity\", \"social_risk\""
+
+# Check if several columns are selected, are they joined
+def test_slow_get_valid_columns(mock_run_sql, client):
+    """Test the /slowget route with valid columns."""
+    # Simulate a successful SQL query
+    mock_run_sql.return_value = [
+        {"company_name": "Tervita Corp", "metric_name": "SOXEMISSIONS", "metric_value": 100}
+    ]
+
+    # Make a GET request to the /slowget route with valid columns
+    response = client.get(
+        "/slowget?columns=company_name,metric_name,metric_value&company_name=Tervita+Corp"
+    )
+
+    # Assertions
+    assert response.status_code == 200
+    assert response.json == [
+        {"company_name": "Tervita Corp", "metric_name": "SOXEMISSIONS", "metric_value": 100}
+    ]
