@@ -15,11 +15,9 @@ def client():
     with app.test_client() as client:
         yield client
 
-def test_getCompanies_valid_industry(mock_run_sql, client):
+def test_getCompanies_valid_industry(client):
     """Test the /getCompanies route with a valid industry."""
-    # Simulate a successful SQL query
-    mock_run_sql.return_value = [{"company_name": "PrimeCity Investment PLC"}]
-
+   
     # Make a GET request to the /getCompanies route
     response = client.get(
         "/getCompanies?industry=Airlines"
