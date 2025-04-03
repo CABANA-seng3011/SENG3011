@@ -37,4 +37,4 @@ ENV FLASK_APP=index.py
 EXPOSE 5000
 
 # Run Flask on custom port
-CMD ["flask", "run", "--host=0.0.0.0", "--port=5050"]
+CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]
