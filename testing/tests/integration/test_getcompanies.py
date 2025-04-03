@@ -23,7 +23,7 @@ def test_getCompanies_valid_industry(mock_run_sql, client):
 
     # Make a GET request to the /getCompanies route
     response = client.get(
-        "/getCompanies?industry=Real+Estate"
+        "/getCompanies?industry=Airlines"
     )
 
     # Assertions
