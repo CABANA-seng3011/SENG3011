@@ -1,12 +1,13 @@
 import pytest
 from unittest.mock import patch
 from flask import Flask, jsonify
-from index import app # Import the Flask app from the index.py file
+from index import app
 
-##########################################################################
+########################################################################################################
 # /SLOWGET ROUTE
 # THE FOLLOWING TESTS CHECK THE /SLOWGET ROUTE
-##########################################################################
+# THE TESTS CHECK FOR VALID AND INVALID COLUMNS, SQL EXCEPTIONS, AND INVALID CATEGORIES
+########################################################################################################
 
 @pytest.fixture
 def client():
@@ -47,7 +48,6 @@ def test_slowget_invalid_category(mock_run_sql, client):
         "/slowget?category=invalid_category&columns=company_name,metric_name,metric_value&company_name=Tervita+Corp"
     )
 
-    # Assertions
     assert response.status_code == 500
 
 # Check if several columns are selected, are they joined

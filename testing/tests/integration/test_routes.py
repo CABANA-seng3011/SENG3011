@@ -1,7 +1,12 @@
 import pytest
 from unittest.mock import patch
 from flask import Flask, jsonify
-from index import app # Import the Flask app from the index.py file
+from index import app
+
+########################################################################################################
+# BASIC ROUTES
+# THE FOLLOWING TESTS CHECK THE SANITY CHECK ROUTES
+########################################################################################################
 
 @pytest.fixture
 def client():
