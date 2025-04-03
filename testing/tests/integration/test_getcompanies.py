@@ -13,6 +13,8 @@ def client():
 def test_getCompanies_valid_industry(mock_run_sql, client):
     """Test the /getCompanies route with a valid industry."""
 
+    mock_run_sql.return_value = {"companies": ["Cardinal Ethanol LLC"]}
+
     # Make a GET request to the /getCompanies route
     response = client.get("/getCompanies?industry=Biofuels")
 
@@ -29,7 +31,8 @@ def test_getCompanies_no_industry(client):
         "Invalid params, please specify an industry. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/964329628/Available+Companies+and+Industries for allowed industries."
     )
 
-def test_getCompanies_invalid_industry(client):
+@patch("index.run_sql_raw")
+def test_getCompanies_invalid_industry(mock_run_sql, client):
     """Test the /getCompanies route with an invalid industry."""
 
     # Make a GET request to the /getCompanies route with an invalid industry
