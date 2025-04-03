@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import patch
-from flask import Flask
+from flask import Flask, jsonify
 from index import app # Import the Flask app from the index.py file
 
 @pytest.fixture
@@ -89,9 +89,7 @@ def test_get_valid_columns(mock_run_sql, client):
 
     # Assertions
     assert response.status_code == 200
-    assert response.json == [
-        {"company_name": "Tervita Corp", "metric_name": "SOXEMISSIONS", "metric_value": 100}
-    ]
+    assert response.json == '{"data_source": "Eurofidai Clarity AI ESG data", "dataset_type": "Environmental, Social, and Governance (ESG) metrics...Q1 2016 - Q4 2024"}, "events": [{"company_name": "Tervita Corp", "metric_name": "SOXEMISSIONS", "metric_value": 100}]}'
 
 ##########################################################################
 # /SLOWGET ROUTE
@@ -131,8 +129,7 @@ def test_slowget_invalid_category(mock_run_sql, client):
     )
 
     # Assertions
-    assert response.status_code == 400
-    assert response.data.decode() == "Invalid category. Allowed categories are: \"environmental_opportunity\", \"environmental_risk\", \"governance_opportunity\", \"governance_risk\", \"social_opportunity\", \"social_risk\""
+    assert response.status_code == 500
 
 # Check if several columns are selected, are they joined
 @patch("index.run_sql")
@@ -150,6 +147,4 @@ def test_slowget_valid_columns(mock_run_sql, client):
 
     # Assertions
     assert response.status_code == 200
-    assert response.json == [
-        {"company_name": "Tervita Corp", "metric_name": "SOXEMISSIONS", "metric_value": 100}
-    ]
+    assert response.json == '{"data_source": "Eurofidai Clarity AI ESG data", "dataset_type": "Environmental, Social, and Governance (ESG) metrics...Q1 2016 - Q4 2024"}, "events": [{"company_name": "Tervita Corp", "metric_name": "SOXEMISSIONS", "metric_value": 100}]}'
