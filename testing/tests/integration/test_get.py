@@ -15,8 +15,7 @@ def client():
     with app.test_client() as client:
         yield client
         
-@patch("index.run_sql")  # Patch run_sql in the context of index.py where it's used
-def test_get_invalid_columns(mock_run_sql, client):
+def test_get_invalid_columns(client):
     """Test the /get route with invalid columns."""
 
     response = client.get(
@@ -42,9 +41,8 @@ def test_get_sql_exception(mock_run_sql, client):
     assert response.status_code == 500
     assert response.data.decode() == "SQL Exception likely caused by invalid conditions. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/960921696/get+and+slowget for instructions on how to use /get"
 
-@patch("index.run_sql")
 # Test the route if not proivded with ESG risk or opp
-def test_get_invalid_category(mock_run_sql, client):
+def test_get_invalid_category(client):
     """Test the /get route with an invalid category."""
     # Make a GET request to the /get route with an invalid category
     response = client.get(
