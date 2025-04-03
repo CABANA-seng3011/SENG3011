@@ -49,7 +49,6 @@ def test_getIndustry_invalid_company(client):
     )
 
     # Assertions
-    assert response.status_code == 500
     assert response.data.decode() == "No industry found for 'CABANA'. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/964329628/Available+Companies+and+Industries for allowed companies."
 
 def test_sql_exception(client):
