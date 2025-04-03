@@ -6,7 +6,9 @@ on:
     types:
       - completed
   push:
-    branches: [ "main", "HIGH_VOLUME_ENV" ]
+    branches: [ "HIGH_VOLUME_ENV" ]
+  pull_request:
+    branches: [ "HIGH_VOLUME_ENV" ] 
 
 jobs:
   build:

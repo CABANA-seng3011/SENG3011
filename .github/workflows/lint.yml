@@ -2,7 +2,9 @@ name: Linting
 
 on:
   push:
-    branches: [ "main", "STAGING_ENV" ]
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   lint:
