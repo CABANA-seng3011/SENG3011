@@ -30,7 +30,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the app
 COPY . .
 
-# Set Flask environment variable
+# Set Flask environment variable dummy 1
 ENV FLASK_APP=index.py
 
 # Expose the desired port
