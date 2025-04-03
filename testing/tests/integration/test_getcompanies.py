@@ -41,3 +41,18 @@ def test_getCompanies_invalid_industry(mock_run_sql, client):
 
     assert response.status_code == 400
     assert response.data.decode() == "No companies found for 'CABANA'. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/964329628/Available+Companies+and+Industries for allowed industries"
+
+def test_sql_exception(client):
+    """Test the /getCompanies route when a SQL exception occurs."""
+    # Simulate an exception in the run_sql function
+    with patch("index.run_sql_raw") as mock_run_sql:
+        mock_run_sql.side_effect = Exception("SQL Exception occurred.")
+        
+        # Make a GET request to the /getIndustry route
+        response = client.get(
+            "/getCompanies?industry=Airlines"
+        )
+
+        # Assertions
+        assert response.status_code == 500
+        assert response.data.decode() == "SQL Exception occurred."
