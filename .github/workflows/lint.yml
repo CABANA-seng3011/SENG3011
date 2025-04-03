@@ -2,7 +2,7 @@ name: Linting
 
 on:
   push:
-    branches: [ "STAGING_ENV" ]
+    branches: [ "main", "STAGING_ENV" ]
 
 jobs:
   lint:

@@ -6,7 +6,7 @@ on:
     types:
       - completed
   push:
-    branches: [ "STAGING_ENV" ] 
+    branches: [ "main", "STAGING_ENV" ]
 
 jobs:
   build:
