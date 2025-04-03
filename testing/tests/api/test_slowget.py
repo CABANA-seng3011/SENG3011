@@ -8,6 +8,13 @@ from index import app # Import the Flask app from the index.py file
 # THE FOLLOWING TESTS CHECK THE /SLOWGET ROUTE
 ##########################################################################
 
+@pytest.fixture
+def client():
+    """Fixture to create a test client for the Flask app."""
+    app.config["TESTING"] = True
+    with app.test_client() as client:
+        yield client
+        
 @patch("index.run_sql")
 def test_slowget_invalid_columns(mock_run_sql, client):
     """Test the /slowget route with invalid columns."""

@@ -8,6 +8,13 @@ from index import app
 # THE FOLLOWING TESTS CHECK THE /GET ROUTE
 ##########################################################################
 
+@pytest.fixture
+def client():
+    """Fixture to create a test client for the Flask app."""
+    app.config["TESTING"] = True
+    with app.test_client() as client:
+        yield client
+        
 @patch("index.run_sql")  # Patch run_sql in the context of index.py where it's used
 def test_get_invalid_columns(mock_run_sql, client):
     """Test the /get route with invalid columns."""
