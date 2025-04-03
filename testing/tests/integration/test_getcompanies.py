@@ -15,7 +15,6 @@ def client():
     with app.test_client() as client:
         yield client
 
-@patch("index.run_sql_raw")
 def test_getCompanies_valid_industry(mock_run_sql, client):
     """Test the /getCompanies route with a valid industry."""
     # Simulate a successful SQL query
@@ -30,7 +29,6 @@ def test_getCompanies_valid_industry(mock_run_sql, client):
     assert response.status_code == 200
     assert response.json == {"company_name": "PrimeCity Investment PLC"}
 
-@patch("index.run_sql_raw")
 def test_getCompanies_no_industry(client):
     """Test the /getCompanies route with no industry."""
     # Make a GET request to the /getCompanies route with no industry
