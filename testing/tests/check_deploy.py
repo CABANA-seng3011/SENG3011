@@ -1,6 +1,13 @@
 import json
 import requests
 
+########################################################################################################
+# PRODUCTION TESTS
+# THE FOLLOWING TESTS CHECK THE PRODUCTION API ENDPOINTS
+# THE TESTS CHECK THE GET, GETINDUSTRY, AND GETCOMPANIES ENDPOINTS
+# THE TESTS CHECK FOR VALID RESPONSES, INVALID RESPONSES, AND ERROR HANDLING
+########################################################################################################
+
 class Style():
   BLUE = "\033[34m"
   RESET = "\033[0m"
