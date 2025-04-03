@@ -9,8 +9,8 @@ def client():
     with app.test_client() as client:
         yield client
 
-@patch("index.run_sql")
-def test_getCompanies_valid_industry(client):
+@patch("index.run_sql_raw")
+def test_getCompanies_valid_industry(mock_run_sql, client):
     """Test the /getCompanies route with a valid industry."""
 
     # Make a GET request to the /getCompanies route
