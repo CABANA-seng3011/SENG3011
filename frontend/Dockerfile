@@ -51,7 +51,7 @@ COPY yarn*.lock ./
 RUN yarn install
 
 # Copy the rest of the application code
-COPY ./cabana .
+COPY . .
 
 # Expose Next.js port
 EXPOSE 3000
