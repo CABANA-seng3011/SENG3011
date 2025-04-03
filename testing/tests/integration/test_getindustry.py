@@ -15,11 +15,8 @@ def client():
     with app.test_client() as client:
         yield client
 
-@patch("index.run_sql")
-def test_getIndustry_valid_company(mock_run_sql, client):
+def test_getIndustry_valid_company(client):
     """Test the /getIndustry route with a valid company."""
-    # Simulate a successful SQL query
-    mock_run_sql.return_value = [{"industry": "Real Estate"}]
 
     # Make a GET request to the /getIndustry route
     response = client.get(
@@ -41,8 +38,7 @@ def test_getIndustry_no_company(client):
     assert response.status_code == 400
     assert response.data.decode() == "Invalid params, please specify a company. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/964329628/Available+Companies+and+Industries for allowed companies."
 
-@patch("index.run_sql")
-def test_getIndustry_invalid_company(mock_run_sql, client):
+def test_getIndustry_invalid_company(client):
     """Test the /getIndustry route without providing a valid company."""
     # Make a GET request to the /getIndustry route with an invalid company
     response = client.get(
