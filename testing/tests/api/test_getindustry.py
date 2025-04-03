@@ -15,7 +15,6 @@ def client():
     with app.test_client() as client:
         yield client
 
-@patch("index.run_sql")  # Patch run_sql in the context of index.py where it's used
 def test_getIndustry_valid_company(mock_run_sql, client):
     """Test the /getIndustry route with a valid company."""
     # Simulate a successful SQL query
@@ -30,7 +29,6 @@ def test_getIndustry_valid_company(mock_run_sql, client):
     assert response.status_code == 200
     assert response.json == {"industry": "Real Estate"}
 
-@patch("index.run_sql") 
 def test_getIndustry_no_company(client):
     """Test the /getIndustry route with an invalid company."""
     # Make a GET request to the /getIndustry route with no company
@@ -53,7 +51,6 @@ def test_getIndustry_invalid_company(client):
     assert response.status_code == 400
     assert response.data.decode() == "No industry found for 'CABANA'. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/964329628/Available+Companies+and+Industries for allowed companies."
 
-@patch("index.run_sql")
 def test_sql_exception(client):
     """Test the /getIndustry route when a SQL exception occurs."""
     # Simulate an exception in the run_sql function
