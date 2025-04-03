@@ -21,7 +21,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      # Build and push Flask API multi-arch Docker image
+      # Build and push Flask API multi-arch Docker image dummy 1
       - name: Build and Push Flask API Docker image (multi-arch)
         run: |
           docker buildx build --platform linux/amd64,linux/arm64 \
