@@ -34,7 +34,7 @@ COPY . .
 ENV FLASK_APP=index.py
 
 # Expose the desired port
-EXPOSE 5050
+EXPOSE 5000
 
 # Run Flask on custom port
 CMD ["flask", "run", "--host=0.0.0.0", "--port=5050"]
