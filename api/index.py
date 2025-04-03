@@ -4,6 +4,7 @@ from db import run_sql, run_sql_raw
 
 from flask_cors import CORS
 
+# dummy commit 1
 # To run the app: flask --app index run
 app = Flask(__name__)
 CORS(app)
