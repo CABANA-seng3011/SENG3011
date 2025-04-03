@@ -15,6 +15,7 @@ def client():
     with app.test_client() as client:
         yield client
 
+@patch("index.run_sql")
 def test_getIndustry_valid_company(mock_run_sql, client):
     """Test the /getIndustry route with a valid company."""
     # Simulate a successful SQL query
