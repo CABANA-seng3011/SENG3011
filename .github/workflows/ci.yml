@@ -2,7 +2,7 @@ name: CI Pipeline
 
 on:
   push:
-    branches: [ "deployment_test_byron" ]  # Change to the branch you want to trigger builds
+    branches: [ "deployment_test_byron" ] 
 
 jobs:
   build-and-push:
@@ -20,8 +20,8 @@ jobs:
 
       # Build and push Flask API Docker image
       - name: Build the Flask API Docker image
-        # run: docker build -t bpetselis01/flask-api -f flask-api/Dockerfile . # This is the original command
-        run: docker build -t bpetselis01/flask-api -f flask-api/Dockerfile flask-api
+        # run: docker build -t bpetselis01/flask-api -f api/Dockerfile . # This is the original command
+        run: docker build -t bpetselis01/flask-api -f api/Dockerfile api
 
       - name: Push to DockerHub
         run: docker push bpetselis01/flask-api:latest
