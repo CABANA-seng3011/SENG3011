@@ -1,0 +1,30 @@
+name: External Test Suite
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  external-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Current Repo
+        uses: actions/checkout@v4
+
+      - name: Checkout code from external
+        uses: actions/checkout@v4
+        with:
+          repository: ChunYipMan/CABANA-testing
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies and run tests
+        run: |
+          cd CABANA-testing
+          pip install --no-cache-dir -r requirements.txt
+          pytest external-tests.py
