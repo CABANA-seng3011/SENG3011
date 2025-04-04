@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, Response
 from esg_functions import create_sql_query, get_industry, get_companies, valid_category, valid_columns, ALLOWED_COLUMNS, create_column_array, create_adage_data_model, create_companies_response
+from ticker_functions import query_ticker, query_name, create_adage_data_model_fin
 from db import run_sql, run_sql_raw
 
 from flask_cors import CORS
@@ -135,9 +136,49 @@ def getCompanies():
         res = "SQL Exception occurred."
         return Response (res, 500)
 
-# Vercel-specific handler
-def handler(event, context):
-    return app(event, context)
+    
+# Example of use: curl "http://127.0.0.1:5000/searchTicker?ticker=AAPL"
+@app.route('/searchTicker', methods=['GET'])
+def getFromTicker():
+    ticker = request.args.get("ticker")
+    if not ticker:
+        res = "Invalid params, please specify a stock ticker, eg: \"AAPL\"."
+        return Response (res, 400)
+    
+    try:
+        events = query_ticker(ticker)
+        
+        if len(events) == 0:
+            res = f"No events found for ticker: {ticker}. Please ensure your spelling is correct."
+            return Response (res, 200)
+        else:
+            res = create_adage_data_model_fin(events)
+            return jsonify(res)
+    
+    except Exception as e:
+        res = "An Exception occurred."
+        return Response (res, 500)
+
+# Example of use: curl "http://127.0.0.1:5000/searchName?name=Apple"
+@app.route('/searchName', methods=['GET'])
+def getFromName():
+    name = request.args.get("name")
+    if not name:
+        res = "Invalid params, please specify a company name, eg: \"Apple\"."
+        return Response (res, 400)
+    
+    try:
+        events = query_name(name)
+        if len(events) == 0:
+            res = f"No events found for company name: {name}. Please ensure your spelling is correct."
+            return Response (res, 200)
+        else:
+            res = create_adage_data_model_fin(events)
+            return jsonify(res)
+    
+    except Exception as e:
+        res = "An Exception occurred."
+        return Response (res, 500)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
