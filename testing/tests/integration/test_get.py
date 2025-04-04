@@ -49,7 +49,7 @@ def test_get_valid_columns(mock_run_sql, client):
         {"company_name": "Tervita Corp", "metric_name": "SOXEMISSIONS", "metric_value": 100}
     ]
 
-    # Make a GET request to the /get route with valid column
+    # Make a GET request to the /get route with valid columns
     response = client.get(
         "/get?category=environmental_risk&columns=company_name,metric_name,metric_value&company_name=Tervita+Corp"
     )
