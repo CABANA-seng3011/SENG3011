@@ -44,8 +44,8 @@ FROM node:20
 WORKDIR /cabana
 
 # Copy only package.json and yarn.lock first (dependency caching)
-COPY package*.json ./
-COPY yarn*.lock ./
+COPY package.json ./
+COPY yarn.lock ./
 
 # Install dependencies
 RUN yarn install
