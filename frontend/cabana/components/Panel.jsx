@@ -1,20 +1,20 @@
 import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 
-function Panel({ text }) {
+function Panel({ text, imagePath, imageAlt }) {
   return (
     <Box sx={{ position: 'relative', maxWidth: '100%', height: '500px', overflow: 'hidden' }}>
       <Image
         unoptimized
-        src="/earth.webp"
-        alt="Picture of the earth"
+        src={imagePath}
+        alt={imageAlt}
         width={3000}
-        height={200}
-        layout="intrinsic"
-        objectFit="cover"
+        height={100}
+        layout='intrinsic'
+        objectFit='cover'
       />
       <Typography
-        variant="h1"
+        variant='h1'
         sx={{
           position: 'absolute',
           top: '50%',

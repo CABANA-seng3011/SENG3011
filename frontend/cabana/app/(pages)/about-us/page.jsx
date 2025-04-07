@@ -15,16 +15,15 @@ const govDesc = 'The governance pillar emphasises corporate transparency, leader
 export default function ESGPage() {
   return (
     <>
-      <Header/>
-      <Panel text="The ESG Pillars" />
+      <Panel text='The ESG Pillars' imagePath='/earth.webp' imageAlt='Picture of the earth' />
       <Container 
         maxWidth='lg'
         height='100vh'
         py='4'
       >
         <Typography 
-          textAlign="center" 
-          variant="h6" 
+          textAlign='center' 
+          variant='h6' 
           sx={{
             margin: '30px 0', 
             fontWeight: 'bold',
@@ -33,8 +32,8 @@ export default function ESGPage() {
           {esgDesc1}
         </Typography>
         <Typography 
-          textAlign="center" 
-          variant="h6" 
+          textAlign='center' 
+          variant='h6' 
           sx={{
             margin: '30px 0',
             fontWeight: 'bold',
