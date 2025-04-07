@@ -120,8 +120,7 @@ export default function getRouteDemo() {
 
   return (
     <Box className='flex flex-col items-center justify-center min-h-screen space-y-6'>
-      <Header />
-      <Panel text='Demo for /get'/>
+      <Panel text='Demo for /get' imagePath={null} imageAlt='null' />
       <Typography variant='h4' className='font-bold'>ESG Data Viewer</Typography>
       
       <TextField
