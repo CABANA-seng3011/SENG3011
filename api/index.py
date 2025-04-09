@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, Response
-from esg_functions import create_sql_query, get_industry, get_companies, valid_category, valid_columns, ALLOWED_COLUMNS, create_column_array, create_adage_data_model, create_companies_response
+from esg_functions import create_sql_query, get_industry, get_companies, valid_category, valid_columns, create_column_array, create_adage_data_model, create_companies_response
+from constants import ALLOWED_COLUMNS
 from ticker_functions import query_ticker, query_name, create_adage_data_model_fin
 from db import run_sql, run_sql_raw
 
