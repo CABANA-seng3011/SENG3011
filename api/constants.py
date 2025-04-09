@@ -1,6 +1,11 @@
-from dotenv import load_dotenv, find_dotenv
-import os
-import psycopg2
+# Allowed categories for the /get function
+ALLOWED_CATEGORIES = ["esg", "environmental_opportunity", "environmental_risk", "governance_opportunity", 
+                      "governance_risk", "social_opportunity", "social_risk"]
+
+# Allowed columns for the /get function
+ALLOWED_COLUMNS = ["company_name", "perm_id", "data_type", "disclosure", "metric_description", "metric_name", "metric_unit",
+                       "metric_value", "metric_year", "nb_points_of_observations", "metric_period", "provider_name", 
+                       "reported_date", "pillar", "headquarter_country", "category"]
 
 # Most companies in the NASDAQ 100, except ARM Holdings PLC ADR since our ESG data has no data for this
 # As seen in: https://www.slickcharts.com/nasdaq100
@@ -16,41 +21,3 @@ NASDAQ_100 = [
     "Take-Two Interactive Software Inc", "Cognizant Technology Solutions Corp", "Old Dominion Freight Line Inc", "IDEXX Laboratories Inc", "Atlassian Corporation Ltd", "Lululemon Athletica Inc", "CoStar Group Inc", "Datadog Inc", "Ge Healthcare Technologies", "Zscaler Inc",
     "ANSYS Inc", "Dexcom Inc", "Trade Desk Inc", "Warner Bros Discovery Inc", "Microchip Technology Inc", "CDW Corp", "Biogen Inc", "GlobalFoundries Inc", "ON Semiconductor Corp", "MongoDB Inc"
 ]
-
-def get_industry(company):
-    sql = """
-    SELECT industry FROM industry
-    WHERE company = '{}'
-    """.format(company)
-    return sql
-
-found_companies = 0
-
-load_dotenv(find_dotenv())
-try:
-    # Establish connection
-    conn = psycopg2.connect(
-        host=os.getenv("DB_HOST"),
-        port=os.getenv("DB_PORT"),
-        database=os.getenv("DB_NAME"),
-        user=os.getenv("DB_USER"),
-        password=os.getenv("DB_PASSWORD")
-    )
-    cursor = conn.cursor()
-
-    for company in NASDAQ_100:
-        sql = get_industry(company)
-        cursor.execute(sql)
-        rows = cursor.fetchall()
-        if len(rows) == 0:
-            print(f"No industry found for {company}")
-        else:
-            found_companies += 1
-            print(f"Found companies: {found_companies}")
-
-    # Close connection and return results
-    cursor.close()
-    conn.close()
-    
-except Exception as e:
-    raise e
