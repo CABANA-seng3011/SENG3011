@@ -1,6 +1,7 @@
 from dotenv import load_dotenv, find_dotenv
 import os
 import psycopg2
+from datetime import datetime
 
 # Allowed categories for the /get function
 ALLOWED_CATEGORIES = ["esg", "environmental_opportunity", "environmental_risk", "governance_opportunity", 
@@ -14,10 +15,9 @@ ALLOWED_COLUMNS = ["company_name", "perm_id", "data_type", "disclosure", "metric
 # Most companies in the NASDAQ 100, except ARM Holdings PLC ADR since our ESG data has no data for this
 # As seen in: https://www.slickcharts.com/nasdaq100
 NASDAQ_100 = [
-    # "Apple Inc", "Microsoft Corp", "NVIDIA Corp", "Amazon.com Inc", "Broadcom Inc", "Meta Platforms Inc", "Costco Wholesale Corp", "Netflix Inc", "Tesla Inc", "Alphabet Inc",
-    # "T-Mobile US Inc", "Cisco Systems Inc", "Linde PLC", "PepsiCo Inc", "Palantir Technologies Inc", "Intuitive Surgical Inc", "Amgen Inc", "Intuit Inc", "Adobe Inc",
-    # "Qualcomm Inc", "Booking Holdings Inc", "Advanced Micro Devices Inc", "Texas Instruments Inc", "Gilead Sciences Inc", 
-    "Comcast Corp", "Honeywell International Inc", "Vertex Pharmaceuticals Inc", "Automatic Data Processing Inc", "Applied Materials Inc",
+    "Apple Inc", "Microsoft Corp", "NVIDIA Corp", "Amazon.com Inc", "Broadcom Inc", "Meta Platforms Inc", "Costco Wholesale Corp", "Netflix Inc", "Tesla Inc", "Alphabet Inc",
+    "T-Mobile US Inc", "Cisco Systems Inc", "Linde PLC", "PepsiCo Inc", "Palantir Technologies Inc", "Intuitive Surgical Inc", "Amgen Inc", "Intuit Inc", "Adobe Inc",
+    "Qualcomm Inc", "Booking Holdings Inc", "Advanced Micro Devices Inc", "Texas Instruments Inc", "Gilead Sciences Inc", "Comcast Corp", "Honeywell International Inc", "Vertex Pharmaceuticals Inc", "Automatic Data Processing Inc", "Applied Materials Inc",
     "Palo Alto Networks Inc", "MercadoLibre Inc", "Starbucks Corp", "Intel Corp", "Mondelez International Inc", "Analog Devices Inc", "O''Reilly Automotive Inc", "Cintas Corp", "KLA Corp", "Lam Research Corp",
     "CrowdStrike Holdings Inc", "Micron Technology Inc", "Microstrategy Inc", "PDD Holdings Inc", "Applovin Corp", "Fortinet Inc", "DoorDash Inc", "Cadence Design Systems Inc", "Regeneron Pharmaceuticals Inc", "Synopsys Inc",
     "Marriott International Inc", "Roper Technologies Inc", "PayPal Holdings Inc", "American Electric Power Company Inc", "Monster Beverage Corp", "ASML Holding NV", "Constellation Energy Corp", "Autodesk Inc", "Copart Inc", "Paychex Inc",
@@ -66,24 +66,39 @@ try:
     cursor = conn.cursor()
 
     num = 1
+    total_rows = 0
     for company in NASDAQ_100:
-        print(f"{num}: Inserting {company}...")
+        time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
+        # Insert rows
+        print(f"{num} {time}: Inserting {company}...")
         sql = get_sql(company)
         cursor.execute(sql)
+        conn.commit()
 
-        print(f"{num}: Checking {company}...")
+        # Check rows
+        print(f"{num} {time}: Checking {company}...")
         sql = check(company)
         cursor.execute(sql)
         rows = cursor.fetchall()
 
+        total_rows += len(rows)
         if len(rows) == 0:
-            print(f"Found no rows for {company} :(")
+            print(f"{num} {time}: Found no rows for {company} :(")
         else:
-            print(f"Found {len(rows)} rows for {company}")
+            print(f"{num} {time}: Found {len(rows)} rows for {company}")
         
         num += 1
 
-    # Close connection and return results
+    # Check all rows
+    sql = check_all()
+    cursor.execute(sql)
+    rows = cursor.fetchall()
+    print(f"EXPECTED: Fetched {total_rows} rows")
+    print(f"ACTUAL: Fetched {len(rows)} rows")
+    
+    # Commit the transaction, Close connection and return results
+    conn.commit()
     cursor.close()
     conn.close()
 
