@@ -1,3 +1,7 @@
+from dotenv import load_dotenv, find_dotenv
+import os
+import psycopg2
+
 # Allowed categories for the /get function
 ALLOWED_CATEGORIES = ["esg", "environmental_opportunity", "environmental_risk", "governance_opportunity", 
                       "governance_risk", "social_opportunity", "social_risk"]
@@ -10,9 +14,10 @@ ALLOWED_COLUMNS = ["company_name", "perm_id", "data_type", "disclosure", "metric
 # Most companies in the NASDAQ 100, except ARM Holdings PLC ADR since our ESG data has no data for this
 # As seen in: https://www.slickcharts.com/nasdaq100
 NASDAQ_100 = [
-    "Apple Inc", "Microsoft Corp", "NVIDIA Corp", "Amazon.com Inc", "Broadcom Inc", "Meta Platforms Inc", "Costco Wholesale Corp", "Netflix Inc", "Tesla Inc", "Alphabet Inc",
-    "T-Mobile US Inc", "Cisco Systems Inc", "Linde PLC", "PepsiCo Inc", "Palantir Technologies Inc", "Intuitive Surgical Inc", "Amgen Inc", "Intuit Inc", "Adobe Inc",
-    "Qualcomm Inc", "Booking Holdings Inc", "Advanced Micro Devices Inc", "Texas Instruments Inc", "Gilead Sciences Inc", "Comcast Corp", "Honeywell International Inc", "Vertex Pharmaceuticals Inc", "Automatic Data Processing Inc", "Applied Materials Inc",
+    # "Apple Inc", "Microsoft Corp", "NVIDIA Corp", "Amazon.com Inc", "Broadcom Inc", "Meta Platforms Inc", "Costco Wholesale Corp", "Netflix Inc", "Tesla Inc", "Alphabet Inc",
+    # "T-Mobile US Inc", "Cisco Systems Inc", "Linde PLC", "PepsiCo Inc", "Palantir Technologies Inc", "Intuitive Surgical Inc", "Amgen Inc", "Intuit Inc", "Adobe Inc",
+    # "Qualcomm Inc", "Booking Holdings Inc", "Advanced Micro Devices Inc", "Texas Instruments Inc", "Gilead Sciences Inc", 
+    "Comcast Corp", "Honeywell International Inc", "Vertex Pharmaceuticals Inc", "Automatic Data Processing Inc", "Applied Materials Inc",
     "Palo Alto Networks Inc", "MercadoLibre Inc", "Starbucks Corp", "Intel Corp", "Mondelez International Inc", "Analog Devices Inc", "O''Reilly Automotive Inc", "Cintas Corp", "KLA Corp", "Lam Research Corp",
     "CrowdStrike Holdings Inc", "Micron Technology Inc", "Microstrategy Inc", "PDD Holdings Inc", "Applovin Corp", "Fortinet Inc", "DoorDash Inc", "Cadence Design Systems Inc", "Regeneron Pharmaceuticals Inc", "Synopsys Inc",
     "Marriott International Inc", "Roper Technologies Inc", "PayPal Holdings Inc", "American Electric Power Company Inc", "Monster Beverage Corp", "ASML Holding NV", "Constellation Energy Corp", "Autodesk Inc", "Copart Inc", "Paychex Inc",
@@ -21,3 +26,66 @@ NASDAQ_100 = [
     "Take-Two Interactive Software Inc", "Cognizant Technology Solutions Corp", "Old Dominion Freight Line Inc", "IDEXX Laboratories Inc", "Atlassian Corporation Ltd", "Lululemon Athletica Inc", "CoStar Group Inc", "Datadog Inc", "Ge Healthcare Technologies", "Zscaler Inc",
     "ANSYS Inc", "Dexcom Inc", "Trade Desk Inc", "Warner Bros Discovery Inc", "Microchip Technology Inc", "CDW Corp", "Biogen Inc", "GlobalFoundries Inc", "ON Semiconductor Corp", "MongoDB Inc"
 ]
+
+# Getting that esg data
+def get_sql(company):
+    sql = """
+    INSERT INTO esg_nasdaq_100 (company_name, perm_id, data_type, disclosure, metric_description, metric_name, metric_unit, metric_value, metric_year, nb_points_of_observations, metric_period, provider_name, reported_date, pillar, headquarter_country, category)
+    SELECT company_name, perm_id, data_type, disclosure, metric_description, metric_name, metric_unit, metric_value, metric_year, nb_points_of_observations, metric_period, provider_name, reported_date, pillar, headquarter_country, category
+    FROM esg
+    WHERE company_name='{}';
+    """.format(company)
+    return sql
+
+def check(company):
+    sql = """
+    SELECT company_name, perm_id, data_type, disclosure, metric_description, metric_name, metric_unit, metric_value, metric_year, nb_points_of_observations, metric_period, provider_name, reported_date, pillar, headquarter_country, category
+    FROM esg_nasdaq_100
+    WHERE company_name='{}';
+    """.format(company)
+    return sql
+
+def check_all():
+    sql = """
+    SELECT company_name, perm_id, data_type, disclosure, metric_description, metric_name, metric_unit, metric_value, metric_year, nb_points_of_observations, metric_period, provider_name, reported_date, pillar, headquarter_country, category
+    FROM esg_nasdaq_100
+    """
+    return sql
+
+load_dotenv(find_dotenv())
+
+try:
+    # Establish connection
+    conn = psycopg2.connect(
+        host=os.getenv("DB_HOST"),
+        port=os.getenv("DB_PORT"),
+        database=os.getenv("DB_NAME"),
+        user=os.getenv("DB_USER"),
+        password=os.getenv("DB_PASSWORD")
+    )
+    cursor = conn.cursor()
+
+    num = 1
+    for company in NASDAQ_100:
+        print(f"{num}: Inserting {company}...")
+        sql = get_sql(company)
+        cursor.execute(sql)
+
+        print(f"{num}: Checking {company}...")
+        sql = check(company)
+        cursor.execute(sql)
+        rows = cursor.fetchall()
+
+        if len(rows) == 0:
+            print(f"Found no rows for {company} :(")
+        else:
+            print(f"Found {len(rows)} rows for {company}")
+        
+        num += 1
+
+    # Close connection and return results
+    cursor.close()
+    conn.close()
+
+except Exception as e:
+    raise e
