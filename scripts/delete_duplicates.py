@@ -1,5 +1,16 @@
+###############################################################################
+#
+# delete_duplicates.py
+#
+# This script goes through each company in the nasdaq-100 table and ensures 
+# that there is at most one metric value for each metric name. This is done
+# by picking the most recent metric value. If there is no reported date, the
+# last appearing value is chosen.
+#
+###############################################################################
+
 from dotenv import load_dotenv, find_dotenv
-from api.constants import NASDAQ_100, ESG_METRICS
+from constants import NASDAQ_100, ESG_METRICS
 import os
 import psycopg2
 
@@ -19,9 +30,6 @@ def del_sql(row):
         reported_date = "AND reported_date IS NULL"
     else:
         reported_date = f"AND reported_date = \'{row[12]}\'"
-
-    # AND reported_date IS NULL
-    # AND reported_date = \'{row[12]}\'
 
     del_sql = f"""
     DELETE FROM esg_nasdaq_100

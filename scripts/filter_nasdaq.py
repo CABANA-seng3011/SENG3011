@@ -5,6 +5,8 @@
 # This script goes through all rows in esg_hub and returns only companies
 # that are in the NASDAQ-100
 #
+# DO NOT RUN unless esg_nasdaq_100 table is empty.
+#
 ###############################################################################
 
 from datetime import datetime
