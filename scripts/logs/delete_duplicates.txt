@@ -1,0 +1,995 @@
+>>> Deleting rows for Company Apple Inc...<<<
+>>> Company Apple Inc has 88 total rows <<<
+>>> The following metrics have 0 rows: ['CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'TRADEUNIONREP', 'EMPLOYEEFATALITIES', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Apple Inc finished with 88 successes, 8 warnings and 0 errors <<<
+>>> Deleting rows for Company Microsoft Corp...<<<
+>>> Company Microsoft Corp has 87 total rows <<<
+>>> The following metrics have 0 rows: ['CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICQMS', 'TRADEUNIONREP', 'EMPLOYEEFATALITIES', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Microsoft Corp finished with 87 successes, 9 warnings and 0 errors <<<
+>>> Deleting rows for Company NVIDIA Corp...<<<
+ERROR: Company NVIDIA Corp | Metric NOXEMISSIONS | Ended with 0 rows! Started with 4 rows.
+ERROR: Company NVIDIA Corp | Metric PARTICULATE_MATTER_EMISSIONS | Ended with 0 rows! Started with 2 rows.
+>>> Company NVIDIA Corp has 91 total rows <<<
+>>> The following metrics have 0 rows: ['CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company NVIDIA Corp finished with 91 successes, 3 warnings and 2 errors <<<
+>>> Deleting rows for Company Amazon.com Inc...<<<
+>>> Company Amazon.com Inc has 84 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'WASTE_RECYCLED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'TRADEUNIONREP', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Amazon.com Inc finished with 84 successes, 12 warnings and 0 errors <<<
+>>> Deleting rows for Company Broadcom Inc...<<<
+>>> Company Broadcom Inc has 87 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'AIRPOLLUTANTS_INDIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ELIMINATION_CUM_VOTING_RIGHTS', 'TRADEUNIONREP', 'GENDER_PAY_GAP_PERCENTAGE', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Broadcom Inc finished with 87 successes, 9 warnings and 0 errors <<<
+>>> Deleting rows for Company Meta Platforms Inc...<<<
+>>> Company Meta Platforms Inc has 85 total rows <<<
+>>> The following metrics have 0 rows: ['WASTE_RECYCLED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'EMPLOYEEFATALITIES', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Meta Platforms Inc finished with 85 successes, 11 warnings and 0 errors <<<
+>>> Deleting rows for Company Costco Wholesale Corp...<<<
+>>> Company Costco Wholesale Corp has 81 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'AIRPOLLUTANTS_DIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'HUMAN_RIGHTS_POLICY_DUEDILIGENCE', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BRIBERYAND_CORRUPTION', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL'] <<<
+>>> Company Costco Wholesale Corp finished with 81 successes, 15 warnings and 0 errors <<<
+>>> Deleting rows for Company Netflix Inc...<<<
+>>> Company Netflix Inc has 80 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPRODUCED', 'WASTE_RECYCLED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'COMMMEETINGSATTENDANCEAVG', 'ELIMINATION_CUM_VOTING_RIGHTS', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'TRADEUNIONREP', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Netflix Inc finished with 80 successes, 16 warnings and 0 errors <<<
+>>> Deleting rows for Company Tesla Inc...<<<
+>>> Company Tesla Inc has 86 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPURCHASED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'BOARDMEETINGATTENDANCEAVG', 'COMMMEETINGSATTENDANCEAVG', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Tesla Inc finished with 86 successes, 10 warnings and 0 errors <<<
+>>> Deleting rows for Company Alphabet Inc...<<<
+>>> Company Alphabet Inc has 86 total rows <<<
+>>> The following metrics have 0 rows: ['AIRPOLLUTANTS_INDIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'EMPLOYEEFATALITIES', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Alphabet Inc finished with 86 successes, 10 warnings and 0 errors <<<
+>>> Deleting rows for Company T-Mobile US Inc...<<<
+>>> Company T-Mobile US Inc has 87 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPRODUCED', 'AIRPOLLUTANTS_INDIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'TRADEUNIONREP', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TURNOVEREMPLOYEES'] <<<
+>>> Company T-Mobile US Inc finished with 87 successes, 9 warnings and 0 errors <<<
+>>> Deleting rows for Company Cisco Systems Inc...<<<
+>>> Company Cisco Systems Inc has 86 total rows <<<
+>>> The following metrics have 0 rows: ['ENV_INVESTMENTS', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ELIMINATION_CUM_VOTING_RIGHTS', 'AVGTRAININGHOURS', 'HUMAN_RIGHTS_POLICY_DUEDILIGENCE', 'TRADEUNIONREP', 'GENDER_PAY_GAP_PERCENTAGE', 'POLICY_BUSINESS_ETHICS', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Cisco Systems Inc finished with 86 successes, 10 warnings and 0 errors <<<
+>>> Deleting rows for Company PepsiCo Inc...<<<
+>>> Company PepsiCo Inc has 88 total rows <<<
+>>> The following metrics have 0 rows: ['CO2_NO_EQUIVALENTS', 'HAZARDOUSWASTE', 'NATURAL_RESOURCE_USE_DIRECT', 'HUMAN_RIGHTS_POLICY_DUEDILIGENCE', 'EMPLOYEEFATALITIES', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TURNOVEREMPLOYEES'] <<<
+>>> Company PepsiCo Inc finished with 88 successes, 8 warnings and 0 errors <<<
+>>> Deleting rows for Company Palantir Technologies Inc...<<<
+ERROR: Company Palantir Technologies Inc | Metric NOXEMISSIONS | Ended with 0 rows! Started with 5 rows.
+ERROR: Company Palantir Technologies Inc | Metric VOCEMISSIONS | Ended with 0 rows! Started with 5 rows.
+>>> Company Palantir Technologies Inc has 72 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'TRANALYTICRENEWENERGYUSE', 'WASTE_RECYCLED', 'AIRPOLLUTANTS_DIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'COMMMEETINGSATTENDANCEAVG', 'ANALYTICNONAUDITAUDITFEESRATIO', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'HUMAN_RIGHTS_POLICY_DUEDILIGENCE', 'WOMENEMPLOYEES', 'WOMENMANAGERS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Palantir Technologies Inc finished with 72 successes, 22 warnings and 2 errors <<<
+>>> Deleting rows for Company Intuitive Surgical Inc...<<<
+>>> Company Intuitive Surgical Inc has 82 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'TRANALYTICRENEWENERGYUSE', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'COMMMEETINGSATTENDANCEAVG', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Intuitive Surgical Inc finished with 82 successes, 14 warnings and 0 errors <<<
+>>> Deleting rows for Company Amgen Inc...<<<
+ERROR: Company Amgen Inc | Metric PARTICULATE_MATTER_EMISSIONS | Ended with 0 rows! Started with 3 rows.
+ERROR: Company Amgen Inc | Metric SOXEMISSIONS | Ended with 0 rows! Started with 3 rows.
+>>> Company Amgen Inc has 87 total rows <<<
+>>> The following metrics have 0 rows: ['CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'COMMMEETINGSATTENDANCEAVG', 'TRADEUNIONREP', 'GENDER_PAY_GAP_PERCENTAGE', 'POLICY_BUSINESS_ETHICS', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Amgen Inc finished with 87 successes, 7 warnings and 2 errors <<<
+>>> Deleting rows for Company Intuit Inc...<<<
+ERROR: Company Intuit Inc | Metric PARTICULATE_MATTER_EMISSIONS | Ended with 0 rows! Started with 3 rows.
+ERROR: Company Intuit Inc | Metric VOCEMISSIONS | Ended with 0 rows! Started with 7 rows.
+>>> Company Intuit Inc has 80 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'COMMMEETINGSATTENDANCEAVG', 'GLOBAL_COMPACT', 'AVGTRAININGHOURS', 'WOMENMANAGERS', 'EMPLOYEEFATALITIES', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Intuit Inc finished with 80 successes, 14 warnings and 2 errors <<<
+>>> Deleting rows for Company Adobe Inc...<<<
+ERROR: Company Adobe Inc | Metric PARTICULATE_MATTER_EMISSIONS | Ended with 0 rows! Started with 6 rows.
+ERROR: Company Adobe Inc | Metric SOXEMISSIONS | Ended with 0 rows! Started with 2 rows.
+ERROR: Company Adobe Inc | Metric VOCEMISSIONS | Ended with 0 rows! Started with 7 rows.
+>>> Company Adobe Inc has 84 total rows <<<
+>>> The following metrics have 0 rows: ['POLICY_SUSTAINABLE_PACKAGING', 'RENEWENERGYPRODUCED', 'AIRPOLLUTANTS_DIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ELIMINATION_CUM_VOTING_RIGHTS', 'AVGTRAININGHOURS', 'TRADEUNIONREP', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Adobe Inc finished with 84 successes, 9 warnings and 3 errors <<<
+>>> Deleting rows for Company Qualcomm Inc...<<<
+>>> Company Qualcomm Inc has 87 total rows <<<
+>>> The following metrics have 0 rows: ['CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICNONAUDITAUDITFEESRATIO', 'CALL_MEETINGS_LIMITED_RIGHTS', 'ELIMINATION_CUM_VOTING_RIGHTS', 'ANALYTICTOTALDONATIONS', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Qualcomm Inc finished with 87 successes, 9 warnings and 0 errors <<<
+>>> Deleting rows for Company Booking Holdings Inc...<<<
+ERROR: Company Booking Holdings Inc | Metric VOCEMISSIONS | Ended with 0 rows! Started with 3 rows.
+>>> Company Booking Holdings Inc has 77 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'TRANALYTICRENEWENERGYUSE', 'WASTE_RECYCLED', 'WASTE_REDUCTION_TOTAL', 'AIRPOLLUTANTS_DIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'AVGTRAININGHOURS', 'WOMENMANAGERS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Booking Holdings Inc finished with 77 successes, 18 warnings and 1 errors <<<
+>>> Deleting rows for Company Advanced Micro Devices Inc...<<<
+ERROR: Company Advanced Micro Devices Inc | Metric PARTICULATE_MATTER_EMISSIONS | Ended with 0 rows! Started with 6 rows.
+>>> Company Advanced Micro Devices Inc has 89 total rows <<<
+>>> The following metrics have 0 rows: ['SUSTAINABLE_BUILDING_PRODUCTS', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICQMS', 'GENDER_PAY_GAP_PERCENTAGE', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Advanced Micro Devices Inc finished with 89 successes, 6 warnings and 1 errors <<<
+>>> Deleting rows for Company Texas Instruments Inc...<<<
+>>> Company Texas Instruments Inc has 90 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPRODUCED', 'TARGETS_EMISSIONS', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'TRADEUNIONREP', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Texas Instruments Inc finished with 90 successes, 6 warnings and 0 errors <<<
+>>> Deleting rows for Company Gilead Sciences Inc...<<<
+ERROR: Company Gilead Sciences Inc | Metric PARTICULATE_MATTER_EMISSIONS | Ended with 0 rows! Started with 3 rows.
+>>> Company Gilead Sciences Inc has 92 total rows <<<
+>>> The following metrics have 0 rows: ['CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Gilead Sciences Inc finished with 92 successes, 3 warnings and 1 errors <<<
+>>> Deleting rows for Company Comcast Corp...<<<
+>>> Company Comcast Corp has 83 total rows <<<
+>>> The following metrics have 0 rows: ['WASTE_RECYCLED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'AVGTRAININGHOURS', 'HUMAN_RIGHTS_POLICY_DUEDILIGENCE', 'TRADEUNIONREP', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Comcast Corp finished with 83 successes, 13 warnings and 0 errors <<<
+>>> Deleting rows for Company Honeywell International Inc...<<<
+>>> Company Honeywell International Inc has 88 total rows <<<
+>>> The following metrics have 0 rows: ['WASTE_RECYCLED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'ANALYTICTOTALDONATIONS', 'TRADEUNIONREP', 'POLICY_BUSINESS_ETHICS', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Honeywell International Inc finished with 88 successes, 8 warnings and 0 errors <<<
+>>> Deleting rows for Company Vertex Pharmaceuticals Inc...<<<
+ERROR: Company Vertex Pharmaceuticals Inc | Metric PARTICULATE_MATTER_EMISSIONS | Ended with 0 rows! Started with 6 rows.
+>>> Company Vertex Pharmaceuticals Inc has 82 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ELIMINATION_CUM_VOTING_RIGHTS', 'AVGTRAININGHOURS', 'TRADEUNIONREP', 'WOMENMANAGERS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Vertex Pharmaceuticals Inc finished with 82 successes, 13 warnings and 1 errors <<<
+>>> Deleting rows for Company Automatic Data Processing Inc...<<<
+ERROR: Company Automatic Data Processing Inc | Metric PARTICULATE_MATTER_EMISSIONS | Ended with 0 rows! Started with 6 rows.
+>>> Company Automatic Data Processing Inc has 83 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'TRANALYTICRENEWENERGYUSE', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'COMMMEETINGSATTENDANCEAVG', 'TRADEUNIONREP', 'EMPLOYEEFATALITIES', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL'] <<<
+>>> Company Automatic Data Processing Inc finished with 83 successes, 12 warnings and 1 errors <<<
+>>> Deleting rows for Company Applied Materials Inc...<<<
+>>> Company Applied Materials Inc has 90 total rows <<<
+>>> The following metrics have 0 rows: ['AIRPOLLUTANTS_DIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'TRADEUNIONREP', 'GENDER_PAY_GAP_PERCENTAGE', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Applied Materials Inc finished with 90 successes, 6 warnings and 0 errors <<<
+>>> Deleting rows for Company Palo Alto Networks Inc...<<<
+>>> Company Palo Alto Networks Inc has 82 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'WASTE_RECYCLED', 'AIRPOLLUTANTS_DIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'PARTICULATE_MATTER_EMISSIONS', 'ANALYTICWASTERECYCLINGRATIO', 'ANALYTICTOTALDONATIONS', 'TRADEUNIONREP', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Palo Alto Networks Inc finished with 82 successes, 14 warnings and 0 errors <<<
+>>> Deleting rows for Company MercadoLibre Inc...<<<
+>>> Company MercadoLibre Inc has 89 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPURCHASED', 'AIRPOLLUTANTS_DIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'TRADEUNIONREP', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company MercadoLibre Inc finished with 89 successes, 7 warnings and 0 errors <<<
+>>> Deleting rows for Company Starbucks Corp...<<<
+>>> Company Starbucks Corp has 87 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPRODUCED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICTOTALDONATIONS', 'TRADEUNIONREP', 'EMPLOYEEFATALITIES', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL'] <<<
+>>> Company Starbucks Corp finished with 87 successes, 9 warnings and 0 errors <<<
+>>> Deleting rows for Company Intel Corp...<<<
+>>> Company Intel Corp has 92 total rows <<<
+>>> The following metrics have 0 rows: ['CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ELIMINATION_CUM_VOTING_RIGHTS', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Intel Corp finished with 92 successes, 4 warnings and 0 errors <<<
+>>> Deleting rows for Company Mondelez International Inc...<<<
+>>> Company Mondelez International Inc has 85 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPURCHASED', 'WASTE_RECYCLED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'BOARDMEETINGATTENDANCEAVG', 'COMMMEETINGSATTENDANCEAVG', 'AVGTRAININGHOURS', 'WOMENEMPLOYEES', 'POLICY_BUSINESS_ETHICS', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Mondelez International Inc finished with 85 successes, 11 warnings and 0 errors <<<
+>>> Deleting rows for Company Analog Devices Inc...<<<
+>>> Company Analog Devices Inc has 91 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPRODUCED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'GENDER_PAY_GAP_PERCENTAGE', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Analog Devices Inc finished with 91 successes, 5 warnings and 0 errors <<<
+>>> Deleting rows for Company Cintas Corp...<<<
+ERROR: Company Cintas Corp | Metric SOXEMISSIONS | Ended with 0 rows! Started with 6 rows.
+>>> Company Cintas Corp has 85 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'ANALYTICNONAUDITAUDITFEESRATIO', 'WOMENMANAGERS', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Cintas Corp finished with 85 successes, 10 warnings and 1 errors <<<
+>>> Deleting rows for Company KLA Corp...<<<
+>>> Company KLA Corp has 91 total rows <<<
+>>> The following metrics have 0 rows: ['AIRPOLLUTANTS_DIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'WOMENMANAGERS', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company KLA Corp finished with 91 successes, 5 warnings and 0 errors <<<
+>>> Deleting rows for Company Lam Research Corp...<<<
+ERROR: Company Lam Research Corp | Metric PARTICULATE_MATTER_EMISSIONS | Ended with 0 rows! Started with 6 rows.
+>>> Company Lam Research Corp has 87 total rows <<<
+>>> The following metrics have 0 rows: ['AIRPOLLUTANTS_DIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'CALL_MEETINGS_LIMITED_RIGHTS', 'ELIMINATION_CUM_VOTING_RIGHTS', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Lam Research Corp finished with 87 successes, 8 warnings and 1 errors <<<
+>>> Deleting rows for Company CrowdStrike Holdings Inc...<<<
+ERROR: Company CrowdStrike Holdings Inc | Metric SOXEMISSIONS | Ended with 0 rows! Started with 7 rows.
+>>> Company CrowdStrike Holdings Inc has 73 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'TRANALYTICRENEWENERGYUSE', 'WASTE_RECYCLED', 'AIRPOLLUTANTS_DIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'COMMMEETINGSATTENDANCEAVG', 'CALL_MEETINGS_LIMITED_RIGHTS', 'ELIMINATION_CUM_VOTING_RIGHTS', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'WOMENEMPLOYEES', 'WOMENMANAGERS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company CrowdStrike Holdings Inc finished with 73 successes, 22 warnings and 1 errors <<<
+>>> Deleting rows for Company Micron Technology Inc...<<<
+>>> Company Micron Technology Inc has 90 total rows <<<
+>>> The following metrics have 0 rows: ['CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ELIMINATION_CUM_VOTING_RIGHTS', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Micron Technology Inc finished with 90 successes, 6 warnings and 0 errors <<<
+>>> Deleting rows for Company Microstrategy Inc...<<<
+ERROR: Company Microstrategy Inc | Metric SOXEMISSIONS | Ended with 0 rows! Started with 6 rows.
+ERROR: Company Microstrategy Inc | Metric VOCEMISSIONS | Ended with 0 rows! Started with 7 rows.
+>>> Company Microstrategy Inc has 73 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'TRANALYTICRENEWENERGYUSE', 'WASTE_RECYCLED', 'AIRPOLLUTANTS_DIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICNOMINATIONCOMMIND', 'ANALYTICWASTERECYCLINGRATIO', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'TRADEUNIONREP', 'WOMENEMPLOYEES', 'WOMENMANAGERS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Microstrategy Inc finished with 73 successes, 21 warnings and 2 errors <<<
+>>> Deleting rows for Company PDD Holdings Inc...<<<
+>>> Company PDD Holdings Inc has 70 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'TRANALYTICRENEWENERGYUSE', 'WASTE_RECYCLED', 'WASTE_REDUCTION_TOTAL', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICCEO_CHAIRMAN_SEPARATION', 'ANALYTICWASTERECYCLINGRATIO', 'BOARDMEETINGATTENDANCEAVG', 'COMMMEETINGSATTENDANCEAVG', 'ANNUAL_MEDIAN_COMPENSATION', 'CALL_MEETINGS_LIMITED_RIGHTS', 'CEO_ANNUAL_COMPENSATION', 'CEO_PAY_RATIO_MEDIAN', 'ELIMINATION_CUM_VOTING_RIGHTS', 'AVGTRAININGHOURS', 'TRADEUNIONREP', 'WOMENEMPLOYEES', 'WOMENMANAGERS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company PDD Holdings Inc finished with 70 successes, 26 warnings and 0 errors <<<
+>>> Deleting rows for Company Applovin Corp...<<<
+ERROR: Company Applovin Corp | Metric NOXEMISSIONS | Ended with 0 rows! Started with 4 rows.
+ERROR: Company Applovin Corp | Metric SOXEMISSIONS | Ended with 0 rows! Started with 4 rows.
+ERROR: Company Applovin Corp | Metric VOCEMISSIONS | Ended with 0 rows! Started with 4 rows.
+>>> Company Applovin Corp has 72 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'TRANALYTICRENEWENERGYUSE', 'WASTE_RECYCLED', 'AIRPOLLUTANTS_DIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'BOARDMEETINGATTENDANCEAVG', 'COMMMEETINGSATTENDANCEAVG', 'ANALYTICNONAUDITAUDITFEESRATIO', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'WOMENMANAGERS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Applovin Corp finished with 72 successes, 21 warnings and 3 errors <<<
+>>> Deleting rows for Company Fortinet Inc...<<<
+ERROR: Company Fortinet Inc | Metric PARTICULATE_MATTER_EMISSIONS | Ended with 0 rows! Started with 6 rows.
+>>> Company Fortinet Inc has 80 total rows <<<
+>>> The following metrics have 0 rows: ['ENV_INVESTMENTS', 'RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'ELIMINATION_CUM_VOTING_RIGHTS', 'ANALYTICTOTALDONATIONS', 'TRADEUNIONREP', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL'] <<<
+>>> Company Fortinet Inc finished with 80 successes, 15 warnings and 1 errors <<<
+>>> Deleting rows for Company DoorDash Inc...<<<
+ERROR: Company DoorDash Inc | Metric NOXEMISSIONS | Ended with 0 rows! Started with 5 rows.
+ERROR: Company DoorDash Inc | Metric SOXEMISSIONS | Ended with 0 rows! Started with 5 rows.
+ERROR: Company DoorDash Inc | Metric VOCEMISSIONS | Ended with 0 rows! Started with 5 rows.
+>>> Company DoorDash Inc has 72 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'TAKEBACK_RECYCLING_INITIATIVES', 'TRANALYTICRENEWENERGYUSE', 'WASTE_RECYCLED', 'AIRPOLLUTANTS_DIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'COMMMEETINGSATTENDANCEAVG', 'ELIMINATION_CUM_VOTING_RIGHTS', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'WOMENMANAGERS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company DoorDash Inc finished with 72 successes, 21 warnings and 3 errors <<<
+>>> Deleting rows for Company Cadence Design Systems Inc...<<<
+ERROR: Company Cadence Design Systems Inc | Metric PARTICULATE_MATTER_EMISSIONS | Ended with 0 rows! Started with 6 rows.
+ERROR: Company Cadence Design Systems Inc | Metric VOCEMISSIONS | Ended with 0 rows! Started with 7 rows.
+>>> Company Cadence Design Systems Inc has 83 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'WASTE_RECYCLED', 'AIRPOLLUTANTS_DIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'ANALYTICTOTALDONATIONS', 'TRADEUNIONREP', 'EMPLOYEEFATALITIES', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Cadence Design Systems Inc finished with 83 successes, 11 warnings and 2 errors <<<
+>>> Deleting rows for Company Regeneron Pharmaceuticals Inc...<<<
+ERROR: Company Regeneron Pharmaceuticals Inc | Metric VOCEMISSIONS | Ended with 0 rows! Started with 7 rows.
+>>> Company Regeneron Pharmaceuticals Inc has 88 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ELIMINATION_CUM_VOTING_RIGHTS', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Regeneron Pharmaceuticals Inc finished with 88 successes, 7 warnings and 1 errors <<<
+>>> Deleting rows for Company Synopsys Inc...<<<
+>>> Company Synopsys Inc has 80 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'WASTE_RECYCLED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'PARTICULATE_MATTER_EMISSIONS', 'VOCEMISSIONS', 'ANALYTICWASTERECYCLINGRATIO', 'GLOBAL_COMPACT', 'ELIMINATION_CUM_VOTING_RIGHTS', 'TRADEUNIONREP', 'EMPLOYEEFATALITIES', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL'] <<<
+>>> Company Synopsys Inc finished with 80 successes, 16 warnings and 0 errors <<<
+>>> Deleting rows for Company Marriott International Inc...<<<
+>>> Company Marriott International Inc has 87 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'AIRPOLLUTANTS_DIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'HUMAN_RIGHTS_POLICY_DUEDILIGENCE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Marriott International Inc finished with 87 successes, 9 warnings and 0 errors <<<
+>>> Deleting rows for Company Roper Technologies Inc...<<<
+ERROR: Company Roper Technologies Inc | Metric SOXEMISSIONS | Ended with 0 rows! Started with 6 rows.
+`>>> Company Roper Technologies Inc has 79 total rows <<<
+>>> The following metrics have 0 rows: ['ECO_DESIGN_PRODUCTS', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'WASTE_RECYCLED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'ELIMINATION_CUM_VOTING_RIGHTS', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Roper Technologies Inc finished with 79 successes, 16 warnings and 1 errors <<<
+>>> Deleting rows for Company PayPal Holdings Inc...<<<
+>>> Company PayPal Holdings Inc has 85 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPRODUCED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'WASTETOTAL', 'ELIMINATION_CUM_VOTING_RIGHTS', 'TRADEUNIONREP', 'WOMENMANAGERS', 'EMPLOYEEFATALITIES', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL'] <<<
+>>> Company PayPal Holdings Inc finished with 85 successes, 11 warnings and 0 errors <<<
+>>> Deleting rows for Company American Electric Power Company Inc...<<<
+>>> Company American Electric Power Company Inc has 91 total rows <<<
+>>> The following metrics have 0 rows: ['CO2INDIRECTSCOPE3', 'CO2_NO_EQUIVALENTS', 'ANALYTICWASTERECYCLINGRATIO', 'GENDER_PAY_GAP_PERCENTAGE', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company American Electric Power Company Inc finished with 91 successes, 5 warnings and 0 errors <<<
+>>> Deleting rows for Company Monster Beverage Corp...<<<
+>>> Company Monster Beverage Corp has 79 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'WASTE_RECYCLED', 'AIRPOLLUTANTS_INDIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'AVGTRAININGHOURS', 'TRADEUNIONREP', 'WOMENMANAGERS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Monster Beverage Corp finished with 79 successes, 17 warnings and 0 errors <<<
+>>> Deleting rows for Company ASML Holding NV...<<<
+ERROR: Company ASML Holding NV | Metric PARTICULATE_MATTER_EMISSIONS | Ended with 0 rows! Started with 5 rows.
+>>> Company ASML Holding NV has 88 total rows <<<
+>>> The following metrics have 0 rows: ['CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANNUAL_MEDIAN_COMPENSATION', 'CEO_PAY_RATIO_MEDIAN', 'ELIMINATION_CUM_VOTING_RIGHTS', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company ASML Holding NV finished with 88 successes, 7 warnings and 1 errors <<<
+>>> Deleting rows for Company Constellation Energy Corp...<<<
+ERROR: Company Constellation Energy Corp | Metric ECO_DESIGN_PRODUCTS | Ended with 2 rows!
+Constellation Energy Corp - ECO_DESIGN_PRODUCTS - 0.0 - 2024-05-27 08:18:38
+Constellation Energy Corp - ECO_DESIGN_PRODUCTS - 0.0 - 2024-05-22 14:15:05
+ERROR: Company Constellation Energy Corp | Metric ENV_INVESTMENTS | Ended with 5 rows!
+Constellation Energy Corp - ENV_INVESTMENTS - 0.0 - 2024-05-28 14:49:49
+Constellation Energy Corp - ENV_INVESTMENTS - 0.0 - 2024-05-27 08:18:38
+Constellation Energy Corp - ENV_INVESTMENTS - 0.0 - 2021-05-27 08:18:38
+Constellation Energy Corp - ENV_INVESTMENTS - 0.0 - 2020-05-27 08:18:38
+Constellation Energy Corp - ENV_INVESTMENTS - 0.0 - 2019-05-27 08:18:38
+ERROR: Company Constellation Energy Corp | Metric POLICY_EMISSIONS | Ended with 2 rows!
+Constellation Energy Corp - POLICY_EMISSIONS - 1.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - POLICY_EMISSIONS - 1.0 - 2022-12-31 00:00:00
+ERROR: Company Constellation Energy Corp | Metric POLICY_SUSTAINABLE_PACKAGING | Ended with 5 rows!
+Constellation Energy Corp - POLICY_SUSTAINABLE_PACKAGING - 0.0 - 2024-05-28 14:49:49
+Constellation Energy Corp - POLICY_SUSTAINABLE_PACKAGING - 0.0 - 2024-05-27 08:18:38
+Constellation Energy Corp - POLICY_SUSTAINABLE_PACKAGING - 0.0 - 2021-05-27 08:18:38
+Constellation Energy Corp - POLICY_SUSTAINABLE_PACKAGING - 0.0 - 2020-05-27 08:18:38
+Constellation Energy Corp - POLICY_SUSTAINABLE_PACKAGING - 0.0 - 2019-05-27 08:18:38
+ERROR: Company Constellation Energy Corp | Metric SUSTAINABLE_BUILDING_PRODUCTS | Ended with 5 rows!
+Constellation Energy Corp - SUSTAINABLE_BUILDING_PRODUCTS - 0.0 - 2024-05-27 08:18:38
+Constellation Energy Corp - SUSTAINABLE_BUILDING_PRODUCTS - 0.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - SUSTAINABLE_BUILDING_PRODUCTS - 0.0 - 2021-05-27 08:18:38
+Constellation Energy Corp - SUSTAINABLE_BUILDING_PRODUCTS - 0.0 - 2020-05-27 08:18:38
+Constellation Energy Corp - SUSTAINABLE_BUILDING_PRODUCTS - 0.0 - 2019-05-27 08:18:38
+ERROR: Company Constellation Energy Corp | Metric TAKEBACK_RECYCLING_INITIATIVES | Ended with 2 rows!
+Constellation Energy Corp - TAKEBACK_RECYCLING_INITIATIVES - 0.0 - 2024-05-28 14:49:49
+Constellation Energy Corp - TAKEBACK_RECYCLING_INITIATIVES - 0.0 - 2024-05-27 08:18:38
+ERROR: Company Constellation Energy Corp | Metric TARGETS_EMISSIONS | Ended with 2 rows!
+Constellation Energy Corp - TARGETS_EMISSIONS - 1.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - TARGETS_EMISSIONS - 1.0 - 2022-12-31 00:00:00
+ERROR: Company Constellation Energy Corp | Metric TARGETS_WATER_EFFICIENCY | Ended with 5 rows!
+Constellation Energy Corp - TARGETS_WATER_EFFICIENCY - 0.0 - 2024-05-27 08:18:38
+Constellation Energy Corp - TARGETS_WATER_EFFICIENCY - 0.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - TARGETS_WATER_EFFICIENCY - 0.0 - 2021-05-27 08:18:38
+Constellation Energy Corp - TARGETS_WATER_EFFICIENCY - 0.0 - 2020-05-27 08:18:38
+Constellation Energy Corp - TARGETS_WATER_EFFICIENCY - 0.0 - 2019-05-27 08:18:38
+ERROR: Company Constellation Energy Corp | Metric WASTE_REDUCTION_TOTAL | Ended with 2 rows!
+Constellation Energy Corp - WASTE_REDUCTION_TOTAL - 1.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - WASTE_REDUCTION_TOTAL - 1.0 - 2022-12-31 00:00:00
+ERROR: Company Constellation Energy Corp | Metric WATER_TECHNOLOGIES | Ended with 5 rows!
+Constellation Energy Corp - WATER_TECHNOLOGIES - 0.0 - 2024-05-27 08:18:38
+Constellation Energy Corp - WATER_TECHNOLOGIES - 0.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - WATER_TECHNOLOGIES - 0.0 - 2021-05-27 08:18:38
+Constellation Energy Corp - WATER_TECHNOLOGIES - 0.0 - 2020-05-27 08:18:38
+Constellation Energy Corp - WATER_TECHNOLOGIES - 0.0 - 2019-05-27 08:18:38
+ERROR: Company Constellation Energy Corp | Metric CO2DIRECTSCOPE1 | Ended with 2 rows!
+Constellation Energy Corp - CO2DIRECTSCOPE1 - 9679181.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - CO2DIRECTSCOPE1 - 9110000.0 - 2022-12-31 00:00:00
+ERROR: Company Constellation Energy Corp | Metric CO2INDIRECTSCOPE2 | Ended with 2 rows!
+Constellation Energy Corp - CO2INDIRECTSCOPE2 - 379850.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - CO2INDIRECTSCOPE2 - 45000.0 - 2022-12-31 00:00:00
+ERROR: Company Constellation Energy Corp | Metric N_OXS_OX_EMISSIONS_REDUCTION | Ended with 2 rows!
+Constellation Energy Corp - N_OXS_OX_EMISSIONS_REDUCTION - 0.0 - 2024-05-27 08:18:38
+Constellation Energy Corp - N_OXS_OX_EMISSIONS_REDUCTION - 0.0 - 2024-05-22 14:15:05
+ERROR: Company Constellation Energy Corp | Metric TOXIC_CHEMICALS_REDUCTION | Ended with 5 rows!
+Constellation Energy Corp - TOXIC_CHEMICALS_REDUCTION - 0.0 - 2024-05-27 08:18:38
+Constellation Energy Corp - TOXIC_CHEMICALS_REDUCTION - 0.0 - 2024-05-22 14:15:05
+Constellation Energy Corp - TOXIC_CHEMICALS_REDUCTION - 0.0 - 2021-05-27 08:18:38
+Constellation Energy Corp - TOXIC_CHEMICALS_REDUCTION - 0.0 - 2020-05-27 08:18:38
+Constellation Energy Corp - TOXIC_CHEMICALS_REDUCTION - 0.0 - 2019-05-27 08:18:38
+ERROR: Company Constellation Energy Corp | Metric VOC_EMISSIONS_REDUCTION | Ended with 2 rows!
+Constellation Energy Corp - VOC_EMISSIONS_REDUCTION - 0.0 - 2024-05-27 08:18:38
+Constellation Energy Corp - VOC_EMISSIONS_REDUCTION - 0.0 - 2024-05-22 14:15:05
+ERROR: Company Constellation Energy Corp | Metric WATERWITHDRAWALTOTAL | Ended with 2 rows!
+Constellation Energy Corp - WATERWITHDRAWALTOTAL - 48697737000.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - WATERWITHDRAWALTOTAL - 47000000000.0 - 2022-12-31 00:00:00
+ERROR: Company Constellation Energy Corp | Metric WATER_USE_PAI_M10 | Ended with 4 rows!
+Constellation Energy Corp - WATER_USE_PAI_M10 - 0.0 - 2024-12-20 00:00:00
+Constellation Energy Corp - WATER_USE_PAI_M10 - 0.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - WATER_USE_PAI_M10 - 0.0 - 2022-12-31 00:00:00
+Constellation Energy Corp - WATER_USE_PAI_M10 - 0.0 - 2021-12-31 00:00:00
+ERROR: Company Constellation Energy Corp | Metric ANALYTICBOARDFEMALE | Ended with 2 rows!
+Constellation Energy Corp - ANALYTICBOARDFEMALE - 27.27 - 2023-12-31 00:00:00
+Constellation Energy Corp - ANALYTICBOARDFEMALE - 27.0 - 2022-12-31 00:00:00
+ERROR: Company Constellation Energy Corp | Metric ANALYTICINDEPBOARD | Ended with 2 rows!
+Constellation Energy Corp - ANALYTICINDEPBOARD - 91.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - ANALYTICINDEPBOARD - 90.9 - 2022-12-31 00:00:00
+ERROR: Company Constellation Energy Corp | Metric ANALYTICNONEXECBOARD | Ended with 2 rows!
+Constellation Energy Corp - ANALYTICNONEXECBOARD - 91.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - ANALYTICNONEXECBOARD - 90.9 - 2022-12-31 00:00:00
+ERROR: Company Constellation Energy Corp | Metric ANALYTICQMS | Ended with 3 rows!
+Constellation Energy Corp - ANALYTICQMS - 0.0 - 2024-05-22 14:15:05
+Constellation Energy Corp - ANALYTICQMS - 0.0 - 2020-05-15 00:00:00
+Constellation Energy Corp - ANALYTICQMS - 0.0 - 2019-05-15 00:00:00
+ERROR: Company Constellation Energy Corp | Metric ANALYTIC_AUDIT_COMM_EXPERTISE | Ended with 5 rows!
+Constellation Energy Corp - ANALYTIC_AUDIT_COMM_EXPERTISE - 0.0 - 2024-05-29 10:46:39
+Constellation Energy Corp - ANALYTIC_AUDIT_COMM_EXPERTISE - 1.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - ANALYTIC_AUDIT_COMM_EXPERTISE - 0.0 - 2021-05-29 10:46:39
+Constellation Energy Corp - ANALYTIC_AUDIT_COMM_EXPERTISE - 0.0 - 2020-05-29 10:46:39
+Constellation Energy Corp - ANALYTIC_AUDIT_COMM_EXPERTISE - 0.0 - 2019-05-29 10:46:39
+ERROR: Company Constellation Energy Corp | Metric ANALYTIC_VOTING_RIGHTS | Ended with 5 rows!
+Constellation Energy Corp - ANALYTIC_VOTING_RIGHTS - 0.0 - 2024-05-29 10:46:39
+Constellation Energy Corp - ANALYTIC_VOTING_RIGHTS - 1.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - ANALYTIC_VOTING_RIGHTS - 0.0 - 2021-05-29 10:46:39
+Constellation Energy Corp - ANALYTIC_VOTING_RIGHTS - 0.0 - 2020-05-29 10:46:39
+Constellation Energy Corp - ANALYTIC_VOTING_RIGHTS - 0.0 - 2019-05-29 10:46:39
+ERROR: Company Constellation Energy Corp | Metric GLOBAL_COMPACT | Ended with 3 rows!
+Constellation Energy Corp - GLOBAL_COMPACT - 0.0 - 2024-06-28 09:38:26
+Constellation Energy Corp - GLOBAL_COMPACT - 0.0 - 2020-05-15 00:00:00
+Constellation Energy Corp - GLOBAL_COMPACT - 0.0 - 2019-05-15 00:00:00
+ERROR: Company Constellation Energy Corp | Metric ANALYTIC_ANTI_TAKEOVER_DEVICES | Ended with 5 rows!
+Constellation Energy Corp - ANALYTIC_ANTI_TAKEOVER_DEVICES - 0.0 - 2024-05-29 10:46:39
+Constellation Energy Corp - ANALYTIC_ANTI_TAKEOVER_DEVICES - 1.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - ANALYTIC_ANTI_TAKEOVER_DEVICES - 0.0 - 2021-05-29 10:46:39
+Constellation Energy Corp - ANALYTIC_ANTI_TAKEOVER_DEVICES - 0.0 - 2020-05-29 10:46:39
+Constellation Energy Corp - ANALYTIC_ANTI_TAKEOVER_DEVICES - 0.0 - 2019-05-29 10:46:39
+ERROR: Company Constellation Energy Corp | Metric CALL_MEETINGS_LIMITED_RIGHTS | Ended with 5 rows!
+Constellation Energy Corp - CALL_MEETINGS_LIMITED_RIGHTS - 0.0 - 2024-05-30 10:07:37
+Constellation Energy Corp - CALL_MEETINGS_LIMITED_RIGHTS - 0.0 - 2024-05-29 10:46:39
+Constellation Energy Corp - CALL_MEETINGS_LIMITED_RIGHTS - 0.0 - 2021-05-29 10:46:39
+Constellation Energy Corp - CALL_MEETINGS_LIMITED_RIGHTS - 0.0 - 2020-05-29 10:46:39
+Constellation Energy Corp - CALL_MEETINGS_LIMITED_RIGHTS - 0.0 - 2019-05-29 10:46:39
+ERROR: Company Constellation Energy Corp | Metric ELIMINATION_CUM_VOTING_RIGHTS | Ended with 5 rows!
+Constellation Energy Corp - ELIMINATION_CUM_VOTING_RIGHTS - 0.0 - 2024-05-30 10:07:37
+Constellation Energy Corp - ELIMINATION_CUM_VOTING_RIGHTS - 0.0 - 2024-05-29 10:46:39
+Constellation Energy Corp - ELIMINATION_CUM_VOTING_RIGHTS - 0.0 - 2021-05-29 10:46:39
+Constellation Energy Corp - ELIMINATION_CUM_VOTING_RIGHTS - 0.0 - 2020-05-29 10:46:39
+Constellation Energy Corp - ELIMINATION_CUM_VOTING_RIGHTS - 0.0 - 2019-05-29 10:46:39
+ERROR: Company Constellation Energy Corp | Metric ANALYTICCSR_COMP_INCENTIVES | Ended with 3 rows!
+Constellation Energy Corp - ANALYTICCSR_COMP_INCENTIVES - 0.0 - 2022-12-31 00:00:00
+Constellation Energy Corp - ANALYTICCSR_COMP_INCENTIVES - 0.0 - 2020-05-15 00:00:00
+Constellation Energy Corp - ANALYTICCSR_COMP_INCENTIVES - 0.0 - 2019-05-15 00:00:00
+ERROR: Company Constellation Energy Corp | Metric ANALYTICEMPLOYMENTCREATION | Ended with 8 rows!
+Constellation Energy Corp - ANALYTICEMPLOYMENTCREATION - 6.7 - 2023-12-31 00:00:00
+Constellation Energy Corp - ANALYTICEMPLOYMENTCREATION - 11.15 - 2022-12-31 00:00:00
+Constellation Energy Corp - ANALYTICEMPLOYMENTCREATION - 242.19 - 2021-12-31 00:00:00
+Constellation Energy Corp - ANALYTICEMPLOYMENTCREATION - -73.87 - 2020-12-31 00:00:00
+Constellation Energy Corp - ANALYTICEMPLOYMENTCREATION - -7.29 - 2019-12-31 00:00:00
+Constellation Energy Corp - ANALYTICEMPLOYMENTCREATION - -6.0 - 2018-12-31 00:00:00
+Constellation Energy Corp - ANALYTICEMPLOYMENTCREATION - 2.0 - 2017-12-31 00:00:00
+Constellation Energy Corp - ANALYTICEMPLOYMENTCREATION - 1.41 - 2016-12-31 00:00:00
+ERROR: Company Constellation Energy Corp | Metric ANIMAL_TESTING_REDUCTION | Ended with 5 rows!
+Constellation Energy Corp - ANIMAL_TESTING_REDUCTION - 0.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - ANIMAL_TESTING_REDUCTION - 0.0 - 2022-12-31 00:00:00
+Constellation Energy Corp - ANIMAL_TESTING_REDUCTION - 0.0 - 2021-12-31 00:00:00
+Constellation Energy Corp - ANIMAL_TESTING_REDUCTION - 0.0 - 2020-12-31 00:00:00
+Constellation Energy Corp - ANIMAL_TESTING_REDUCTION - 0.0 - 2019-12-31 00:00:00
+ERROR: Company Constellation Energy Corp | Metric DAY_CARE_SERVICES | Ended with 2 rows!
+Constellation Energy Corp - DAY_CARE_SERVICES - 1.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - DAY_CARE_SERVICES - 0.0 - 2022-12-31 00:00:00
+ERROR: Company Constellation Energy Corp | Metric HUMAN_RIGHTS_CONTRACTOR | Ended with 2 rows!
+Constellation Energy Corp - HUMAN_RIGHTS_CONTRACTOR - 1.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - HUMAN_RIGHTS_CONTRACTOR - 1.0 - 2022-12-31 00:00:00
+ERROR: Company Constellation Energy Corp | Metric ISO14000 | Ended with 2 rows!
+Constellation Energy Corp - ISO14000 - 1.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - ISO14000 - 1.0 - 2022-12-31 00:00:00
+ERROR: Company Constellation Energy Corp | Metric LABELED_WOOD | Ended with 5 rows!
+Constellation Energy Corp - LABELED_WOOD - 0.0 - 2024-05-27 08:18:38
+Constellation Energy Corp - LABELED_WOOD - 0.0 - 2024-05-24 10:02:24
+Constellation Energy Corp - LABELED_WOOD - 0.0 - 2021-05-27 08:18:38
+Constellation Energy Corp - LABELED_WOOD - 0.0 - 2020-05-27 08:18:38
+Constellation Energy Corp - LABELED_WOOD - 0.0 - 2019-05-27 08:18:38
+ERROR: Company Constellation Energy Corp | Metric TRADEUNIONREP | Ended with 2 rows!
+Constellation Energy Corp - TRADEUNIONREP - 25.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - TRADEUNIONREP - 25.0 - 2022-12-31 00:00:00
+ERROR: Company Constellation Energy Corp | Metric WHISTLEBLOWER_PROTECTION | Ended with 2 rows!
+Constellation Energy Corp - WHISTLEBLOWER_PROTECTION - 1.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - WHISTLEBLOWER_PROTECTION - 1.0 - 2022-12-31 00:00:00
+ERROR: Company Constellation Energy Corp | Metric BRIBERY_AND_CORRUPTION_PAI_INSUFFICIENT_ACTIONS | Ended with 4 rows!
+Constellation Energy Corp - BRIBERY_AND_CORRUPTION_PAI_INSUFFICIENT_ACTIONS - 0.0 - 2024-12-20 00:00:00
+Constellation Energy Corp - BRIBERY_AND_CORRUPTION_PAI_INSUFFICIENT_ACTIONS - 0.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - BRIBERY_AND_CORRUPTION_PAI_INSUFFICIENT_ACTIONS - 0.0 - 2022-12-31 00:00:00
+Constellation Energy Corp - BRIBERY_AND_CORRUPTION_PAI_INSUFFICIENT_ACTIONS - 0.0 - 2021-12-31 00:00:00
+ERROR: Company Constellation Energy Corp | Metric EMPLOYEE_HEALTH_SAFETY_POLICY | Ended with 2 rows!
+Constellation Energy Corp - EMPLOYEE_HEALTH_SAFETY_POLICY - 1.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - EMPLOYEE_HEALTH_SAFETY_POLICY - 1.0 - 2022-12-31 00:00:00
+ERROR: Company Constellation Energy Corp | Metric HUMAN_RIGHTS_VIOLATION_PAI | Ended with 4 rows!
+Constellation Energy Corp - HUMAN_RIGHTS_VIOLATION_PAI - 0.0 - 2024-12-20 00:00:00
+Constellation Energy Corp - HUMAN_RIGHTS_VIOLATION_PAI - 0.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - HUMAN_RIGHTS_VIOLATION_PAI - 0.0 - 2022-12-31 00:00:00
+Constellation Energy Corp - HUMAN_RIGHTS_VIOLATION_PAI - 0.0 - 2021-12-31 00:00:00
+ERROR: Company Constellation Energy Corp | Metric IMPROVEMENT_TOOLS_BUSINESS_ETHICS | Ended with 2 rows!
+Constellation Energy Corp - IMPROVEMENT_TOOLS_BUSINESS_ETHICS - 1.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - IMPROVEMENT_TOOLS_BUSINESS_ETHICS - 1.0 - 2022-12-31 00:00:00
+ERROR: Company Constellation Energy Corp | Metric POLICY_BOARD_DIVERSITY | Ended with 2 rows!
+Constellation Energy Corp - POLICY_BOARD_DIVERSITY - 1.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - POLICY_BOARD_DIVERSITY - 1.0 - 2022-12-31 00:00:00
+ERROR: Company Constellation Energy Corp | Metric POLICY_BRIBERYAND_CORRUPTION | Ended with 2 rows!
+Constellation Energy Corp - POLICY_BRIBERYAND_CORRUPTION - 1.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - POLICY_BRIBERYAND_CORRUPTION - 1.0 - 2022-12-31 00:00:00
+ERROR: Company Constellation Energy Corp | Metric POLICY_CHILD_LABOR | Ended with 5 rows!
+Constellation Energy Corp - POLICY_CHILD_LABOR - 1.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - POLICY_CHILD_LABOR - 0.0 - 2022-12-31 00:00:00
+Constellation Energy Corp - POLICY_CHILD_LABOR - 0.0 - 2021-12-31 00:00:00
+Constellation Energy Corp - POLICY_CHILD_LABOR - 0.0 - 2020-12-31 00:00:00
+Constellation Energy Corp - POLICY_CHILD_LABOR - 0.0 - 2019-12-31 00:00:00
+ERROR: Company Constellation Energy Corp | Metric POLICY_DATA_PRIVACY | Ended with 5 rows!
+Constellation Energy Corp - POLICY_DATA_PRIVACY - 0.0 - 2024-05-27 08:18:38
+Constellation Energy Corp - POLICY_DATA_PRIVACY - 1.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - POLICY_DATA_PRIVACY - 0.0 - 2021-05-27 08:18:38
+Constellation Energy Corp - POLICY_DATA_PRIVACY - 0.0 - 2020-05-27 08:18:38
+Constellation Energy Corp - POLICY_DATA_PRIVACY - 0.0 - 2019-05-27 08:18:38
+ERROR: Company Constellation Energy Corp | Metric POLICY_FORCED_LABOR | Ended with 5 rows!
+Constellation Energy Corp - POLICY_FORCED_LABOR - 0.0 - 2024-05-27 08:18:37
+Constellation Energy Corp - POLICY_FORCED_LABOR - 1.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - POLICY_FORCED_LABOR - 0.0 - 2021-05-27 08:18:37
+Constellation Energy Corp - POLICY_FORCED_LABOR - 0.0 - 2020-05-27 08:18:37
+Constellation Energy Corp - POLICY_FORCED_LABOR - 0.0 - 2019-05-27 08:18:37
+ERROR: Company Constellation Energy Corp | Metric POLICY_HUMAN_RIGHTS | Ended with 3 rows!
+Constellation Energy Corp - POLICY_HUMAN_RIGHTS - 0.0 - 2024-05-23 09:54:26
+Constellation Energy Corp - POLICY_HUMAN_RIGHTS - 0.0 - 2020-05-15 00:00:00
+Constellation Energy Corp - POLICY_HUMAN_RIGHTS - 0.0 - 2019-05-15 00:00:00
+ERROR: Company Constellation Energy Corp | Metric SUPPLY_CHAINHS_POLICY | Ended with 2 rows!
+Constellation Energy Corp - SUPPLY_CHAINHS_POLICY - 1.0 - 2023-12-31 00:00:00
+Constellation Energy Corp - SUPPLY_CHAINHS_POLICY - 1.0 - 2022-12-31 00:00:00
+>>> Company Constellation Energy Corp has 184 total rows <<<
+>>> The following metrics have 0 rows: ['ENERGYUSETOTAL', 'RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'TRANALYTICRENEWENERGYUSE', 'WASTE_RECYCLED', 'AIRPOLLUTANTS_INDIRECT', 'CO2_NO_EQUIVALENTS', 'HAZARDOUSWASTE', 'NATURAL_RESOURCE_USE_DIRECT', 'VOCEMISSIONS', 'WASTETOTAL', 'ANALYTICWASTERECYCLINGRATIO', 'BOARDMEETINGATTENDANCEAVG', 'COMMMEETINGSATTENDANCEAVG', 'ANALYTICNONAUDITAUDITFEESRATIO', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'CONFORMANCE_UN_GUID', 'HUMAN_RIGHTS_POLICY_DUEDILIGENCE', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Constellation Energy Corp finished with 26 successes, 23 warnings and 47 errors <<<
+>>> Deleting rows for Company Autodesk Inc...<<<
+ERROR: Company Autodesk Inc | Metric SOXEMISSIONS | Ended with 0 rows! Started with 3 rows.
+ERROR: Company Autodesk Inc | Metric VOCEMISSIONS | Ended with 0 rows! Started with 7 rows.
+>>> Company Autodesk Inc has 88 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPRODUCED', 'AIRPOLLUTANTS_DIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'AVGTRAININGHOURS', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Autodesk Inc finished with 88 successes, 6 warnings and 2 errors <<<
+>>> Deleting rows for Company Copart Inc...<<<
+>>> Company Copart Inc has 80 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'TRANALYTICRENEWENERGYUSE', 'WASTE_RECYCLED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Copart Inc finished with 80 successes, 16 warnings and 0 errors <<<
+>>> Deleting rows for Company Paychex Inc...<<<
+ERROR: Company Paychex Inc | Metric SOXEMISSIONS | Ended with 0 rows! Started with 6 rows.
+>>> Company Paychex Inc has 88 total rows <<<
+>>> The following metrics have 0 rows: ['AIRPOLLUTANTS_DIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'WOMENMANAGERS', 'GENDER_PAY_GAP_PERCENTAGE', 'POLICY_BUSINESS_ETHICS', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Paychex Inc finished with 88 successes, 7 warnings and 1 errors <<<
+>>> Deleting rows for Company CSX Corp...<<<
+>>> Company CSX Corp has 89 total rows <<<
+>>> The following metrics have 0 rows: ['CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ELIMINATION_CUM_VOTING_RIGHTS', 'AVGTRAININGHOURS', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company CSX Corp finished with 89 successes, 7 warnings and 0 errors <<<
+>>> Deleting rows for Company Charter Communications Inc...<<<
+>>> Company Charter Communications Inc has 81 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPURCHASED', 'WASTE_RECYCLED', 'AIRPOLLUTANTS_INDIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'ELIMINATION_CUM_VOTING_RIGHTS', 'ANALYTICTOTALDONATIONS', 'TRADEUNIONREP', 'WOMENMANAGERS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Charter Communications Inc finished with 81 successes, 15 warnings and 0 errors <<<
+>>> Deleting rows for Company Paccar Inc...<<<
+>>> Company Paccar Inc has 83 total rows <<<
+>>> The following metrics have 0 rows: ['TARGETS_EMISSIONS', 'WASTE_RECYCLED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'AVGTRAININGHOURS', 'TRADEUNIONREP', 'WOMENEMPLOYEES', 'WOMENMANAGERS', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Paccar Inc finished with 83 successes, 13 warnings and 0 errors <<<
+>>> Deleting rows for Company Workday Inc...<<<
+ERROR: Company Workday Inc | Metric VOCEMISSIONS | Ended with 0 rows! Started with 7 rows.
+>>> Company Workday Inc has 81 total rows <<<
+>>> The following metrics have 0 rows: ['POLICY_SUSTAINABLE_PACKAGING', 'WASTE_RECYCLED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'COMMMEETINGSATTENDANCEAVG', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Workday Inc finished with 81 successes, 14 warnings and 1 errors <<<
+>>> Deleting rows for Company Airbnb Inc...<<<
+>>> Company Airbnb Inc has 77 total rows <<<
+>>> The following metrics have 0 rows: ['POLICY_SUSTAINABLE_PACKAGING', 'RENEWENERGYPRODUCED', 'WASTE_RECYCLED', 'AIRPOLLUTANTS_DIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'COMMMEETINGSATTENDANCEAVG', 'ANALYTICNONAUDITAUDITFEESRATIO', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'TRADEUNIONREP', 'WOMENMANAGERS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Airbnb Inc finished with 77 successes, 19 warnings and 0 errors <<<
+>>> Deleting rows for Company Keurig Dr Pepper Inc...<<<
+>>> Company Keurig Dr Pepper Inc has 88 total rows <<<
+>>> The following metrics have 0 rows: ['AIRPOLLUTANTS_INDIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'COMMMEETINGSATTENDANCEAVG', 'WOMENMANAGERS', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Keurig Dr Pepper Inc finished with 88 successes, 8 warnings and 0 errors <<<
+>>> Deleting rows for Company Exelon Corp...<<<
+>>> Company Exelon Corp has 90 total rows <<<
+>>> The following metrics have 0 rows: ['POLICY_SUSTAINABLE_PACKAGING', 'RENEWENERGYPURCHASED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'GENDER_PAY_GAP_PERCENTAGE', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Exelon Corp finished with 90 successes, 6 warnings and 0 errors <<<
+>>> Deleting rows for Company Ross Stores Inc...<<<
+ERROR: Company Ross Stores Inc | Metric VOCEMISSIONS | Ended with 0 rows! Started with 6 rows.
+>>> Company Ross Stores Inc has 79 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'WASTE_REDUCTION_TOTAL', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'GLOBAL_COMPACT', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'WOMENMANAGERS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Ross Stores Inc finished with 79 successes, 16 warnings and 1 errors <<<
+>>> Deleting rows for Company Marvell Technology Inc...<<<
+>>> Company Marvell Technology Inc has 80 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'WASTE_RECYCLED', 'AIRPOLLUTANTS_DIRECT', 'AIRPOLLUTANTS_INDIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'COMMMEETINGSATTENDANCEAVG', 'ANALYTICTOTALDONATIONS', 'TRADEUNIONREP', 'WOMENMANAGERS', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL'] <<<
+>>> Company Marvell Technology Inc finished with 80 successes, 16 warnings and 0 errors <<<
+>>> Deleting rows for Company Fastenal Co...<<<
+>>> Company Fastenal Co has 82 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'ANALYTICTOTALDONATIONS', 'WOMENMANAGERS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Fastenal Co finished with 82 successes, 14 warnings and 0 errors <<<
+>>> Deleting rows for Company NXP Semiconductors NV...<<<
+>>> Company NXP Semiconductors NV has 89 total rows <<<
+>>> The following metrics have 0 rows: ['CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'COMMMEETINGSATTENDANCEAVG', 'ELIMINATION_CUM_VOTING_RIGHTS', 'ANALYTICTOTALDONATIONS', 'GENDER_PAY_GAP_PERCENTAGE', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company NXP Semiconductors NV finished with 89 successes, 7 warnings and 0 errors <<<
+>>> Deleting rows for Company Verisk Analytics Inc...<<<
+ERROR: Company Verisk Analytics Inc | Metric SOXEMISSIONS | Ended with 0 rows! Started with 6 rows.
+>>> Company Verisk Analytics Inc has 78 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'WASTE_RECYCLED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICCEO_CHAIRMAN_SEPARATION', 'ANALYTICWASTERECYCLINGRATIO', 'CALL_MEETINGS_LIMITED_RIGHTS', 'ELIMINATION_CUM_VOTING_RIGHTS', 'ANALYTICTOTALDONATIONS', 'HUMAN_RIGHTS_POLICY_DUEDILIGENCE', 'WOMENMANAGERS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL'] <<<
+>>> Company Verisk Analytics Inc finished with 78 successes, 17 warnings and 1 errors <<<
+>>> Deleting rows for Company AstraZeneca PLC...<<<
+>>> Company AstraZeneca PLC has 88 total rows <<<
+>>> The following metrics have 0 rows: ['CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICNONAUDITAUDITFEESRATIO', 'ANNUAL_MEDIAN_COMPENSATION', 'ELIMINATION_CUM_VOTING_RIGHTS', 'ANALYTICTOTALDONATIONS', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company AstraZeneca PLC finished with 88 successes, 8 warnings and 0 errors <<<
+>>> Deleting rows for Company Xcel Energy Inc...<<<
+>>> Company Xcel Energy Inc has 90 total rows <<<
+>>> The following metrics have 0 rows: ['POLICY_SUSTAINABLE_PACKAGING', 'CO2_NO_EQUIVALENTS', 'COMMMEETINGSATTENDANCEAVG', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Xcel Energy Inc finished with 90 successes, 6 warnings and 0 errors <<<
+>>> Deleting rows for Company Coca-Cola Europacific Partners PLC...<<<
+>>> Company Coca-Cola Europacific Partners PLC has 88 total rows <<<
+>>> The following metrics have 0 rows: ['AIRPOLLUTANTS_INDIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANNUAL_MEDIAN_COMPENSATION', 'CALL_MEETINGS_LIMITED_RIGHTS', 'ELIMINATION_CUM_VOTING_RIGHTS', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Coca-Cola Europacific Partners PLC finished with 88 successes, 8 warnings and 0 errors <<<
+>>> Deleting rows for Company Axon Enterprise Inc...<<<
+>>> Company Axon Enterprise Inc has 80 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'TRANALYTICRENEWENERGYUSE', 'WASTE_RECYCLED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'WOMENMANAGERS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL'] <<<
+>>> Company Axon Enterprise Inc finished with 80 successes, 16 warnings and 0 errors <<<
+>>> Deleting rows for Company Diamondback Energy Inc...<<<
+>>> Company Diamondback Energy Inc has 86 total rows <<<
+>>> The following metrics have 0 rows: ['POLICY_SUSTAINABLE_PACKAGING', 'RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'WASTE_RECYCLED', 'CO2_NO_EQUIVALENTS', 'ANALYTICWASTERECYCLINGRATIO', 'ANALYTICTOTALDONATIONS', 'GENDER_PAY_GAP_PERCENTAGE', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Diamondback Energy Inc finished with 86 successes, 10 warnings and 0 errors <<<
+>>> Deleting rows for Company Kraft Heinz Co...<<<
+>>> Company Kraft Heinz Co has 81 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'WASTE_RECYCLED', 'AIRPOLLUTANTS_INDIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'ANALYTICTOTALDONATIONS', 'TRADEUNIONREP', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Kraft Heinz Co finished with 81 successes, 15 warnings and 0 errors <<<
+>>> Deleting rows for Company Electronic Arts Inc...<<<
+ERROR: Company Electronic Arts Inc | Metric PARTICULATE_MATTER_EMISSIONS | Ended with 0 rows! Started with 3 rows.
+ERROR: Company Electronic Arts Inc | Metric SOXEMISSIONS | Ended with 0 rows! Started with 6 rows.
+ERROR: Company Electronic Arts Inc | Metric VOCEMISSIONS | Ended with 0 rows! Started with 7 rows.
+>>> Company Electronic Arts Inc has 78 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'WASTE_RECYCLED', 'AIRPOLLUTANTS_DIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ELIMINATION_CUM_VOTING_RIGHTS', 'ANALYTICTOTALDONATIONS', 'WOMENMANAGERS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Electronic Arts Inc finished with 78 successes, 15 warnings and 3 errors <<<
+>>> Deleting rows for Company Baker Hughes Co...<<<
+>>> Company Baker Hughes Co has 91 total rows <<<
+>>> The following metrics have 0 rows: ['POLICY_SUSTAINABLE_PACKAGING', 'AIRPOLLUTANTS_INDIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Baker Hughes Co finished with 91 successes, 5 warnings and 0 errors <<<
+>>> Deleting rows for Company Take-Two Interactive Software Inc...<<<
+ERROR: Company Take-Two Interactive Software Inc | Metric SOXEMISSIONS | Ended with 0 rows! Started with 7 rows.
+>>> Company Take-Two Interactive Software Inc has 82 total rows <<<
+>>> The following metrics have 0 rows: ['WASTE_RECYCLED', 'AIRPOLLUTANTS_DIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'ELIMINATION_CUM_VOTING_RIGHTS', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL'] <<<
+>>> Company Take-Two Interactive Software Inc finished with 82 successes, 13 warnings and 1 errors <<<
+>>> Deleting rows for Company Cognizant Technology Solutions Corp...<<<
+>>> Company Cognizant Technology Solutions Corp has 86 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPRODUCED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'ANALYTICTOTALDONATIONS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL'] <<<
+>>> Company Cognizant Technology Solutions Corp finished with 86 successes, 10 warnings and 0 errors <<<
+>>> Deleting rows for Company Old Dominion Freight Line Inc...<<<
+>>> Company Old Dominion Freight Line Inc has 81 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'WASTE_REDUCTION_TOTAL', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'ANALYTICNONAUDITAUDITFEESRATIO', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'WOMENEMPLOYEES', 'WOMENMANAGERS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Old Dominion Freight Line Inc finished with 81 successes, 15 warnings and 0 errors <<<
+>>> Deleting rows for Company IDEXX Laboratories Inc...<<<
+>>> Company IDEXX Laboratories Inc has 89 total rows <<<
+>>> The following metrics have 0 rows: ['WASTE_RECYCLED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'TRADEUNIONREP', 'GENDER_PAY_GAP_PERCENTAGE', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company IDEXX Laboratories Inc finished with 89 successes, 7 warnings and 0 errors <<<
+>>> Deleting rows for Company Atlassian Corporation Ltd...<<<
+ERROR: Company Atlassian Corporation Ltd | Metric VOCEMISSIONS | Ended with 0 rows! Started with 7 rows.
+>>> Company Atlassian Corporation Ltd has 79 total rows <<<
+>>> The following metrics have 0 rows: ['POLICY_SUSTAINABLE_PACKAGING', 'WASTE_RECYCLED', 'AIRPOLLUTANTS_INDIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'BOARDMEETINGATTENDANCEAVG', 'COMMMEETINGSATTENDANCEAVG', 'ANALYTICNONAUDITAUDITFEESRATIO', 'AVGTRAININGHOURS', 'TRADEUNIONREP', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Atlassian Corporation Ltd finished with 79 successes, 16 warnings and 1 errors <<<
+>>> Deleting rows for Company Lululemon Athletica Inc...<<<
+>>> Company Lululemon Athletica Inc has 84 total rows <<<
+>>> The following metrics have 0 rows: ['WASTE_RECYCLED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'ANALYTICTOTALDONATIONS', 'WOMENMANAGERS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Lululemon Athletica Inc finished with 84 successes, 12 warnings and 0 errors <<<
+>>> Deleting rows for Company CoStar Group Inc...<<<
+>>> Company CoStar Group Inc has 85 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'WASTE_RECYCLED', 'AIRPOLLUTANTS_DIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'ANALYTICTOTALDONATIONS', 'WOMENMANAGERS', 'GENDER_PAY_GAP_PERCENTAGE', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company CoStar Group Inc finished with 85 successes, 11 warnings and 0 errors <<<
+>>> Deleting rows for Company Datadog Inc...<<<
+ERROR: Company Datadog Inc | Metric PARTICULATE_MATTER_EMISSIONS | Ended with 0 rows! Started with 5 rows.
+ERROR: Company Datadog Inc | Metric VOCEMISSIONS | Ended with 0 rows! Started with 6 rows.
+>>> Company Datadog Inc has 73 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'TRANALYTICRENEWENERGYUSE', 'WASTE_RECYCLED', 'AIRPOLLUTANTS_DIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'ANALYTICNONAUDITAUDITFEESRATIO', 'CALL_MEETINGS_LIMITED_RIGHTS', 'ELIMINATION_CUM_VOTING_RIGHTS', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'WOMENMANAGERS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Datadog Inc finished with 73 successes, 21 warnings and 2 errors <<<
+>>> Deleting rows for Company Ge Healthcare Technologies...<<<
+ERROR: Company Ge Healthcare Technologies | Metric ENERGYUSETOTAL | Ended with 5 rows!
+Ge Healthcare Technologies - ENERGYUSETOTAL - 3708327.69 - None
+Ge Healthcare Technologies - ENERGYUSETOTAL - 3788652.92 - None
+Ge Healthcare Technologies - ENERGYUSETOTAL - 3782026.8 - None
+Ge Healthcare Technologies - ENERGYUSETOTAL - 3691130.4 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - ENERGYUSETOTAL - 3651642.0 - 2022-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric RENEWENERGYCONSUMED | Ended with 2 rows!
+Ge Healthcare Technologies - RENEWENERGYCONSUMED - 775137.38 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - RENEWENERGYCONSUMED - 309301.2 - 2022-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric SUSTAINABLE_BUILDING_PRODUCTS | Ended with 5 rows!
+Ge Healthcare Technologies - SUSTAINABLE_BUILDING_PRODUCTS - 0.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - SUSTAINABLE_BUILDING_PRODUCTS - 0.0 - 2022-12-31 00:00:00
+Ge Healthcare Technologies - SUSTAINABLE_BUILDING_PRODUCTS - 0.0 - 2021-12-31 00:00:00
+Ge Healthcare Technologies - SUSTAINABLE_BUILDING_PRODUCTS - 0.0 - 2020-12-31 00:00:00
+Ge Healthcare Technologies - SUSTAINABLE_BUILDING_PRODUCTS - 0.0 - 2019-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric TARGETS_EMISSIONS | Ended with 5 rows!
+Ge Healthcare Technologies - TARGETS_EMISSIONS - 1.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - TARGETS_EMISSIONS - 0.0 - 2022-12-31 00:00:00
+Ge Healthcare Technologies - TARGETS_EMISSIONS - 0.0 - 2021-12-31 00:00:00
+Ge Healthcare Technologies - TARGETS_EMISSIONS - 0.0 - 2020-12-31 00:00:00
+Ge Healthcare Technologies - TARGETS_EMISSIONS - 0.0 - 2019-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric TARGETS_WATER_EFFICIENCY | Ended with 5 rows!
+Ge Healthcare Technologies - TARGETS_WATER_EFFICIENCY - 0.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - TARGETS_WATER_EFFICIENCY - 0.0 - 2022-12-31 00:00:00
+Ge Healthcare Technologies - TARGETS_WATER_EFFICIENCY - 0.0 - 2021-12-31 00:00:00
+Ge Healthcare Technologies - TARGETS_WATER_EFFICIENCY - 0.0 - 2020-12-31 00:00:00
+Ge Healthcare Technologies - TARGETS_WATER_EFFICIENCY - 0.0 - 2019-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric TRANALYTICRENEWENERGYUSE | Ended with 2 rows!
+Ge Healthcare Technologies - TRANALYTICRENEWENERGYUSE - 21.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - TRANALYTICRENEWENERGYUSE - 8.47 - 2022-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric WATER_TECHNOLOGIES | Ended with 5 rows!
+Ge Healthcare Technologies - WATER_TECHNOLOGIES - 0.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - WATER_TECHNOLOGIES - 0.0 - 2022-12-31 00:00:00
+Ge Healthcare Technologies - WATER_TECHNOLOGIES - 0.0 - 2021-12-31 00:00:00
+Ge Healthcare Technologies - WATER_TECHNOLOGIES - 0.0 - 2020-12-31 00:00:00
+Ge Healthcare Technologies - WATER_TECHNOLOGIES - 0.0 - 2019-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric CO2DIRECTSCOPE1 | Ended with 5 rows!
+Ge Healthcare Technologies - CO2DIRECTSCOPE1 - 122836.94 - None
+Ge Healthcare Technologies - CO2DIRECTSCOPE1 - 113528.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - CO2DIRECTSCOPE1 - 117000.0 - 2022-12-31 00:00:00
+Ge Healthcare Technologies - CO2DIRECTSCOPE1 - 117475.0 - 2021-12-31 00:00:00
+Ge Healthcare Technologies - CO2DIRECTSCOPE1 - 137254.0 - 2020-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric CO2INDIRECTSCOPE2 | Ended with 5 rows!
+Ge Healthcare Technologies - CO2INDIRECTSCOPE2 - 161782.67 - None
+Ge Healthcare Technologies - CO2INDIRECTSCOPE2 - 139701.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - CO2INDIRECTSCOPE2 - 174000.0 - 2022-12-31 00:00:00
+Ge Healthcare Technologies - CO2INDIRECTSCOPE2 - 174451.0 - 2021-12-31 00:00:00
+Ge Healthcare Technologies - CO2INDIRECTSCOPE2 - 174852.0 - 2020-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric CO2INDIRECTSCOPE3 | Ended with 2 rows!
+Ge Healthcare Technologies - CO2INDIRECTSCOPE3 - 3679201.47 - None
+Ge Healthcare Technologies - CO2INDIRECTSCOPE3 - 6800000.0 - 2023-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric NOXEMISSIONS | Ended with 5 rows!
+Ge Healthcare Technologies - NOXEMISSIONS - 164.64 - None
+Ge Healthcare Technologies - NOXEMISSIONS - 172.53 - None
+Ge Healthcare Technologies - NOXEMISSIONS - 176.73 - None
+Ge Healthcare Technologies - NOXEMISSIONS - 179.75 - None
+Ge Healthcare Technologies - NOXEMISSIONS - 183.04 - None
+ERROR: Company Ge Healthcare Technologies | Metric PARTICULATE_MATTER_EMISSIONS | Ended with 5 rows!
+Ge Healthcare Technologies - PARTICULATE_MATTER_EMISSIONS - 22.18 - None
+Ge Healthcare Technologies - PARTICULATE_MATTER_EMISSIONS - 22.97 - None
+Ge Healthcare Technologies - PARTICULATE_MATTER_EMISSIONS - 28.91 - None
+Ge Healthcare Technologies - PARTICULATE_MATTER_EMISSIONS - 21.65 - None
+Ge Healthcare Technologies - PARTICULATE_MATTER_EMISSIONS - 20.66 - None
+ERROR: Company Ge Healthcare Technologies | Metric SOXEMISSIONS | Ended with 5 rows!
+Ge Healthcare Technologies - SOXEMISSIONS - 21.96 - None
+Ge Healthcare Technologies - SOXEMISSIONS - 19.44 - None
+Ge Healthcare Technologies - SOXEMISSIONS - 21.99 - None
+Ge Healthcare Technologies - SOXEMISSIONS - 22.25 - None
+Ge Healthcare Technologies - SOXEMISSIONS - 53.85 - None
+ERROR: Company Ge Healthcare Technologies | Metric VOCEMISSIONS | Ended with 5 rows!
+Ge Healthcare Technologies - VOCEMISSIONS - 162.35 - None
+Ge Healthcare Technologies - VOCEMISSIONS - 159.89 - None
+Ge Healthcare Technologies - VOCEMISSIONS - 168.42 - None
+Ge Healthcare Technologies - VOCEMISSIONS - 175.01 - None
+Ge Healthcare Technologies - VOCEMISSIONS - 649.93 - None
+ERROR: Company Ge Healthcare Technologies | Metric WATERWITHDRAWALTOTAL | Ended with 5 rows!
+Ge Healthcare Technologies - WATERWITHDRAWALTOTAL - 1799850.49 - None
+Ge Healthcare Technologies - WATERWITHDRAWALTOTAL - 2660873.76 - None
+Ge Healthcare Technologies - WATERWITHDRAWALTOTAL - 1835521.84 - None
+Ge Healthcare Technologies - WATERWITHDRAWALTOTAL - 1823966.46 - None
+Ge Healthcare Technologies - WATERWITHDRAWALTOTAL - 1819708.58 - None
+ERROR: Company Ge Healthcare Technologies | Metric WATER_USE_PAI_M10 | Ended with 4 rows!
+Ge Healthcare Technologies - WATER_USE_PAI_M10 - 0.0 - 2024-12-20 00:00:00
+Ge Healthcare Technologies - WATER_USE_PAI_M10 - 0.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - WATER_USE_PAI_M10 - 0.0 - 2022-12-31 00:00:00
+Ge Healthcare Technologies - WATER_USE_PAI_M10 - 0.0 - 2021-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric ANALYTICBOARDFEMALE | Ended with 2 rows!
+Ge Healthcare Technologies - ANALYTICBOARDFEMALE - 40.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - ANALYTICBOARDFEMALE - 40.0 - 2022-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric ANALYTICQMS | Ended with 4 rows!
+Ge Healthcare Technologies - ANALYTICQMS - 1.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - ANALYTICQMS - 0.0 - 2021-11-15 00:00:00
+Ge Healthcare Technologies - ANALYTICQMS - 0.0 - 2020-11-15 00:00:00
+Ge Healthcare Technologies - ANALYTICQMS - 0.0 - 2019-11-15 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric GLOBAL_COMPACT | Ended with 4 rows!
+Ge Healthcare Technologies - GLOBAL_COMPACT - 1.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - GLOBAL_COMPACT - 0.0 - 2021-11-15 00:00:00
+Ge Healthcare Technologies - GLOBAL_COMPACT - 0.0 - 2020-11-15 00:00:00
+Ge Healthcare Technologies - GLOBAL_COMPACT - 0.0 - 2019-11-15 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric CEO_ANNUAL_COMPENSATION | Ended with 2 rows!
+Ge Healthcare Technologies - CEO_ANNUAL_COMPENSATION - 29849700.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - CEO_ANNUAL_COMPENSATION - 10497100.0 - 2022-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric CSR_REPORTING_EXTERNAL_AUDIT | Ended with 4 rows!
+Ge Healthcare Technologies - CSR_REPORTING_EXTERNAL_AUDIT - 1.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - CSR_REPORTING_EXTERNAL_AUDIT - 0.0 - 2021-11-15 00:00:00
+Ge Healthcare Technologies - CSR_REPORTING_EXTERNAL_AUDIT - 0.0 - 2020-11-15 00:00:00
+Ge Healthcare Technologies - CSR_REPORTING_EXTERNAL_AUDIT - 0.0 - 2019-11-15 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric ANALYTICCSR_COMP_INCENTIVES | Ended with 5 rows!
+Ge Healthcare Technologies - ANALYTICCSR_COMP_INCENTIVES - 0.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - ANALYTICCSR_COMP_INCENTIVES - 0.0 - 2022-12-31 00:00:00
+Ge Healthcare Technologies - ANALYTICCSR_COMP_INCENTIVES - 0.0 - 2021-12-31 00:00:00
+Ge Healthcare Technologies - ANALYTICCSR_COMP_INCENTIVES - 0.0 - 2020-12-31 00:00:00
+Ge Healthcare Technologies - ANALYTICCSR_COMP_INCENTIVES - 0.0 - 2019-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric ANALYTICEMPLOYMENTCREATION | Ended with 2 rows!
+Ge Healthcare Technologies - ANALYTICEMPLOYMENTCREATION - 2.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - ANALYTICEMPLOYMENTCREATION - -1.96 - 2022-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric ANIMAL_TESTING_REDUCTION | Ended with 5 rows!
+Ge Healthcare Technologies - ANIMAL_TESTING_REDUCTION - 0.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - ANIMAL_TESTING_REDUCTION - 0.0 - 2022-12-31 00:00:00
+Ge Healthcare Technologies - ANIMAL_TESTING_REDUCTION - 0.0 - 2021-12-31 00:00:00
+Ge Healthcare Technologies - ANIMAL_TESTING_REDUCTION - 0.0 - 2020-12-31 00:00:00
+Ge Healthcare Technologies - ANIMAL_TESTING_REDUCTION - 0.0 - 2019-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric CONFORMANCE_OECD_MNE | Ended with 2 rows!
+Ge Healthcare Technologies - CONFORMANCE_OECD_MNE - 1.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - CONFORMANCE_OECD_MNE - 0.0 - 2022-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric CONFORMANCE_UN_GUID | Ended with 2 rows!
+Ge Healthcare Technologies - CONFORMANCE_UN_GUID - 1.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - CONFORMANCE_UN_GUID - 1.0 - 2022-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric DAY_CARE_SERVICES | Ended with 2 rows!
+Ge Healthcare Technologies - DAY_CARE_SERVICES - 0.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - DAY_CARE_SERVICES - 0.0 - 2022-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric GRIEVANCE_REPORTING_PROCESS | Ended with 2 rows!
+Ge Healthcare Technologies - GRIEVANCE_REPORTING_PROCESS - 1.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - GRIEVANCE_REPORTING_PROCESS - 1.0 - 2022-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric HUMAN_RIGHTS_CONTRACTOR | Ended with 2 rows!
+Ge Healthcare Technologies - HUMAN_RIGHTS_CONTRACTOR - 1.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - HUMAN_RIGHTS_CONTRACTOR - 1.0 - 2022-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric TARGETS_DIVERSITY_OPPORTUNITY | Ended with 2 rows!
+Ge Healthcare Technologies - TARGETS_DIVERSITY_OPPORTUNITY - 0.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - TARGETS_DIVERSITY_OPPORTUNITY - 0.0 - 2022-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric WHISTLEBLOWER_PROTECTION | Ended with 2 rows!
+Ge Healthcare Technologies - WHISTLEBLOWER_PROTECTION - 1.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - WHISTLEBLOWER_PROTECTION - 1.0 - 2022-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric BRIBERY_AND_CORRUPTION_PAI_INSUFFICIENT_ACTIONS | Ended with 4 rows!
+Ge Healthcare Technologies - BRIBERY_AND_CORRUPTION_PAI_INSUFFICIENT_ACTIONS - 0.0 - 2024-12-20 00:00:00
+Ge Healthcare Technologies - BRIBERY_AND_CORRUPTION_PAI_INSUFFICIENT_ACTIONS - 0.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - BRIBERY_AND_CORRUPTION_PAI_INSUFFICIENT_ACTIONS - 0.0 - 2022-12-31 00:00:00
+Ge Healthcare Technologies - BRIBERY_AND_CORRUPTION_PAI_INSUFFICIENT_ACTIONS - 0.0 - 2021-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric EMPLOYEE_HEALTH_SAFETY_POLICY | Ended with 2 rows!
+Ge Healthcare Technologies - EMPLOYEE_HEALTH_SAFETY_POLICY - 1.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - EMPLOYEE_HEALTH_SAFETY_POLICY - 1.0 - 2022-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric HUMAN_RIGHTS_VIOLATION_PAI | Ended with 4 rows!
+Ge Healthcare Technologies - HUMAN_RIGHTS_VIOLATION_PAI - 0.0 - 2024-12-20 00:00:00
+Ge Healthcare Technologies - HUMAN_RIGHTS_VIOLATION_PAI - 0.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - HUMAN_RIGHTS_VIOLATION_PAI - 0.0 - 2022-12-31 00:00:00
+Ge Healthcare Technologies - HUMAN_RIGHTS_VIOLATION_PAI - 0.0 - 2021-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric POLICY_CHILD_LABOR | Ended with 2 rows!
+Ge Healthcare Technologies - POLICY_CHILD_LABOR - 1.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - POLICY_CHILD_LABOR - 1.0 - 2022-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric POLICY_DATA_PRIVACY | Ended with 2 rows!
+Ge Healthcare Technologies - POLICY_DATA_PRIVACY - 1.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - POLICY_DATA_PRIVACY - 1.0 - 2022-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric POLICY_FORCED_LABOR | Ended with 2 rows!
+Ge Healthcare Technologies - POLICY_FORCED_LABOR - 1.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - POLICY_FORCED_LABOR - 1.0 - 2022-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric SUPPLY_CHAINHS_POLICY | Ended with 2 rows!
+Ge Healthcare Technologies - SUPPLY_CHAINHS_POLICY - 1.0 - 2023-12-31 00:00:00
+Ge Healthcare Technologies - SUPPLY_CHAINHS_POLICY - 1.0 - 2022-12-31 00:00:00
+ERROR: Company Ge Healthcare Technologies | Metric TIRTOTAL | Ended with 2 rows!
+Ge Healthcare Technologies - TIRTOTAL - 1.7 - 2022-12-31 00:00:00
+Ge Healthcare Technologies - TIRTOTAL - 1.85 - 2021-12-31 00:00:00
+>>> Company Ge Healthcare Technologies has 154 total rows <<<
+>>> The following metrics have 0 rows: ['ECO_DESIGN_PRODUCTS', 'ENV_INVESTMENTS', 'POLICY_SUSTAINABLE_PACKAGING', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'TAKEBACK_RECYCLING_INITIATIVES', 'WASTE_REDUCTION_TOTAL', 'AIRPOLLUTANTS_DIRECT', 'AIRPOLLUTANTS_INDIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'N_OXS_OX_EMISSIONS_REDUCTION', 'VOC_EMISSIONS_REDUCTION', 'ANALYTICAUDITCOMMIND', 'ANALYTICCEO_CHAIRMAN_SEPARATION', 'ANALYTICWASTERECYCLINGRATIO', 'BOARDMEETINGATTENDANCEAVG', 'COMMMEETINGSATTENDANCEAVG', 'ANALYTICNONAUDITAUDITFEESRATIO', 'ANALYTIC_ANTI_TAKEOVER_DEVICES', 'AUDITCOMMNONEXECMEMBERS', 'CALL_MEETINGS_LIMITED_RIGHTS', 'CSR_REPORTINGGRI', 'ELIMINATION_CUM_VOTING_RIGHTS', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'HUMAN_RIGHTS_POLICY_DUEDILIGENCE', 'LABELED_WOOD', 'POLICY_FREEDOMOF_ASSOCIATION', 'TRADEUNIONREP', 'WOMENMANAGERS', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Ge Healthcare Technologies finished with 22 successes, 35 warnings and 39 errors <<<
+>>> Deleting rows for Company Zscaler Inc...<<<
+>>> Company Zscaler Inc has 80 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'COMMMEETINGSATTENDANCEAVG', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'WOMENMANAGERS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Zscaler Inc finished with 80 successes, 16 warnings and 0 errors <<<
+>>> Deleting rows for Company ANSYS Inc...<<<
+ERROR: Company ANSYS Inc | Metric PARTICULATE_MATTER_EMISSIONS | Ended with 0 rows! Started with 6 rows.
+ERROR: Company ANSYS Inc | Metric SOXEMISSIONS | Ended with 0 rows! Started with 6 rows.
+ERROR: Company ANSYS Inc | Metric VOCEMISSIONS | Ended with 0 rows! Started with 7 rows.
+>>> Company ANSYS Inc has 82 total rows <<<
+>>> The following metrics have 0 rows: ['WASTE_RECYCLED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL'] <<<
+>>> Company ANSYS Inc finished with 82 successes, 11 warnings and 3 errors <<<
+>>> Deleting rows for Company Dexcom Inc...<<<
+>>> Company Dexcom Inc has 83 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'TRANALYTICRENEWENERGYUSE', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'WOMENMANAGERS', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Dexcom Inc finished with 83 successes, 13 warnings and 0 errors <<<
+>>> Deleting rows for Company Trade Desk Inc...<<<
+ERROR: Company Trade Desk Inc | Metric SOXEMISSIONS | Ended with 0 rows! Started with 7 rows.
+ERROR: Company Trade Desk Inc | Metric VOCEMISSIONS | Ended with 0 rows! Started with 7 rows.
+>>> Company Trade Desk Inc has 74 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'TRANALYTICRENEWENERGYUSE', 'WASTE_RECYCLED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'ELIMINATION_CUM_VOTING_RIGHTS', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'TRADEUNIONREP', 'WOMENEMPLOYEES', 'WOMENMANAGERS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Trade Desk Inc finished with 74 successes, 20 warnings and 2 errors <<<
+>>> Deleting rows for Company Warner Bros Discovery Inc...<<<
+>>> Company Warner Bros Discovery Inc has 75 total rows <<<
+>>> The following metrics have 0 rows: ['POLICY_SUSTAINABLE_PACKAGING', 'RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'WASTE_RECYCLED', 'WATER_TECHNOLOGIES', 'AIRPOLLUTANTS_INDIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'N_OXS_OX_EMISSIONS_REDUCTION', 'VOC_EMISSIONS_REDUCTION', 'ANALYTICWASTERECYCLINGRATIO', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'TRADEUNIONREP', 'WOMENEMPLOYEES', 'EMPLOYEEFATALITIES', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company Warner Bros Discovery Inc finished with 75 successes, 21 warnings and 0 errors <<<
+>>> Deleting rows for Company Microchip Technology Inc...<<<
+>>> Company Microchip Technology Inc has 87 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICTOTALDONATIONS', 'WOMENMANAGERS', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Microchip Technology Inc finished with 87 successes, 9 warnings and 0 errors <<<
+>>> Deleting rows for Company CDW Corp...<<<
+ERROR: Company CDW Corp | Metric VOCEMISSIONS | Ended with 0 rows! Started with 7 rows.
+>>> Company CDW Corp has 82 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'WASTE_RECYCLED', 'AIRPOLLUTANTS_DIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'WOMENMANAGERS', 'POLICY_BUSINESS_ETHICS', 'TURNOVEREMPLOYEES'] <<<
+>>> Company CDW Corp finished with 82 successes, 13 warnings and 1 errors <<<
+>>> Deleting rows for Company Biogen Inc...<<<
+>>> Company Biogen Inc has 91 total rows <<<
+>>> The following metrics have 0 rows: ['CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ELIMINATION_CUM_VOTING_RIGHTS', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company Biogen Inc finished with 91 successes, 5 warnings and 0 errors <<<
+>>> Deleting rows for Company GlobalFoundries Inc...<<<
+ERROR: Company GlobalFoundries Inc | Metric ENERGYUSETOTAL | Ended with 3 rows!
+GlobalFoundries Inc - ENERGYUSETOTAL - 14279333.24 - None
+GlobalFoundries Inc - ENERGYUSETOTAL - 12956139.14 - None
+GlobalFoundries Inc - ENERGYUSETOTAL - 14797539.5 - None
+ERROR: Company GlobalFoundries Inc | Metric POLICY_WATER_EFFICIENCY | Ended with 2 rows!
+GlobalFoundries Inc - POLICY_WATER_EFFICIENCY - 1.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - POLICY_WATER_EFFICIENCY - 1.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric WASTE_RECYCLED | Ended with 2 rows!
+GlobalFoundries Inc - WASTE_RECYCLED - 35642.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - WASTE_RECYCLED - 42798.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric AIRPOLLUTANTS_DIRECT | Ended with 6 rows!
+GlobalFoundries Inc - AIRPOLLUTANTS_DIRECT - 15.68 - None
+GlobalFoundries Inc - AIRPOLLUTANTS_DIRECT - 13.05 - None
+GlobalFoundries Inc - AIRPOLLUTANTS_DIRECT - 1599.93 - None
+GlobalFoundries Inc - AIRPOLLUTANTS_DIRECT - 12.62 - None
+GlobalFoundries Inc - AIRPOLLUTANTS_DIRECT - 267.21 - None
+GlobalFoundries Inc - AIRPOLLUTANTS_DIRECT - 14.54 - None
+ERROR: Company GlobalFoundries Inc | Metric CO2DIRECTSCOPE1 | Ended with 2 rows!
+GlobalFoundries Inc - CO2DIRECTSCOPE1 - 957489.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - CO2DIRECTSCOPE1 - 1649765.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric CO2INDIRECTSCOPE2 | Ended with 6 rows!
+GlobalFoundries Inc - CO2INDIRECTSCOPE2 - 544692.43 - None
+GlobalFoundries Inc - CO2INDIRECTSCOPE2 - 563331.65 - None
+GlobalFoundries Inc - CO2INDIRECTSCOPE2 - 496841.72 - None
+GlobalFoundries Inc - CO2INDIRECTSCOPE2 - 625265.5 - None
+GlobalFoundries Inc - CO2INDIRECTSCOPE2 - 822082.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - CO2INDIRECTSCOPE2 - 811685.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric CO2INDIRECTSCOPE3 | Ended with 5 rows!
+GlobalFoundries Inc - CO2INDIRECTSCOPE3 - 276501.62 - None
+GlobalFoundries Inc - CO2INDIRECTSCOPE3 - 304727.0 - None
+GlobalFoundries Inc - CO2INDIRECTSCOPE3 - 279270.2 - None
+GlobalFoundries Inc - CO2INDIRECTSCOPE3 - 693703.64 - 2023-12-31 00:00:00
+GlobalFoundries Inc - CO2INDIRECTSCOPE3 - 834806.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric HAZARDOUSWASTE | Ended with 2 rows!
+GlobalFoundries Inc - HAZARDOUSWASTE - 37139.85 - None
+GlobalFoundries Inc - HAZARDOUSWASTE - 47233.0 - 2023-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric NOXEMISSIONS | Ended with 6 rows!
+GlobalFoundries Inc - NOXEMISSIONS - 62.46 - None
+GlobalFoundries Inc - NOXEMISSIONS - 72.87 - None
+GlobalFoundries Inc - NOXEMISSIONS - 64.83 - None
+GlobalFoundries Inc - NOXEMISSIONS - 80.25 - None
+GlobalFoundries Inc - NOXEMISSIONS - 58.01 - None
+GlobalFoundries Inc - NOXEMISSIONS - 61.33 - None
+ERROR: Company GlobalFoundries Inc | Metric PARTICULATE_MATTER_EMISSIONS | Ended with 2 rows!
+GlobalFoundries Inc - PARTICULATE_MATTER_EMISSIONS - 7.79 - None
+GlobalFoundries Inc - PARTICULATE_MATTER_EMISSIONS - 48.4 - None
+ERROR: Company GlobalFoundries Inc | Metric SOXEMISSIONS | Ended with 6 rows!
+GlobalFoundries Inc - SOXEMISSIONS - 58.96 - None
+GlobalFoundries Inc - SOXEMISSIONS - 63.02 - None
+GlobalFoundries Inc - SOXEMISSIONS - 64.7 - None
+GlobalFoundries Inc - SOXEMISSIONS - 72.63 - None
+GlobalFoundries Inc - SOXEMISSIONS - 62.78 - None
+GlobalFoundries Inc - SOXEMISSIONS - 84.65 - None
+ERROR: Company GlobalFoundries Inc | Metric VOCEMISSIONS | Ended with 6 rows!
+GlobalFoundries Inc - VOCEMISSIONS - 81.97 - None
+GlobalFoundries Inc - VOCEMISSIONS - 101.83 - None
+GlobalFoundries Inc - VOCEMISSIONS - 84.73 - None
+GlobalFoundries Inc - VOCEMISSIONS - 94.44 - None
+GlobalFoundries Inc - VOCEMISSIONS - 77.22 - 2023-12-31 00:00:00
+GlobalFoundries Inc - VOCEMISSIONS - 89.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric WASTETOTAL | Ended with 2 rows!
+GlobalFoundries Inc - WASTETOTAL - 60391.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - WASTETOTAL - 77819.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric WATERWITHDRAWALTOTAL | Ended with 5 rows!
+GlobalFoundries Inc - WATERWITHDRAWALTOTAL - 14696556.93 - None
+GlobalFoundries Inc - WATERWITHDRAWALTOTAL - 16092213.47 - None
+GlobalFoundries Inc - WATERWITHDRAWALTOTAL - 16194103.46 - None
+GlobalFoundries Inc - WATERWITHDRAWALTOTAL - 23658000.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - WATERWITHDRAWALTOTAL - 26851000.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric WATER_USE_PAI_M10 | Ended with 4 rows!
+GlobalFoundries Inc - WATER_USE_PAI_M10 - 0.0 - 2024-12-20 00:00:00
+GlobalFoundries Inc - WATER_USE_PAI_M10 - 0.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - WATER_USE_PAI_M10 - 0.0 - 2022-12-31 00:00:00
+GlobalFoundries Inc - WATER_USE_PAI_M10 - 0.0 - 2021-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric ANALYTICBOARDFEMALE | Ended with 2 rows!
+GlobalFoundries Inc - ANALYTICBOARDFEMALE - 18.18 - 2023-12-31 00:00:00
+GlobalFoundries Inc - ANALYTICBOARDFEMALE - 18.18 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric ANALYTICCOMPCOMMIND | Ended with 2 rows!
+GlobalFoundries Inc - ANALYTICCOMPCOMMIND - 100.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - ANALYTICCOMPCOMMIND - 75.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric ANALYTICINDEPBOARD | Ended with 2 rows!
+GlobalFoundries Inc - ANALYTICINDEPBOARD - 81.82 - 2023-12-31 00:00:00
+GlobalFoundries Inc - ANALYTICINDEPBOARD - 81.81 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric ANALYTICNONEXECBOARD | Ended with 2 rows!
+GlobalFoundries Inc - ANALYTICNONEXECBOARD - 81.82 - 2023-12-31 00:00:00
+GlobalFoundries Inc - ANALYTICNONEXECBOARD - 90.9 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric ANALYTICWASTERECYCLINGRATIO | Ended with 2 rows!
+GlobalFoundries Inc - ANALYTICWASTERECYCLINGRATIO - 59.02 - 2023-12-31 00:00:00
+GlobalFoundries Inc - ANALYTICWASTERECYCLINGRATIO - 55.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric ANALYTIC_AUDIT_COMM_EXPERTISE | Ended with 2 rows!
+GlobalFoundries Inc - ANALYTIC_AUDIT_COMM_EXPERTISE - 1.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - ANALYTIC_AUDIT_COMM_EXPERTISE - 1.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric ANALYTIC_VOTING_RIGHTS | Ended with 4 rows!
+GlobalFoundries Inc - ANALYTIC_VOTING_RIGHTS - 0.0 - 2022-12-31 00:00:00
+GlobalFoundries Inc - ANALYTIC_VOTING_RIGHTS - 0.0 - 2021-12-31 00:00:00
+GlobalFoundries Inc - ANALYTIC_VOTING_RIGHTS - 0.0 - 2020-12-31 00:00:00
+GlobalFoundries Inc - ANALYTIC_VOTING_RIGHTS - 0.0 - 2019-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric GLOBAL_COMPACT | Ended with 3 rows!
+GlobalFoundries Inc - GLOBAL_COMPACT - 0.0 - 2022-12-31 00:00:00
+GlobalFoundries Inc - GLOBAL_COMPACT - 0.0 - 2020-05-15 00:00:00
+GlobalFoundries Inc - GLOBAL_COMPACT - 0.0 - 2019-05-15 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric CSR_REPORTING_EXTERNAL_AUDIT | Ended with 4 rows!
+GlobalFoundries Inc - CSR_REPORTING_EXTERNAL_AUDIT - 1.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - CSR_REPORTING_EXTERNAL_AUDIT - 0.0 - 2022-12-31 00:00:00
+GlobalFoundries Inc - CSR_REPORTING_EXTERNAL_AUDIT - 0.0 - 2020-05-15 00:00:00
+GlobalFoundries Inc - CSR_REPORTING_EXTERNAL_AUDIT - 0.0 - 2019-05-15 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric ANALYTICCSR_COMP_INCENTIVES | Ended with 4 rows!
+GlobalFoundries Inc - ANALYTICCSR_COMP_INCENTIVES - 1.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - ANALYTICCSR_COMP_INCENTIVES - 0.0 - 2022-12-31 00:00:00
+GlobalFoundries Inc - ANALYTICCSR_COMP_INCENTIVES - 0.0 - 2020-05-15 00:00:00
+GlobalFoundries Inc - ANALYTICCSR_COMP_INCENTIVES - 0.0 - 2019-05-15 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric ANALYTICEMPLOYMENTCREATION | Ended with 3 rows!
+GlobalFoundries Inc - ANALYTICEMPLOYMENTCREATION - -14.29 - 2023-12-31 00:00:00
+GlobalFoundries Inc - ANALYTICEMPLOYMENTCREATION - -4.11 - 2022-12-31 00:00:00
+GlobalFoundries Inc - ANALYTICEMPLOYMENTCREATION - -2.67 - 2021-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric ANIMAL_TESTING_REDUCTION | Ended with 4 rows!
+GlobalFoundries Inc - ANIMAL_TESTING_REDUCTION - 0.0 - 2022-12-31 00:00:00
+GlobalFoundries Inc - ANIMAL_TESTING_REDUCTION - 0.0 - 2021-12-31 00:00:00
+GlobalFoundries Inc - ANIMAL_TESTING_REDUCTION - 0.0 - 2020-12-31 00:00:00
+GlobalFoundries Inc - ANIMAL_TESTING_REDUCTION - 0.0 - 2019-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric CONFORMANCE_OECD_MNE | Ended with 2 rows!
+GlobalFoundries Inc - CONFORMANCE_OECD_MNE - 1.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - CONFORMANCE_OECD_MNE - 0.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric CONFORMANCE_UN_GUID | Ended with 2 rows!
+GlobalFoundries Inc - CONFORMANCE_UN_GUID - 0.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - CONFORMANCE_UN_GUID - 0.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric DAY_CARE_SERVICES | Ended with 2 rows!
+GlobalFoundries Inc - DAY_CARE_SERVICES - 1.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - DAY_CARE_SERVICES - 0.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric GRIEVANCE_REPORTING_PROCESS | Ended with 2 rows!
+GlobalFoundries Inc - GRIEVANCE_REPORTING_PROCESS - 1.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - GRIEVANCE_REPORTING_PROCESS - 1.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric HUMAN_RIGHTS_CONTRACTOR | Ended with 2 rows!
+GlobalFoundries Inc - HUMAN_RIGHTS_CONTRACTOR - 1.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - HUMAN_RIGHTS_CONTRACTOR - 1.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric HUMAN_RIGHTS_POLICY_DUEDILIGENCE | Ended with 2 rows!
+GlobalFoundries Inc - HUMAN_RIGHTS_POLICY_DUEDILIGENCE - 1.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - HUMAN_RIGHTS_POLICY_DUEDILIGENCE - 1.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric ISO14000 | Ended with 2 rows!
+GlobalFoundries Inc - ISO14000 - 1.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - ISO14000 - 1.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric TARGETS_DIVERSITY_OPPORTUNITY | Ended with 2 rows!
+GlobalFoundries Inc - TARGETS_DIVERSITY_OPPORTUNITY - 1.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - TARGETS_DIVERSITY_OPPORTUNITY - 0.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric WHISTLEBLOWER_PROTECTION | Ended with 2 rows!
+GlobalFoundries Inc - WHISTLEBLOWER_PROTECTION - 1.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - WHISTLEBLOWER_PROTECTION - 1.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric BRIBERY_AND_CORRUPTION_PAI_INSUFFICIENT_ACTIONS | Ended with 4 rows!
+GlobalFoundries Inc - BRIBERY_AND_CORRUPTION_PAI_INSUFFICIENT_ACTIONS - 0.0 - 2024-12-20 00:00:00
+GlobalFoundries Inc - BRIBERY_AND_CORRUPTION_PAI_INSUFFICIENT_ACTIONS - 0.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - BRIBERY_AND_CORRUPTION_PAI_INSUFFICIENT_ACTIONS - 0.0 - 2022-12-31 00:00:00
+GlobalFoundries Inc - BRIBERY_AND_CORRUPTION_PAI_INSUFFICIENT_ACTIONS - 0.0 - 2021-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric EMPLOYEE_HEALTH_SAFETY_POLICY | Ended with 2 rows!
+GlobalFoundries Inc - EMPLOYEE_HEALTH_SAFETY_POLICY - 1.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - EMPLOYEE_HEALTH_SAFETY_POLICY - 1.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric HUMAN_RIGHTS_VIOLATION_PAI | Ended with 4 rows!
+GlobalFoundries Inc - HUMAN_RIGHTS_VIOLATION_PAI - 0.0 - 2024-12-20 00:00:00
+GlobalFoundries Inc - HUMAN_RIGHTS_VIOLATION_PAI - 0.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - HUMAN_RIGHTS_VIOLATION_PAI - 0.0 - 2022-12-31 00:00:00
+GlobalFoundries Inc - HUMAN_RIGHTS_VIOLATION_PAI - 0.0 - 2021-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric IMPROVEMENT_TOOLS_BUSINESS_ETHICS | Ended with 2 rows!
+GlobalFoundries Inc - IMPROVEMENT_TOOLS_BUSINESS_ETHICS - 1.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - IMPROVEMENT_TOOLS_BUSINESS_ETHICS - 0.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric POLICY_BOARD_DIVERSITY | Ended with 2 rows!
+GlobalFoundries Inc - POLICY_BOARD_DIVERSITY - 1.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - POLICY_BOARD_DIVERSITY - 1.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric POLICY_CHILD_LABOR | Ended with 2 rows!
+GlobalFoundries Inc - POLICY_CHILD_LABOR - 1.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - POLICY_CHILD_LABOR - 1.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric POLICY_DATA_PRIVACY | Ended with 2 rows!
+GlobalFoundries Inc - POLICY_DATA_PRIVACY - 1.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - POLICY_DATA_PRIVACY - 1.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric POLICY_FORCED_LABOR | Ended with 2 rows!
+GlobalFoundries Inc - POLICY_FORCED_LABOR - 1.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - POLICY_FORCED_LABOR - 1.0 - 2022-12-31 00:00:00
+ERROR: Company GlobalFoundries Inc | Metric POLICY_HUMAN_RIGHTS | Ended with 2 rows!
+GlobalFoundries Inc - POLICY_HUMAN_RIGHTS - 1.0 - 2023-12-31 00:00:00
+GlobalFoundries Inc - POLICY_HUMAN_RIGHTS - 1.0 - 2022-12-31 00:00:00
+>>> Company GlobalFoundries Inc has 149 total rows <<<
+>>> The following metrics have 0 rows: ['ECO_DESIGN_PRODUCTS', 'ENV_INVESTMENTS', 'POLICY_SUSTAINABLE_PACKAGING', 'RENEWENERGYCONSUMED', 'RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'SUSTAINABLE_BUILDING_PRODUCTS', 'TAKEBACK_RECYCLING_INITIATIVES', 'TRANALYTICRENEWENERGYUSE', 'WATER_TECHNOLOGIES', 'AIRPOLLUTANTS_INDIRECT', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'N_OXS_OX_EMISSIONS_REDUCTION', 'VOC_EMISSIONS_REDUCTION', 'ANALYTICCEO_CHAIRMAN_SEPARATION', 'ANALYTICQMS', 'BOARDMEETINGATTENDANCEAVG', 'COMMMEETINGSATTENDANCEAVG', 'ANALYTICNONAUDITAUDITFEESRATIO', 'ANALYTIC_ANTI_TAKEOVER_DEVICES', 'ANNUAL_MEDIAN_COMPENSATION', 'CALL_MEETINGS_LIMITED_RIGHTS', 'CEO_ANNUAL_COMPENSATION', 'CEO_PAY_RATIO_MEDIAN', 'COMPCOMMNONEXECMEMBERS', 'CSR_REPORTINGGRI', 'ELIMINATION_CUM_VOTING_RIGHTS', 'ANALYTICTOTALDONATIONS', 'LABELED_WOOD', 'TRADEUNIONREP', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TURNOVEREMPLOYEES'] <<<
+>>> Company GlobalFoundries Inc finished with 16 successes, 35 warnings and 45 errors <<<
+>>> Deleting rows for Company ON Semiconductor Corp...<<<
+>>> Company ON Semiconductor Corp has 92 total rows <<<
+>>> The following metrics have 0 rows: ['CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'GENDER_PAY_GAP_PERCENTAGE', 'POLICY_BUSINESS_ETHICS'] <<<
+>>> Company ON Semiconductor Corp finished with 92 successes, 4 warnings and 0 errors <<<
+>>> Deleting rows for Company MongoDB Inc...<<<
+ERROR: Company MongoDB Inc | Metric SOXEMISSIONS | Ended with 0 rows! Started with 6 rows.
+>>> Company MongoDB Inc has 77 total rows <<<
+>>> The following metrics have 0 rows: ['RENEWENERGYPRODUCED', 'RENEWENERGYPURCHASED', 'WASTE_RECYCLED', 'CO2_NO_EQUIVALENTS', 'NATURAL_RESOURCE_USE_DIRECT', 'ANALYTICWASTERECYCLINGRATIO', 'COMMMEETINGSATTENDANCEAVG', 'ANALYTIC_ANTI_TAKEOVER_DEVICES', 'ELIMINATION_CUM_VOTING_RIGHTS', 'ANALYTICTOTALDONATIONS', 'AVGTRAININGHOURS', 'WOMENMANAGERS', 'EMPLOYEEFATALITIES', 'GENDER_PAY_GAP_PERCENTAGE', 'LOSTWORKINGDAYS', 'POLICY_BUSINESS_ETHICS', 'TIRTOTAL', 'TURNOVEREMPLOYEES'] <<<
+>>> Company MongoDB Inc finished with 77 successes, 18 warnings and 1 errors <<<
