@@ -10,7 +10,7 @@ ALLOWED_COLUMNS = ["company_name", "perm_id", "data_type", "disclosure", "metric
 # Most companies in the NASDAQ 100, except ARM Holdings PLC ADR since our ESG data has no data for this
 # As seen in: https://www.slickcharts.com/nasdaq100
 NASDAQ_100 = [
-    # Delete Duplicates not working for: "Linde PLC", "O''Reilly Automotive Inc", "Constellation Energy Corp", "Ge Healthcare Technologies", "GlobalFoundries Inc"
+    # Removed: "Linde PLC", "O''Reilly Automotive Inc", "Constellation Energy Corp", "Ge Healthcare Technologies", "GlobalFoundries Inc"
 
     "Apple Inc", "Microsoft Corp", "NVIDIA Corp", "Amazon.com Inc", "Broadcom Inc", "Meta Platforms Inc", "Costco Wholesale Corp", "Netflix Inc", "Tesla Inc", "Alphabet Inc", "T-Mobile US Inc", "Cisco Systems Inc", 
     "PepsiCo Inc", "Palantir Technologies Inc", "Intuitive Surgical Inc", "Amgen Inc", "Intuit Inc", "Adobe Inc",
@@ -24,13 +24,15 @@ NASDAQ_100 = [
     "ANSYS Inc", "Dexcom Inc", "Trade Desk Inc", "Warner Bros Discovery Inc", "Microchip Technology Inc", "CDW Corp", "Biogen Inc", "ON Semiconductor Corp", "MongoDB Inc"
 ]
 
-# 96 ESG Metrics available through our API
+# 95 ESG Metrics available through our API
 ESG_METRICS = [
+    # Removed: CO2_NO_EQUIVALENTS
+
     # Environmental Opportunity
     "ECO_DESIGN_PRODUCTS", "ENERGYUSETOTAL", "ENV_INVESTMENTS", "POLICY_EMISSIONS", "POLICY_SUSTAINABLE_PACKAGING", "POLICY_WATER_EFFICIENCY", "RENEWENERGYCONSUMED", "RENEWENERGYPRODUCED", "RENEWENERGYPURCHASED", "SUSTAINABLE_BUILDING_PRODUCTS",
     "TAKEBACK_RECYCLING_INITIATIVES", "TARGETS_EMISSIONS", "TARGETS_WATER_EFFICIENCY", "TRANALYTICRENEWENERGYUSE", "WASTE_RECYCLED", "WASTE_REDUCTION_TOTAL", "WATER_TECHNOLOGIES",
     # Environmental Risk
-    "AIRPOLLUTANTS_DIRECT", "AIRPOLLUTANTS_INDIRECT", "CO2DIRECTSCOPE1", "CO2INDIRECTSCOPE2", "CO2INDIRECTSCOPE3", "CO2_NO_EQUIVALENTS", "HAZARDOUSWASTE", "NATURAL_RESOURCE_USE_DIRECT", "NOXEMISSIONS", "N_OXS_OX_EMISSIONS_REDUCTION",
+    "AIRPOLLUTANTS_DIRECT", "AIRPOLLUTANTS_INDIRECT", "CO2DIRECTSCOPE1", "CO2INDIRECTSCOPE2", "CO2INDIRECTSCOPE3", "HAZARDOUSWASTE", "NATURAL_RESOURCE_USE_DIRECT", "NOXEMISSIONS", "N_OXS_OX_EMISSIONS_REDUCTION",
     "PARTICULATE_MATTER_EMISSIONS", "SOXEMISSIONS", "TOXIC_CHEMICALS_REDUCTION", "VOCEMISSIONS", "VOC_EMISSIONS_REDUCTION", "WASTETOTAL", "WATERWITHDRAWALTOTAL", "WATER_USE_PAI_M10",
     # Governance Opportunity
     "ANALYTICAUDITCOMMIND", "ANALYTICBOARDFEMALE", "ANALYTICCEO_CHAIRMAN_SEPARATION", "ANALYTICCOMPCOMMIND", "ANALYTICINDEPBOARD", "ANALYTICNOMINATIONCOMMIND", "ANALYTICNONEXECBOARD", "ANALYTICQMS", "ANALYTICWASTERECYCLINGRATIO", "ANALYTIC_AUDIT_COMM_EXPERTISE",
