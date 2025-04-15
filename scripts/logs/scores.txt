@@ -1,0 +1,575 @@
+*** Calculating scores for category: Environmental Opportunity ***
+> Apple Inc: 0.6808089761943416
+> Microsoft Corp: 0.7821258982353336
+> NVIDIA Corp: 0.5447501068102212
+> Amazon.com Inc: 0.7721032880281553
+> Broadcom Inc: 0.3940230988514077
+> Meta Platforms Inc: 0.5789804240347362
+> Costco Wholesale Corp: 0.39867944528452864
+> Netflix Inc: 0.36814095828955484
+> Tesla Inc: 0.4517638307435795
+> Alphabet Inc: 0.5999484011617736
+> T-Mobile US Inc: 0.5403670163553155
+> Cisco Systems Inc: 0.7222261992138608
+> PepsiCo Inc: 0.7688373482164218
+> Palantir Technologies Inc: 0.16487455197132617
+> Intuitive Surgical Inc: 0.6081745400065546
+> Amgen Inc: 0.5794542681504156
+> Intuit Inc: 0.4750819686565505
+> Adobe Inc: 0.48358208347700304
+> Qualcomm Inc: 0.5284877942819423
+> Booking Holdings Inc: 0.3147605083088954
+> Advanced Micro Devices Inc: 0.5299528654776384
+> Texas Instruments Inc: 0.51331476841566
+> Gilead Sciences Inc: 0.5927006445908486
+> Comcast Corp: 0.3443845850478132
+> Honeywell International Inc: 0.5243923843574642
+> Vertex Pharmaceuticals Inc: 0.4455728854251162
+> Automatic Data Processing Inc: 0.36875946127315573
+> Applied Materials Inc: 0.4993381421468007
+> Palo Alto Networks Inc: 0.5002983949492729
+> MercadoLibre Inc: 0.3658417402654475
+> Starbucks Corp: 0.5351295844581389
+> Intel Corp: 0.7573195898450811
+> Mondelez International Inc: 0.6131215450021533
+> Analog Devices Inc: 0.645502876918181
+> Cintas Corp: 0.44829436455668187
+> KLA Corp: 0.5160174954377912
+> Lam Research Corp: 0.5330663447080886
+> CrowdStrike Holdings Inc: 0.15770609318996417
+> Micron Technology Inc: 0.4688430206973943
+> Microstrategy Inc: 0.32974910394265233
+> PDD Holdings Inc: 0.3225806451612903
+> Applovin Corp: 0.16039426523297493
+> Fortinet Inc: 0.3682049464617628
+> DoorDash Inc: 0.25513196480938416
+> Cadence Design Systems Inc: 0.41647841065970914
+> Regeneron Pharmaceuticals Inc: 0.4411635636471341
+> Synopsys Inc: 0.47751567882233464
+> Marriott International Inc: 0.3374873257798133
+> Roper Technologies Inc: 0.31343272217098267
+> PayPal Holdings Inc: 0.47890112583627725
+> American Electric Power Company Inc: 0.3885477745259087
+> Monster Beverage Corp: 0.20760959470636892
+> ASML Holding NV: 0.5352416309523004
+> Autodesk Inc: 0.6615213953154557
+> Copart Inc: 0.06272401433691756
+> Paychex Inc: 0.3125011388390169
+> CSX Corp: 0.4550388860719181
+> Charter Communications Inc: 0.27892042757244084
+> Paccar Inc: 0.35795963416084076
+> Workday Inc: 0.5392511111766314
+> Airbnb Inc: 0.19733297073205108
+> Keurig Dr Pepper Inc: 0.6594530152016015
+> Exelon Corp: 0.6680898836356975
+> Ross Stores Inc: 0.4813204366660918
+> Marvell Technology Inc: 0.38586957482425016
+> Fastenal Co: 0.44817309960572127
+> NXP Semiconductors NV: 0.6484336069987838
+> Verisk Analytics Inc: 0.41005516873217973
+> AstraZeneca PLC: 0.6987305271443233
+> Xcel Energy Inc: 0.6223277036328407
+> Coca-Cola Europacific Partners PLC: 0.6218569734026832
+> Axon Enterprise Inc: 0.15501792114695342
+> Diamondback Energy Inc: 0.5421714078308607
+> Kraft Heinz Co: 0.5030101244882789
+> Electronic Arts Inc: 0.4841334655544537
+> Baker Hughes Co: 0.5898898896594689
+> Take-Two Interactive Software Inc: 0.2726795639529975
+> Cognizant Technology Solutions Corp: 0.2246029167919383
+> Old Dominion Freight Line Inc: 0.24639929744439093
+> IDEXX Laboratories Inc: 0.6675600134547198
+> Atlassian Corporation Ltd: 0.33848079142866944
+> Lululemon Athletica Inc: 0.5792183388911684
+> CoStar Group Inc: 0.148773949611026
+> Datadog Inc: 0.3333333333333333
+> Zscaler Inc: 0.28381846817943185
+> ANSYS Inc: 0.40313732446940237
+> Dexcom Inc: 0.2432542097788598
+> Trade Desk Inc: 0.24910394265232974
+> Warner Bros Discovery Inc: 0.48494747392256576
+> Microchip Technology Inc: 0.4499137775592547
+> CDW Corp: 0.44476552438986083
+> Biogen Inc: 0.4989910212801754
+> ON Semiconductor Corp: 0.5434752181741679
+> MongoDB Inc: 0.38385841734147164
+
+*** Calculating scores for category: Environmental Risk ***
+> Apple Inc: 0.34479871729434064
+> Microsoft Corp: 0.4022075904745097
+> NVIDIA Corp: 0.5142200974949923
+> Amazon.com Inc: 0.2794257193336215
+> Broadcom Inc: 0.40629593352278337
+> Meta Platforms Inc: 0.5094009523954868
+> Costco Wholesale Corp: 0.23220348704998853
+> Netflix Inc: 0.4054849615689016
+> Tesla Inc: 0.29628954503114263
+> Alphabet Inc: 0.45357736034282026
+> T-Mobile US Inc: 0.29895394653946444
+> Cisco Systems Inc: 0.533542105972011
+> PepsiCo Inc: 0.15751007437478
+> Palantir Technologies Inc: 0.7345622892299892
+> Intuitive Surgical Inc: 0.5971125085963505
+> Amgen Inc: 0.4487430620684898
+> Intuit Inc: 0.6912053564156563
+> Adobe Inc: 0.5836108048540177
+> Qualcomm Inc: 0.4943510399779706
+> Booking Holdings Inc: 0.49891247035141134
+> Advanced Micro Devices Inc: 0.5993487446542272
+> Texas Instruments Inc: 0.35481796322953973
+> Gilead Sciences Inc: 0.43698271933419797
+> Comcast Corp: 0.33704098772140945
+> Honeywell International Inc: 0.18715056666267463
+> Vertex Pharmaceuticals Inc: 0.6621532793582808
+> Automatic Data Processing Inc: 0.5829803250268202
+> Applied Materials Inc: 0.5126796789783247
+> Palo Alto Networks Inc: 0.8198619946162526
+> MercadoLibre Inc: 0.5018261887651271
+> Starbucks Corp: 0.3403758749251676
+> Intel Corp: 0.3071698139253253
+> Mondelez International Inc: 0.2752747916454357
+> Analog Devices Inc: 0.5616300666141365
+> Cintas Corp: 0.4206217482466712
+> KLA Corp: 0.6880711218560019
+> Lam Research Corp: 0.573431581766716
+> CrowdStrike Holdings Inc: 0.7136156412684738
+> Micron Technology Inc: 0.3653560827347602
+> Microstrategy Inc: 0.7817430622417506
+> PDD Holdings Inc: 0.5093454222242116
+> Applovin Corp: 0.7144291091736407
+> Fortinet Inc: 0.6831853868116393
+> DoorDash Inc: 0.6858020362578566
+> Cadence Design Systems Inc: 0.6829668917079814
+> Regeneron Pharmaceuticals Inc: 0.5580137014792771
+> Synopsys Inc: 0.624645236125301
+> Marriott International Inc: 0.19620338041480523
+> Roper Technologies Inc: 0.46400429902085993
+> PayPal Holdings Inc: 0.515914557644713
+> American Electric Power Company Inc: 0.13454780251132228
+> Monster Beverage Corp: 0.4666393627868576
+> ASML Holding NV: 0.5673316312190756
+> Autodesk Inc: 0.6817564992394806
+> Copart Inc: 0.5753573202935411
+> Paychex Inc: 0.6918677210943435
+> CSX Corp: 0.1651668033291475
+> Charter Communications Inc: 0.36043825572354216
+> Paccar Inc: 0.2737724118192051
+> Workday Inc: 0.6353561184852798
+> Airbnb Inc: 0.4682366151279991
+> Keurig Dr Pepper Inc: 0.2686511708077078
+> Exelon Corp: 0.0914417637667162
+> Ross Stores Inc: 0.4362613392622294
+> Marvell Technology Inc: 0.5570479884734159
+> Fastenal Co: 0.4906330723697139
+> NXP Semiconductors NV: 0.3392685501855807
+> Verisk Analytics Inc: 0.6844047494097485
+> AstraZeneca PLC: 0.3392324864095991
+> Xcel Energy Inc: 0.1992167721161895
+> Coca-Cola Europacific Partners PLC: 0.2662990182105903
+> Axon Enterprise Inc: 0.6506868446783848
+> Diamondback Energy Inc: 0.4477457148885448
+> Kraft Heinz Co: 0.23316691515674998
+> Electronic Arts Inc: 0.6336073118370361
+> Baker Hughes Co: 0.2171069752205092
+> Take-Two Interactive Software Inc: 0.6912654858704593
+> Cognizant Technology Solutions Corp: 0.47811280816579127
+> Old Dominion Freight Line Inc: 0.4027515530092242
+> IDEXX Laboratories Inc: 0.6574044281164609
+> Atlassian Corporation Ltd: 0.7335232565796901
+> Lululemon Athletica Inc: 0.5757885501248763
+> CoStar Group Inc: 0.7121108011229488
+> Datadog Inc: 0.704503428374186
+> Zscaler Inc: 0.7545782784501947
+> ANSYS Inc: 0.6994108976383063
+> Dexcom Inc: 0.7457868881364466
+> Trade Desk Inc: 0.7183839589009521
+> Warner Bros Discovery Inc: 0.4029977448647613
+> Microchip Technology Inc: 0.4297981791389055
+> CDW Corp: 0.534954613045102
+> Biogen Inc: 0.5337175052163751
+> ON Semiconductor Corp: 0.3894161460660076
+> MongoDB Inc: 0.7290537721636848
+
+*** Calculating scores for category: Governance Opportunity ***
+> Apple Inc: 0.3480659125820416
+> Microsoft Corp: 0.725876196423181
+> NVIDIA Corp: 0.7004096009180161
+> Amazon.com Inc: 0.506342963565965
+> Broadcom Inc: 0.5494130596690204
+> Meta Platforms Inc: 0.5034331610418566
+> Costco Wholesale Corp: 0.5148598674194746
+> Netflix Inc: 0.5194520591610353
+> Tesla Inc: 0.45885662374091546
+> Alphabet Inc: 0.37980701120602944
+> T-Mobile US Inc: 0.38021848418061605
+> Cisco Systems Inc: 0.7441972570829513
+> PepsiCo Inc: 0.8015162140337456
+> Palantir Technologies Inc: 0.2972320505192174
+> Intuitive Surgical Inc: 0.6449434740107952
+> Amgen Inc: 0.7316494865583224
+> Intuit Inc: 0.509649882414609
+> Adobe Inc: 0.6216811472772202
+> Qualcomm Inc: 0.6792473927817546
+> Booking Holdings Inc: 0.5542818954459908
+> Advanced Micro Devices Inc: 0.5828245503911703
+> Texas Instruments Inc: 0.6056769609539596
+> Gilead Sciences Inc: 0.6690053459864119
+> Comcast Corp: 0.5800314886920778
+> Honeywell International Inc: 0.7092521394765434
+> Vertex Pharmaceuticals Inc: 0.6704964137467643
+> Automatic Data Processing Inc: 0.7369461417497883
+> Applied Materials Inc: 0.6073600410030985
+> Palo Alto Networks Inc: 0.6393769663405007
+> MercadoLibre Inc: 0.46621709481106394
+> Starbucks Corp: 0.5718210708568352
+> Intel Corp: 0.687994703597789
+> Mondelez International Inc: 0.763345233541587
+> Analog Devices Inc: 0.6995814688661813
+> Cintas Corp: 0.5446910304904695
+> KLA Corp: 0.6598718602575545
+> Lam Research Corp: 0.691464079788063
+> CrowdStrike Holdings Inc: 0.4262643085837336
+> Micron Technology Inc: 0.5897332369983141
+> Microstrategy Inc: 0.3886377212990116
+> PDD Holdings Inc: 0.3525128564749883
+> Applovin Corp: 0.35857877512856473
+> Fortinet Inc: 0.6285598459511502
+> DoorDash Inc: 0.4560706114440336
+> Cadence Design Systems Inc: 0.47303205209937327
+> Regeneron Pharmaceuticals Inc: 0.4739113738061845
+> Synopsys Inc: 0.5349215920306384
+> Marriott International Inc: 0.39976022497060365
+> Roper Technologies Inc: 0.5360929393187457
+> PayPal Holdings Inc: 0.47349522069017164
+> American Electric Power Company Inc: 0.5893563153380825
+> Monster Beverage Corp: 0.3377055973479536
+> ASML Holding NV: 0.6832485342303014
+> Autodesk Inc: 0.575183815716775
+> Copart Inc: 0.24556956990337075
+> Paychex Inc: 0.31352710130760625
+> CSX Corp: 0.4233061429765497
+> Charter Communications Inc: 0.348636189274338
+> Paccar Inc: 0.3241015451744765
+> Workday Inc: 0.2525102001785031
+> Airbnb Inc: 0.2274617670392565
+> Keurig Dr Pepper Inc: 0.5976446414735335
+> Exelon Corp: 0.4274628675049432
+> Ross Stores Inc: 0.33534190213713355
+> Marvell Technology Inc: 0.508805180132319
+> Fastenal Co: 0.5051455868426415
+> NXP Semiconductors NV: 0.5544479480313982
+> Verisk Analytics Inc: 0.6714035811598925
+> AstraZeneca PLC: 0.4906852536586057
+> Xcel Energy Inc: 0.5464794672368305
+> Coca-Cola Europacific Partners PLC: 0.611279849183075
+> Axon Enterprise Inc: 0.47852241260375905
+> Diamondback Energy Inc: 0.4886685116348511
+> Kraft Heinz Co: 0.6306188162780029
+> Electronic Arts Inc: 0.5848884051899479
+> Baker Hughes Co: 0.6571872299431908
+> Take-Two Interactive Software Inc: 0.383248686018672
+> Cognizant Technology Solutions Corp: 0.5941609426882919
+> Old Dominion Freight Line Inc: 0.41660414153401526
+> IDEXX Laboratories Inc: 0.5071784028656399
+> Atlassian Corporation Ltd: 0.2711547452080411
+> Lululemon Athletica Inc: 0.4980265760420038
+> CoStar Group Inc: 0.3917664071941772
+> Datadog Inc: 0.22943672347599414
+> Zscaler Inc: 0.4379644091688271
+> ANSYS Inc: 0.4593169803548485
+> Dexcom Inc: 0.5670154510442028
+> Trade Desk Inc: 0.3484197351658782
+> Warner Bros Discovery Inc: 0.4654214221184768
+> Microchip Technology Inc: 0.6189966434531652
+> CDW Corp: 0.5417469004425526
+> Biogen Inc: 0.5102457150142985
+> ON Semiconductor Corp: 0.7346652003910068
+> MongoDB Inc: 0.5814292114695341
+
+*** Calculating scores for category: Governance Risk ***
+> Apple Inc: 0.44691068579686066
+> Microsoft Corp: 0.6527842138058505
+> NVIDIA Corp: 0.644489972471913
+> Amazon.com Inc: 0.6513319952972001
+> Broadcom Inc: 0.3709834890933903
+> Meta Platforms Inc: 0.614353505307222
+> Costco Wholesale Corp: 0.4588101606909618
+> Netflix Inc: 0.4710361681854189
+> Tesla Inc: 0.5660866991768232
+> Alphabet Inc: 0.6247535459324545
+> T-Mobile US Inc: 0.46632511370838114
+> Cisco Systems Inc: 0.4994935886035371
+> PepsiCo Inc: 0.4083990873470364
+> Palantir Technologies Inc: 0.3904358210667995
+> Intuitive Surgical Inc: 0.6218364410801809
+> Amgen Inc: 0.5468197998533502
+> Intuit Inc: 0.5281177526792667
+> Adobe Inc: 0.6840211386545911
+> Qualcomm Inc: 0.448406203840494
+> Booking Holdings Inc: 0.3861559263760755
+> Advanced Micro Devices Inc: 0.42146813558556945
+> Texas Instruments Inc: 0.6204043302669144
+> Gilead Sciences Inc: 0.7228598169038152
+> Comcast Corp: 0.4869128263671025
+> Honeywell International Inc: 0.6114929832762381
+> Vertex Pharmaceuticals Inc: 0.6690123235941664
+> Automatic Data Processing Inc: 0.6766728446763746
+> Applied Materials Inc: 0.592351064686662
+> Palo Alto Networks Inc: 0.5743008245884209
+> MercadoLibre Inc: 0.7010121492566298
+> Starbucks Corp: 0.6697262846623832
+> Intel Corp: 0.6865164570788064
+> Mondelez International Inc: 0.643704310880509
+> Analog Devices Inc: 0.5777893398447475
+> Cintas Corp: 0.712319311031825
+> KLA Corp: 0.6297379008151658
+> Lam Research Corp: 0.6681902692941664
+> CrowdStrike Holdings Inc: 0.5345816249459662
+> Micron Technology Inc: 0.5533607987895931
+> Microstrategy Inc: 0.45254172866965786
+> PDD Holdings Inc: 0.5481950844854071
+> Applovin Corp: 0.621732701403581
+> Fortinet Inc: 0.8010618060939538
+> DoorDash Inc: 0.5501483150800799
+> Cadence Design Systems Inc: 0.5998675578903134
+> Regeneron Pharmaceuticals Inc: 0.6493757389056568
+> Synopsys Inc: 0.6780300420907446
+> Marriott International Inc: 0.2534061271001246
+> Roper Technologies Inc: 0.5536102581881613
+> PayPal Holdings Inc: 0.6092272616206146
+> American Electric Power Company Inc: 0.41249784695346253
+> Monster Beverage Corp: 0.37262193212285405
+> ASML Holding NV: 0.756196570493555
+> Autodesk Inc: 0.44156451178135153
+> Copart Inc: 0.3262528374651545
+> Paychex Inc: 0.5784959337325506
+> CSX Corp: 0.627841503354843
+> Charter Communications Inc: 0.1373676622530177
+> Paccar Inc: 0.584906293783959
+> Workday Inc: 0.49283017726609446
+> Airbnb Inc: 0.49855559511586434
+> Keurig Dr Pepper Inc: 0.373126685523269
+> Exelon Corp: 0.4486828878345969
+> Ross Stores Inc: 0.338837413171214
+> Marvell Technology Inc: 0.44468891861614496
+> Fastenal Co: 0.43423973240620733
+> NXP Semiconductors NV: 0.4013692855148487
+> Verisk Analytics Inc: 0.44281119793277635
+> AstraZeneca PLC: 0.6985167853418204
+> Xcel Energy Inc: 0.6527394263971789
+> Coca-Cola Europacific Partners PLC: 0.7144441725875808
+> Axon Enterprise Inc: 0.31117100327746905
+> Diamondback Energy Inc: 0.6378197118974338
+> Kraft Heinz Co: 0.528463692413296
+> Electronic Arts Inc: 0.5114796708982536
+> Baker Hughes Co: 0.6203811395752395
+> Take-Two Interactive Software Inc: 0.618468278914723
+> Cognizant Technology Solutions Corp: 0.4742131906156363
+> Old Dominion Freight Line Inc: 0.468390841919373
+> IDEXX Laboratories Inc: 0.4052762259461284
+> Atlassian Corporation Ltd: 0.27447000683050293
+> Lululemon Athletica Inc: 0.42421160871056074
+> CoStar Group Inc: 0.6328877705754962
+> Datadog Inc: 0.3270858879893344
+> Zscaler Inc: 0.24144028907096812
+> ANSYS Inc: 0.15607143695455464
+> Dexcom Inc: 0.40200668214126145
+> Trade Desk Inc: 0.2948877007712124
+> Warner Bros Discovery Inc: 0.3202132529787477
+> Microchip Technology Inc: 0.3811398494293998
+> CDW Corp: 0.5725843972333721
+> Biogen Inc: 0.5988081644049464
+> ON Semiconductor Corp: 0.5489014888017363
+> MongoDB Inc: 0.7240845920621202
+
+*** Calculating scores for category: Social Opportunity ***
+> Apple Inc: 0.3628235432886347
+> Microsoft Corp: 0.7090676842828173
+> NVIDIA Corp: 0.4896927543986183
+> Amazon.com Inc: 0.5957022605378948
+> Broadcom Inc: 0.4454051154166447
+> Meta Platforms Inc: 0.5599273607748184
+> Costco Wholesale Corp: 0.41597794462235416
+> Netflix Inc: 0.511760752688172
+> Tesla Inc: 0.569894770373978
+> Alphabet Inc: 0.33602648276369046
+> T-Mobile US Inc: 0.50230238055909
+> Cisco Systems Inc: 0.6462081782519269
+> PepsiCo Inc: 0.7302621443694018
+> Palantir Technologies Inc: 0.26256866880158297
+> Intuitive Surgical Inc: 0.6240387899282185
+> Amgen Inc: 0.5309314746165484
+> Intuit Inc: 0.3622416827524506
+> Adobe Inc: 0.43622382035753426
+> Qualcomm Inc: 0.4999197514916487
+> Booking Holdings Inc: 0.5326890829548355
+> Advanced Micro Devices Inc: 0.5418911878935551
+> Texas Instruments Inc: 0.5998921942832847
+> Gilead Sciences Inc: 0.6859491976795451
+> Comcast Corp: 0.34588360744254915
+> Honeywell International Inc: 0.5231239991475414
+> Vertex Pharmaceuticals Inc: 0.6668910288519335
+> Automatic Data Processing Inc: 0.39894769322527424
+> Applied Materials Inc: 0.4402942898259893
+> Palo Alto Networks Inc: 0.5962538356807163
+> MercadoLibre Inc: 0.47982131272477624
+> Starbucks Corp: 0.6957369354773915
+> Intel Corp: 0.6269108109686986
+> Mondelez International Inc: 0.6805182861886524
+> Analog Devices Inc: 0.5218875081759853
+> Cintas Corp: 0.5478855517603229
+> KLA Corp: 0.420200994558567
+> Lam Research Corp: 0.53310956519466
+> CrowdStrike Holdings Inc: 0.27432112265354475
+> Micron Technology Inc: 0.7070203389821342
+> Microstrategy Inc: 0.21658986175115208
+> PDD Holdings Inc: 0.18334112513635656
+> Applovin Corp: 0.27230027467520634
+> Fortinet Inc: 0.4265829770525361
+> DoorDash Inc: 0.3809934683277357
+> Cadence Design Systems Inc: 0.3901868481757846
+> Regeneron Pharmaceuticals Inc: 0.5352986424306861
+> Synopsys Inc: 0.3558201058201058
+> Marriott International Inc: 0.53312574856481
+> Roper Technologies Inc: 0.4461952085372148
+> PayPal Holdings Inc: 0.3529511491725831
+> American Electric Power Company Inc: 0.4666525812933236
+> Monster Beverage Corp: 0.40602459426968546
+> ASML Holding NV: 0.7053278840681267
+> Autodesk Inc: 0.42627316111876457
+> Copart Inc: 0.3638010699085539
+> Paychex Inc: 0.4551167232603988
+> CSX Corp: 0.5611222925685568
+> Charter Communications Inc: 0.23048675115207373
+> Paccar Inc: 0.37353903693314633
+> Workday Inc: 0.4173497173609739
+> Airbnb Inc: 0.2786482334869432
+> Keurig Dr Pepper Inc: 0.574438731616567
+> Exelon Corp: 0.4455012709833028
+> Ross Stores Inc: 0.4215759978130126
+> Marvell Technology Inc: 0.40559088089330025
+> Fastenal Co: 0.41433265487715043
+> NXP Semiconductors NV: 0.7321706729169823
+> Verisk Analytics Inc: 0.4307769413018183
+> AstraZeneca PLC: 0.7268607528995719
+> Xcel Energy Inc: 0.4983582917514753
+> Coca-Cola Europacific Partners PLC: 0.676572023471018
+> Axon Enterprise Inc: 0.34401279647999167
+> Diamondback Energy Inc: 0.504012453233339
+> Kraft Heinz Co: 0.5890990622602239
+> Electronic Arts Inc: 0.45922212094662485
+> Baker Hughes Co: 0.5823766855914195
+> Take-Two Interactive Software Inc: 0.4887683340148525
+> Cognizant Technology Solutions Corp: 0.5098985491959795
+> Old Dominion Freight Line Inc: 0.2898487333697831
+> IDEXX Laboratories Inc: 0.53495539036759
+> Atlassian Corporation Ltd: 0.4483125291859678
+> Lululemon Athletica Inc: 0.4983824963723977
+> CoStar Group Inc: 0.3201929423828243
+> Datadog Inc: 0.45717881876643496
+> Zscaler Inc: 0.33604632052383554
+> ANSYS Inc: 0.3685380111585367
+> Dexcom Inc: 0.31843244747324845
+> Trade Desk Inc: 0.2749615975422427
+> Warner Bros Discovery Inc: 0.46347123504039855
+> Microchip Technology Inc: 0.5485208382886317
+> CDW Corp: 0.3112384955349007
+> Biogen Inc: 0.626531140164467
+> ON Semiconductor Corp: 0.5372610026486111
+> MongoDB Inc: 0.3445143879038767
+
+*** Calculating scores for category: Social Risk ***
+> Apple Inc: 0.9758064516129031
+> Microsoft Corp: 0.9811827956989246
+> NVIDIA Corp: 0.7805229798252239
+> Amazon.com Inc: 0.9041563275434242
+> Broadcom Inc: 0.8974648829431439
+> Meta Platforms Inc: 0.8817204301075269
+> Costco Wholesale Corp: 0.649090909090909
+> Netflix Inc: 0.9090909090909091
+> Tesla Inc: 0.7931642340828876
+> Alphabet Inc: 0.739247311827957
+> T-Mobile US Inc: 0.7779778749678415
+> Cisco Systems Inc: 0.7960487338748209
+> PepsiCo Inc: 0.8949704142011835
+> Palantir Technologies Inc: 0.45454545454545453
+> Intuitive Surgical Inc: 0.7810059171597634
+> Amgen Inc: 0.7616125179168657
+> Intuit Inc: 0.7526881720430109
+> Adobe Inc: 0.6588537059013917
+> Qualcomm Inc: 0.7651027233635929
+> Booking Holdings Inc: 0.8181818181818182
+> Advanced Micro Devices Inc: 0.8746733556298774
+> Texas Instruments Inc: 0.8344356861581617
+> Gilead Sciences Inc: 0.7929299277160428
+> Comcast Corp: 0.6363636363636364
+> Honeywell International Inc: 0.8999988492106304
+> Vertex Pharmaceuticals Inc: 0.7214201183431952
+> Automatic Data Processing Inc: 0.7088833746898262
+> Applied Materials Inc: 0.7535986622073578
+> Palo Alto Networks Inc: 0.9037601528905876
+> MercadoLibre Inc: 0.7160307116913008
+> Starbucks Corp: 0.4739454094292804
+> Intel Corp: 0.8212042830941849
+> Mondelez International Inc: 0.8463104254324451
+> Analog Devices Inc: 0.8842162764771461
+> Cintas Corp: 0.8580793119923554
+> KLA Corp: 0.8485961943035927
+> Lam Research Corp: 0.9097109412326804
+> CrowdStrike Holdings Inc: 0.8181818181818182
+> Micron Technology Inc: 0.8790277114190158
+> Microstrategy Inc: 0.6363636363636364
+> PDD Holdings Inc: 0.6666666666666666
+> Applovin Corp: 0.5454545454545454
+> Fortinet Inc: 0.7000000000000001
+> DoorDash Inc: 0.8181818181818182
+> Cadence Design Systems Inc: 0.8037105045492142
+> Regeneron Pharmaceuticals Inc: 0.6891253281547811
+> Synopsys Inc: 0.9572208436724565
+> Marriott International Inc: 0.6879906498363721
+> Roper Technologies Inc: 0.8181818181818182
+> PayPal Holdings Inc: 0.6425806451612903
+> American Electric Power Company Inc: 0.8120267558528428
+> Monster Beverage Corp: 0.7272727272727273
+> ASML Holding NV: 0.8085067069442946
+> Autodesk Inc: 0.7462743418923292
+> Copart Inc: 0.6363636363636364
+> Paychex Inc: 0.8654037267080745
+> CSX Corp: 0.8035857620640229
+> Charter Communications Inc: 0.576923076923077
+> Paccar Inc: 0.85547980447646
+> Workday Inc: 0.9090909090909091
+> Airbnb Inc: 0.7272727272727273
+> Keurig Dr Pepper Inc: 0.7836192068800765
+> Exelon Corp: 0.6511861761426979
+> Ross Stores Inc: 0.9090909090909091
+> Marvell Technology Inc: 0.9340468227424749
+> Fastenal Co: 0.8181818181818182
+> NXP Semiconductors NV: 0.7670680044593089
+> Verisk Analytics Inc: 0.775
+> AstraZeneca PLC: 0.7263096342647535
+> Xcel Energy Inc: 0.7452293358815097
+> Coca-Cola Europacific Partners PLC: 0.780573165030388
+> Axon Enterprise Inc: 0.665
+> Diamondback Energy Inc: 0.8607023411371237
+> Kraft Heinz Co: 0.8878205128205128
+> Electronic Arts Inc: 0.8181818181818182
+> Baker Hughes Co: 0.8246967040673212
+> Take-Two Interactive Software Inc: 0.8816666666666667
+> Cognizant Technology Solutions Corp: 0.855
+> Old Dominion Freight Line Inc: 0.850887573964497
+> IDEXX Laboratories Inc: 0.7254849498327759
+> Atlassian Corporation Ltd: 0.75
+> Lululemon Athletica Inc: 1.0
+> CoStar Group Inc: 0.6086778149386844
+> Datadog Inc: 0.8181818181818182
+> Zscaler Inc: 0.7272727272727273
+> ANSYS Inc: 0.65
+> Dexcom Inc: 0.7954720864419861
+> Trade Desk Inc: 0.6363636363636364
+> Warner Bros Discovery Inc: 0.825268817204301
+> Microchip Technology Inc: 0.8866889632107023
+> CDW Corp: 0.6156410256410256
+> Biogen Inc: 0.6394343870248498
+> ON Semiconductor Corp: 0.7765128205128206
+> MongoDB Inc: 0.6363636363636364

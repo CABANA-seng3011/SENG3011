@@ -2,6 +2,10 @@
 ALLOWED_CATEGORIES = ["esg", "environmental_opportunity", "environmental_risk", "governance_opportunity", 
                       "governance_risk", "social_opportunity", "social_risk"]
 
+# Formatted correctly for db queries
+CATEGORIES = ["Environmental Opportunity", "Environmental Risk", "Governance Opportunity", 
+                "Governance Risk", "Social Opportunity", "Social Risk"]
+
 # Allowed columns for the /get function
 ALLOWED_COLUMNS = ["company_name", "perm_id", "data_type", "disclosure", "metric_description", "metric_name", "metric_unit",
                        "metric_value", "metric_year", "nb_points_of_observations", "metric_period", "provider_name", 
