@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify, Response
-from esg_functions import create_sql_query, get_industry, get_companies, valid_category, valid_columns, ALLOWED_COLUMNS, create_column_array, create_adage_data_model, create_companies_response
+from esg_functions import create_sql_query, get_industry, get_companies, valid_category, valid_columns, create_column_array, create_adage_data_model, create_companies_response
+from constants import ALLOWED_COLUMNS, NASDAQ_100, CATEGORIES
 from ticker_functions import query_ticker, query_name, create_adage_data_model_fin
 from db import run_sql, run_sql_raw
+from nasdaq_functions import create_nasdaq_sql_query, get_all_scores, get_category_scores, get_company_all_scores, get_company_scores, valid_nasdaq_category, valid_nasdaq_company
 
 from flask_cors import CORS
 
@@ -136,6 +138,7 @@ def getCompanies():
         res = "SQL Exception occurred."
         return Response (res, 500)
 
+########## TICKER ROUTES ######################################################
     
 # Example of use: curl "http://127.0.0.1:5000/searchTicker?ticker=AAPL"
 @app.route('/searchTicker', methods=['GET'])
@@ -178,6 +181,69 @@ def getFromName():
     
     except Exception as e:
         res = "An Exception occurred."
+        return Response (res, 500)
+
+########## NASDAQ-100 ROUTES #################################################
+
+# Example of use: curl "http://127.0.0.1:5000/get/nasdaq100?columns=company_name,+metric_name,+metric_value,+percentile&company_name=Synopsys+Inc"
+@app.route('/get/nasdaq100', methods=['GET'])
+def getNasdaq100():
+    # Separate parameters into column and conditions
+    columns = request.args.get("columns")
+    conditions = request.args.to_dict()
+    
+    # If columns exist, check if valid
+    if columns and not valid_columns(columns):
+        res = "Invalid columns. Columns should be a comma-separated String of valid columns. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/961150999/Allowed+columns+for+get for valid columns."
+        return Response (res, 400)
+    elif columns:
+        conditions.pop("columns")
+    # If no columns provided, select ALL columns
+    else:
+        columns = ",".join(ALLOWED_COLUMNS)
+    
+    sql = create_nasdaq_sql_query(columns, conditions)
+    try:
+        res = run_sql(sql, create_column_array(columns))
+        return jsonify(create_adage_data_model(res))
+    except Exception as e:
+        res = "SQL Exception likely caused by invalid conditions. See https://unswcse.atlassian.net/wiki/spaces/SCAI/pages/960921696/get+and+slowget for instructions on how to use /get"
+        return Response (res, 500)
+
+# Examples of use:
+# curl "http://127.0.0.1:5000/score"
+# curl "http://127.0.0.1:5000/score?company=Warner+Bros+Discovery+Inc"
+# curl "http://127.0.0.1:5000/score?category=Social+Opportunity"
+# curl "http://127.0.0.1:5000/score?category=Social+Opportunity&company=Starbucks+Corp"
+@app.route('/score', methods=['GET'])
+def getScore():
+    category = request.args.get("category")
+    company = request.args.get("company")
+    columns = ["category", "company_name", "score"]
+
+    # Input validation
+    if company and not valid_nasdaq_company(company):
+        res = f"Invalid company. Available companies: {NASDAQ_100}"
+        return Response (res, 400)
+    if category and not valid_nasdaq_category(category):
+        res = f"Invalid category. Available categories: {CATEGORIES}"
+        return Response (res, 400)
+    
+    # Get SQL query
+    if company and category:
+        sql = get_company_scores(company, category)
+    elif category:
+        sql = get_category_scores(category)
+    elif company:
+        sql = get_company_all_scores(company)
+    else:
+        sql = get_all_scores()
+    
+    try:
+        res = run_sql(sql, columns)
+        return jsonify(create_adage_data_model(res))
+    except Exception as e:
+        res = "SQL Exception."
         return Response (res, 500)
 
 if __name__ == "__main__":
