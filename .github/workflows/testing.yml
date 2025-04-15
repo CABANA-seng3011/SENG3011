@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - noor/s2_testing
+      - STAGING_ENV
   pull_request:
     branches:
       - main

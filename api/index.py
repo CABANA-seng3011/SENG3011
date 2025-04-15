@@ -7,6 +7,7 @@ from nasdaq_functions import create_nasdaq_sql_query, get_all_scores, get_catego
 
 from flask_cors import CORS
 
+# dummy commit 1
 # To run the app: flask --app index run
 app = Flask(__name__)
 CORS(app)

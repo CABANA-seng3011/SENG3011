@@ -6,7 +6,9 @@ on:
     types:
       - completed
   push:
-    branches: [ "deployment_test_byron" ] 
+    branches: [ "HIGH_VOLUME_ENV" ]
+  pull_request:
+    branches: [ "HIGH_VOLUME_ENV" ] 
 
 jobs:
   build:
@@ -15,15 +17,15 @@ jobs:
     steps:
       - name: Pull Latest Flask-API Docker Images
         run: sudo docker pull bpetselis01/flask-api:latest
-      - name: Pull Latest NextJS Docker Images
-        run: sudo docker pull bpetselis01/nextjs:latest
+      # - name: Pull Latest NextJS Docker Images
+      #   run: sudo docker pull bpetselis01/nextjs:latest
 
       - name: Remove Old Flask-API Containers
         run: sudo docker rm -f flask-api-container || true
-      - name: Remove Old NextJS Containers
-        run: sudo docker rm -f nextjs-container || true
+      # - name: Remove Old NextJS Containers
+      #   run: sudo docker rm -f nextjs-container || true
 
       - name: Run Flask API Container
         run: sudo docker run -d -p 5900:5000 --name flask-api-container bpetselis01/flask-api
-      - name: Run NextJS Container
-        run: sudo docker run -d -p 3000:3000 --name nextjs-container bpetselis01/nextjs
+      # - name: Run NextJS Container
+      #   run: sudo docker run -d -p 3000:3000 --name nextjs-container bpetselis01/nextjs

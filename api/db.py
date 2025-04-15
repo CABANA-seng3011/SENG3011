@@ -13,7 +13,7 @@ def run_sql(sql, columns):
     load_dotenv(find_dotenv())
 
     try:
-        # Establish connection
+        # Establish connections
         conn = psycopg2.connect(
             host=os.getenv("DB_HOST"),
             port=os.getenv("DB_PORT"),
