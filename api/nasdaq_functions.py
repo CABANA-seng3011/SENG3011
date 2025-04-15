@@ -41,5 +41,5 @@ def get_company_scores(company, category):
 def valid_nasdaq_company(company):
     return company in NASDAQ_100
 
-def valid_category(category):
+def valid_nasdaq_category(category):
     return category in CATEGORIES

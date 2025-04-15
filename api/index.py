@@ -3,7 +3,7 @@ from esg_functions import create_sql_query, get_industry, get_companies, valid_c
 from constants import ALLOWED_COLUMNS, NASDAQ_100, CATEGORIES
 from ticker_functions import query_ticker, query_name, create_adage_data_model_fin
 from db import run_sql, run_sql_raw
-from nasdaq_functions import create_nasdaq_sql_query, get_all_scores, get_category_scores, get_company_all_scores, get_company_scores, valid_category, valid_nasdaq_company
+from nasdaq_functions import create_nasdaq_sql_query, get_all_scores, get_category_scores, get_company_all_scores, get_company_scores, valid_nasdaq_category, valid_nasdaq_company
 
 from flask_cors import CORS
 
@@ -224,7 +224,7 @@ def getScore():
     if company and not valid_nasdaq_company(company):
         res = f"Invalid company. Available companies: {NASDAQ_100}"
         return Response (res, 400)
-    if category and not valid_category(category):
+    if category and not valid_nasdaq_category(category):
         res = f"Invalid category. Available categories: {CATEGORIES}"
         return Response (res, 400)
     
