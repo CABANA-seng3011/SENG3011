@@ -1,4 +1,4 @@
-# Allowed categories for the /get function
+# Allowed categories for the /get function dummy
 ALLOWED_CATEGORIES = ["esg", "environmental_opportunity", "environmental_risk", "governance_opportunity", 
                       "governance_risk", "social_opportunity", "social_risk"]
 
