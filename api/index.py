@@ -4,7 +4,7 @@ from constants import ALLOWED_COLUMNS, NASDAQ_100, CATEGORIES
 from ticker_functions import query_ticker, query_name, create_adage_data_model_fin
 from db import run_sql, run_sql_raw
 from nasdaq_functions import create_nasdaq_sql_query, get_all_scores, get_category_scores, get_company_all_scores, get_company_scores, valid_nasdaq_category, valid_nasdaq_company
-
+from news_scraper import query_company
 from flask_cors import CORS
 
 # dummy commit 1
@@ -245,6 +245,38 @@ def getScore():
     except Exception as e:
         res = "SQL Exception."
         return Response (res, 500)
+
+# ... [Previous code remains unchanged]
+
+# Example of use: curl "http://127.0.0.1:5000/company/Tesla+Inc"
+@app.route('/company/<name>', methods=['GET'])
+def get_company(name):
+
+    # Input validation
+    if name and not valid_nasdaq_company(name):
+        res = f"Invalid company. Available companies: {NASDAQ_100}"
+        return Response (res, 400)
+    
+    try:
+        # Get parameters from the request
+        api_key = request.args.get("api_key", "oXbvlcWUVF_4xO_xjsB7Ng")
+        limit = request.args.get("limit", 5)
+        start_date = request.args.get("start_date", "2025-04-15")
+        end_date = request.args.get("end_date", "2025-04-16")
+        
+        # Call the external API query function
+        events = query_company(name, api_key, limit, start_date, end_date)
+        
+        if len(events) == 0:
+            res = f"No events found for company: {name}. Please ensure your spelling is correct."
+            return Response(res, 404)
+        else:
+            res = create_adage_data_model_fin(events)
+            return jsonify(res)
+    
+    except Exception as e:
+        res = "An Exception occurred."
+        return Response(res, 500)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
