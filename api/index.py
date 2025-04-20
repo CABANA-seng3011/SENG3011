@@ -266,8 +266,6 @@ def getCompanyNews():
     try:
         # Get parameters from the request (H17A_Alpha API Key)
         api_key = request.args.get("api_key", "oXbvlcWUVF_4xO_xjsB7Ng")
-        
-        # Call the external API query function
         events = query_company(name, api_key, limit, start_date, end_date)
         
         if len(events) == 0:
