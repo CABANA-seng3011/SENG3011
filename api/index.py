@@ -248,21 +248,24 @@ def getScore():
 
 # ... [Previous code remains unchanged]
 
-# Example of use: curl "http://127.0.0.1:5000/company/Tesla+Inc"
-@app.route('/company/<name>', methods=['GET'])
-def get_company(name):
-
+# Example of use: curl "http://127.0.0.1:5000/companynews?name=Tesla+Inc"
+@app.route('/companyNews', methods=['GET'])
+def getCompanyNews():
+    name = request.args.get("name")
+    limit = request.args.get("limit")
+    start_date = request.args.get("start_date")
+    end_date = request.args.get("end_date")
     # Input validation
+    if not name:
+        res = "Invalid params, please specify a company name."
+        return Response(res, 400)
     if name and not valid_nasdaq_company(name):
         res = f"Invalid company. Available companies: {NASDAQ_100}"
         return Response (res, 400)
     
     try:
-        # Get parameters from the request
+        # Get parameters from the request (H17A_Alpha API Key)
         api_key = request.args.get("api_key", "oXbvlcWUVF_4xO_xjsB7Ng")
-        limit = request.args.get("limit", 5)
-        start_date = request.args.get("start_date", "2025-04-15")
-        end_date = request.args.get("end_date", "2025-04-16")
         
         # Call the external API query function
         events = query_company(name, api_key, limit, start_date, end_date)
