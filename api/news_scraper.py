@@ -19,9 +19,10 @@ def query_company(company, api_key, limit, start_date, end_date):
                 data["events"],
                 key=lambda e: parser.parse(e["time_object"]["timestamp"]),
                 reverse=True
-            )[:5]
+            )[:int(limit)]
 
         return data
     
     except Exception as err:
+        print(f"Error: {err}")
         return []
