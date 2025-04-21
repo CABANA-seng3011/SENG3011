@@ -21,4 +21,4 @@ pytest
 pytest-cov
 pytest-mock
 pytest-flask
-python-dateutil==2.9.0.post0
+python-dateutil
