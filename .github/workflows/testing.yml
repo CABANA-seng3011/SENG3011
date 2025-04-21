@@ -6,7 +6,6 @@ on:
       - main
       - noor/s2_testing
       - STAGING_ENV
-      - byron_web_scrape
   pull_request:
     branches:
       - main
