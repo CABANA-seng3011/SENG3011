@@ -2,7 +2,7 @@ name: Linting
 
 on:
   push:
-    branches: [ "main", "STAGING_ENV", "byron_web_scrape" ]
+    branches: [ "main", "STAGING_ENV" ]
   pull_request:
     branches: [ "main" ]
 
