@@ -1,0 +1,8 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "frontend/cabana/Dockerfile"
+
+[deploy]
+healthcheckPath = "/"
+restartPolicyMaxRetries = 10
+restartPolicyType = "ON_FAILURE"
