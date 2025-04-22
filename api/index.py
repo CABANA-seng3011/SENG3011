@@ -4,7 +4,7 @@ from constants import ALLOWED_COLUMNS, NASDAQ_100, CATEGORIES
 from ticker_functions import query_ticker, query_name, create_adage_data_model_fin
 from db import run_sql, run_sql_raw
 from nasdaq_functions import create_nasdaq_sql_query, get_all_scores, get_category_scores, get_company_all_scores, get_company_scores, valid_nasdaq_category, valid_nasdaq_company
-from news_scraper import query_company, query_company_sentiment, query_company_stock_data
+from external_team_routes import query_company, query_company_sentiment, query_finances_overview, query_finances_stock_data, query_finances_price, query_finances_historical_data, query_finances_options_data
 from flask_cors import CORS
 
 # dummy commit 1
@@ -279,6 +279,7 @@ def getCompanyNews():
         res = "An Exception occurred."
         return Response(res, 500)
 
+# http://127.0.0.1:5900/newsSentiment (body: {"stockCode": "AAPL"})
 @app.route("/newsSentiment", methods=["POST"])
 def getCompanySentiment():
     try:
@@ -298,7 +299,8 @@ def getCompanySentiment():
     except Exception as e:
         return Response(f"Internal server error: {str(e)}", status=500)
 
-@app.route("/stockGraph", methods=["POST"])
+# http://127.0.0.1:5900/financesGraph (body: {"stockCode": "AAPL"})
+@app.route("/financesGraph", methods=["POST"])
 def getCompanyStockGraph():
     try:
         data = request.get_json()
@@ -308,7 +310,7 @@ def getCompanyStockGraph():
         if not stock_code or not api_key:
             return Response("Missing 'stockCode' or 'apiKey' in request body.", status=400)
 
-        result = query_company_stock_data(stock_code, api_key)
+        result = query_finances_stock_data(stock_code, api_key)
 
         if "error" in result:
             return Response(result["error"], status=500)
@@ -316,6 +318,46 @@ def getCompanyStockGraph():
         return jsonify(result)
     except Exception as e:
         return Response(f"Internal server error: {str(e)}", status=500)
+
+# http://127.0.0.1:5900/financesOverview/AAPL
+@app.route("/financesOverview/<symbol>", methods=["GET"])
+def getCompanyOverview(symbol):
+    res = query_finances_overview(symbol)
+    if "error" in res:
+        return Response(res["error"], 500)
+    return jsonify(res)
+
+# http://127.0.0.1:5900/financesPrice/AAPL
+@app.route("/financesPrice/<symbol>", methods=["GET"])
+def getCompanyPrice(symbol):
+    res = query_finances_price(symbol)
+    if "error" in res:
+        return Response(res["error"], 500)
+    return jsonify(res)
+
+# http://127.0.0.1:5900/financesHistorical/AAPL?start_date=2025-04-02&end_date=2025-04-15&interval=1d
+@app.route("/financesHistorical/<symbol>", methods=["GET"])
+def getCompanyHistoricalData(symbol):
+    start_date = request.args.get("start_date")
+    end_date = request.args.get("end_date")
+    interval = request.args.get("interval")
+
+    if not start_date or not end_date:
+        return Response("Please provide 'start_date' and 'end_date' query parameters.", 400)
+
+    data = query_finances_historical_data(symbol, start_date, end_date, interval)
+    if "error" in data:
+        return Response(data["error"], 500)
+
+    return jsonify(data)
+
+# http://127.0.0.1:5900/financesOptions/AAPL
+@app.route("/financesOptions/<symbol>", methods=["GET"])
+def getCompanyOptionsData(symbol):
+    data = query_finances_options_data(symbol)
+    if "error" in data:
+        return Response(data["error"], 500)
+    return jsonify(data)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
