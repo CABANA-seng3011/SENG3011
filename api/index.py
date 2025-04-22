@@ -4,7 +4,7 @@ from constants import ALLOWED_COLUMNS, NASDAQ_100, CATEGORIES
 from ticker_functions import query_ticker, query_name, create_adage_data_model_fin
 from db import run_sql, run_sql_raw
 from nasdaq_functions import create_nasdaq_sql_query, get_all_scores, get_category_scores, get_company_all_scores, get_company_scores, valid_nasdaq_category, valid_nasdaq_company
-from news_scraper import query_company
+from news_scraper import query_company, query_company_sentiment, query_company_stock_data
 from flask_cors import CORS
 
 # dummy commit 1
@@ -248,8 +248,8 @@ def getScore():
 
 # ... [Previous code remains unchanged]
 
-# Example of use: curl "http://127.0.0.1:5000/companynews?name=Tesla+Inc"
-@app.route('/companyNews', methods=['GET'])
+# Example of use: curl "http://127.0.0.1:5900/companyNews?name=Tesla+Inc&limit=5&start_date=2025-04-17&end_date=2025-04-18"
+@app.route('/newsScrape', methods=['GET'])
 def getCompanyNews():
     name = request.args.get("name")
     limit = request.args.get("limit")
@@ -278,6 +278,44 @@ def getCompanyNews():
     except Exception as e:
         res = "An Exception occurred."
         return Response(res, 500)
+
+@app.route("/newsSentiment", methods=["POST"])
+def getCompanySentiment():
+    try:
+        data = request.get_json()
+        stock_code = data.get("stockCode")
+        api_key = "c90b92f2f6139d44d93a743a837113b4512db23728443106abdd7eaf0e7e7e89"
+
+        if not stock_code or not api_key:
+            return Response("Missing 'stockCode' or 'apiKey' in request body.", status=400)
+
+        result = query_company_sentiment(stock_code, api_key)
+
+        if "error" in result:
+            return Response(result["error"], status=500)
+
+        return jsonify(result)
+    except Exception as e:
+        return Response(f"Internal server error: {str(e)}", status=500)
+
+@app.route("/stockGraph", methods=["POST"])
+def getCompanyStockGraph():
+    try:
+        data = request.get_json()
+        stock_code = data.get("stockCode")
+        api_key = "c90b92f2f6139d44d93a743a837113b4512db23728443106abdd7eaf0e7e7e89"
+
+        if not stock_code or not api_key:
+            return Response("Missing 'stockCode' or 'apiKey' in request body.", status=400)
+
+        result = query_company_stock_data(stock_code, api_key)
+
+        if "error" in result:
+            return Response(result["error"], status=500)
+
+        return jsonify(result)
+    except Exception as e:
+        return Response(f"Internal server error: {str(e)}", status=500)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
