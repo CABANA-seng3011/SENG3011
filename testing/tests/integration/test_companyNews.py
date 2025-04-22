@@ -13,13 +13,13 @@ def client():
 
 def test_missing_company_name(client):
     """Test when no company name is provided."""
-    response = client.get("/companyNews")
+    response = client.get("/newsScrape")
     assert response.status_code == 400
     assert b"Invalid params, please specify a company name." in response.data
 
 def test_invalid_company_name(client):
     """Test when the provided company name is not in NASDAQ_100."""
-    response = client.get("/companyNews?name=FakeCompany")
+    response = client.get("/newsScrape?name=FakeCompany")
     assert response.status_code == 400
     assert b"Invalid company. Available companies" in response.data
 
@@ -28,7 +28,7 @@ def test_invalid_company_name(client):
 def test_no_events_found(mock_valid, mock_query, client):
     """Test when no events are returned for a valid company."""
     mock_query.return_value = []
-    response = client.get("/companyNews?name=Apple")
+    response = client.get("/newsScrape?name=Apple")
     assert response.status_code == 404
     assert b"No events found for company" in response.data
 
@@ -40,7 +40,7 @@ def test_valid_news_response(mock_valid, mock_query, client):
 
     # Patch the final data formatting function
     with patch("index.create_adage_data_model_fin", return_value={"mocked": "data"}):
-        response = client.get("/companyNews?name=Apple")
+        response = client.get("/newsScrape?name=Apple")
 
         # Assertions
         assert response.status_code == 200
@@ -51,7 +51,7 @@ def test_valid_news_response(mock_valid, mock_query, client):
 @patch("index.valid_nasdaq_company", return_value=True)
 def test_company_news_exception(mock_valid, mock_query, client):
     """Test internal error handling for company news route."""
-    response = client.get("/companyNews?name=Apple")
+    response = client.get("/newsScrape?name=Apple")
     assert response.status_code == 500
     assert b"An Exception occurred." in response.data
 
@@ -67,7 +67,7 @@ def test_company_news_success(mock_create_model, mock_query_company, mock_valid_
     # Mock the final output formatting
     mock_create_model.return_value = {"mocked": "result"}
 
-    response = client.get("/companyNews", query_string={
+    response = client.get("/newsScrape", query_string={
         "name": "Tesla Inc",
         "limit": "10",
         "start_date": "2025-04-17",
