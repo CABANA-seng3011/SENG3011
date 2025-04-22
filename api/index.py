@@ -4,7 +4,7 @@ from constants import ALLOWED_COLUMNS, NASDAQ_100, CATEGORIES
 from ticker_functions import query_ticker, query_name, create_adage_data_model_fin
 from db import run_sql, run_sql_raw
 from nasdaq_functions import create_nasdaq_sql_query, get_all_scores, get_category_scores, get_company_all_scores, get_company_scores, valid_nasdaq_category, valid_nasdaq_company
-
+from news_scraper import query_company
 from flask_cors import CORS
 
 # dummy commit 1
@@ -245,6 +245,39 @@ def getScore():
     except Exception as e:
         res = "SQL Exception."
         return Response (res, 500)
+
+# ... [Previous code remains unchanged]
+
+# Example of use: curl "http://127.0.0.1:5000/companynews?name=Tesla+Inc"
+@app.route('/companyNews', methods=['GET'])
+def getCompanyNews():
+    name = request.args.get("name")
+    limit = request.args.get("limit")
+    start_date = request.args.get("start_date")
+    end_date = request.args.get("end_date")
+    # Input validation
+    if not name:
+        res = "Invalid params, please specify a company name."
+        return Response(res, 400)
+    if name and not valid_nasdaq_company(name):
+        res = f"Invalid company. Available companies: {NASDAQ_100}"
+        return Response (res, 400)
+    
+    try:
+        # Get parameters from the request (H17A_Alpha API Key)
+        api_key = request.args.get("api_key", "oXbvlcWUVF_4xO_xjsB7Ng")
+        events = query_company(name, api_key, limit, start_date, end_date)
+        
+        if len(events) == 0:
+            res = f"No events found for company: {name}. Please ensure your spelling is correct."
+            return Response(res, 404)
+        else:
+            res = create_adage_data_model_fin(events)
+            return jsonify(res)
+    
+    except Exception as e:
+        res = "An Exception occurred."
+        return Response(res, 500)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)

@@ -3,6 +3,9 @@ services:
     build: ./frontend
     ports:
       - "3000:3000"
+    volumes:
+      - ./frontend/cabana:/cabana
+    working_dir: /cabana
 
   flask-api:
     build: ./api
@@ -11,7 +14,6 @@ services:
     volumes:
       - ./api:/api
     env_file: 
-      - path: ./.env
+      - ./.env
     environment:
       - FLASK_APP=index.py
-
