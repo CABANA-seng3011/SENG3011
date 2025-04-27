@@ -31,7 +31,7 @@ def test_get_nasdaq100_valid_columns(mock_run_sql, client):
 
     assert response.status_code == 200
     assert response.is_json
-    assert response.json["events"][0]["company_name"] == "Synopsys Inc"
+    assert response.get_json()["events"][0]["company_name"] == "Synopsys Inc"
     assert "dataset_id" in response.json
 
 @patch("index.run_sql")
@@ -79,7 +79,7 @@ def test_score_valid_company_category(mock_run_sql, client):
 
     assert response.status_code == 200
     assert response.is_json
-    assert response.json["events"][0]["company_name"] == "Starbucks Corp"
+    assert response.get_json()["events"][0]["company_name"] == "Starbucks Corp"
 
 @patch("index.run_sql")
 def test_score_all_scores(mock_run_sql, client):

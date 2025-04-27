@@ -7,7 +7,7 @@ from unittest.mock import patch
 ########################################################################################################
 
 def test_finances_graph(client):
-    payload = {"ticker": "AAPL", "metric": "revenue"}
+    payload = {"stockcode": "AAPL"}
     response = client.post("/financesGraph", json=payload)
     
     assert response.status_code == 200
@@ -18,8 +18,7 @@ def test_finances_graph(client):
     assert "graphData" in data, "Missing 'graphData' in /financesGraph response"
 
 def test_finances_overview(client):
-    payload = {"ticker": "AAPL"}
-    response = client.post("/financesOverview", json=payload)
+    response = client.get("/financesOverview/AAPL")
     
     assert response.status_code == 200
     assert response.is_json
@@ -30,7 +29,7 @@ def test_finances_overview(client):
 
 def test_finances_historical(client):
     payload = {"ticker": "AAPL"}
-    response = client.post("/financesHistorical", json=payload)
+    response = client.get("/financesHistorical/AAPL")
     
     assert response.status_code == 200
     assert response.is_json
@@ -41,7 +40,7 @@ def test_finances_historical(client):
 
 def test_finances_price(client):
     payload = {"ticker": "AAPL"}
-    response = client.post("/financesPrice", json=payload)
+    response = client.get("/financesPrice/AAPL")
     
     assert response.status_code == 200
     assert response.is_json
@@ -52,7 +51,7 @@ def test_finances_price(client):
 
 def test_finances_options(client):
     payload = {"ticker": "AAPL"}
-    response = client.post("/financesOptions", json=payload)
+    response = client.get("/financesOptions/AAPL")
     
     assert response.status_code == 200
     assert response.is_json

@@ -74,7 +74,7 @@ def test_company_news_success(mock_create_model, mock_query_company, mock_valid_
 #########################################
 
 def test_news_sentiment(client):
-    payload = {"ticker": "AAPL"}
+    payload = {"stockcode": "AAPL"}
     response = client.post("/newsSentiment", json=payload)
     
     assert response.status_code == 200

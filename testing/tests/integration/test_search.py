@@ -1,6 +1,6 @@
 def test_search_ticker(client):
     payload = {"query": "AAPL"}
-    response = client.post("/searchTicker", json=payload)
+    response = client.get("/searchTicker?ticker=AAPL")
     
     assert response.status_code == 200
     assert response.is_json
@@ -10,8 +10,7 @@ def test_search_ticker(client):
     assert data, "Empty response from /searchTicker"
 
 def test_search_name(client):
-    payload = {"query": "Apple"}
-    response = client.post("/searchName", json=payload)
+    response = client.post("/searchName?name=Apple")
     
     assert response.status_code == 200
     assert response.is_json
