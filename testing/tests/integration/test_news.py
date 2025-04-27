@@ -1,15 +1,16 @@
 import pytest
 from unittest.mock import patch
 from flask import Flask, jsonify
-from index import app  # Adjust if your app is imported differently
 from datetime import datetime
 
-@pytest.fixture
-def client():
-    """Fixture to create a test client for the Flask app."""
-    app.config["TESTING"] = True
-    with app.test_client() as client:
-        yield client
+########################################################################################################
+# NEWS ROUTES
+# THE FOLLOWING TESTS CHECK THE /NEWSSCRAPE and /NEWSSENTIMENT ROUTES
+########################################################################################################
+
+#########################################
+########## News Scrape ###############
+#########################################
 
 def test_missing_company_name(client):
     """Test when no company name is provided."""
@@ -76,3 +77,18 @@ def test_company_news_success(mock_create_model, mock_query_company, mock_valid_
 
     assert response.status_code == 200
     assert response.get_json() == {"mocked": "result"}
+
+#########################################
+########## News Sentiment ###############
+#########################################
+
+def test_news_sentiment(client):
+    payload = {"stockCode": "AAPL"}
+    response = client.post("/newsSentiment", json=payload)
+    
+    assert response.status_code == 200
+    assert response.is_json
+    data = response.get_json()
+    
+    assert isinstance(data, dict)
+    assert "stockCode" in data or "summary" in data
