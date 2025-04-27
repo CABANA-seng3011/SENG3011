@@ -1,5 +1,6 @@
 import pytest
 from unittest.mock import patch
+import json
 
 ########################################################################################################
 # NASDAQ100 ROUTES
@@ -30,7 +31,8 @@ def test_get_nasdaq100_valid_columns(mock_run_sql, client):
     response = client.get("/get/nasdaq100?columns=company_name,metric_name,metric_value&company_name=Synopsys+Inc")
 
     assert response.status_code == 200
-    assert response.json.events[0].company_name == "Synopsys Inc"
+    data = json.loads(response.json)
+    assert data.events[0].company_name == "Synopsys Inc"
     assert "dataset_id" in response.json
 
 @patch("index.run_sql")
@@ -77,7 +79,8 @@ def test_score_valid_company_category(mock_run_sql, client):
     response = client.get("/score?company=Starbucks+Corp&category=Social+Opportunity")
 
     assert response.status_code == 200
-    assert response.json.events[0].company_name == "Starbucks Corp"
+    data = json.loads(response.json)
+    assert data.events[0].company_name == "Starbucks Corp"
 
 @patch("index.run_sql")
 def test_score_all_scores(mock_run_sql, client):

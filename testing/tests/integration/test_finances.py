@@ -7,7 +7,7 @@ from unittest.mock import patch
 ########################################################################################################
 
 def test_finances_graph(client):
-    payload = {"stockcode": "AAPL"}
+    payload = {"stockCode": "AAPL"}
     response = client.post("/financesGraph", json=payload)
     
     assert response.status_code == 200
@@ -36,7 +36,7 @@ def test_finances_historical(client):
     data = response.get_json()
     
     assert isinstance(data, dict)
-    assert "historical" in data and "symbol" in data
+    assert "historical_data" in data and "symbol" in data
 
 def test_finances_price(client):
     payload = {"ticker": "AAPL"}
