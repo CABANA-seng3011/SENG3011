@@ -2,8 +2,10 @@ import pytest
 from unittest.mock import patch
 
 ########################################################################################################
-# /FINACNES ROUTE
-# THE FOLLOWING TESTS CHECK THE /FINANCES ROUTES
+# /FINACNES ROUTES
+# THE FOLLOWING TESTS CHECK THE ROUTES:
+# /FINANCESGRAPH /FINANCESOVERVIEW 
+# /FINANCESHISTORICAL /FINANCESOPTIONS /FINANCESPRICES
 ########################################################################################################
 
 def test_finances_graph(client):

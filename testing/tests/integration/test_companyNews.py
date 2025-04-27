@@ -3,6 +3,15 @@ from unittest.mock import patch
 from flask import Flask, jsonify
 from datetime import datetime
 
+########################################################################################################
+# NEWS ROUTES
+# THE FOLLOWING TESTS CHECK THE /NEWSSCRAPE and /NEWSSENTIMENT ROUTES
+########################################################################################################
+
+#########################################
+########## News Scrape ###############
+#########################################
+
 def test_missing_company_name(client):
     """Test when no company name is provided."""
     response = client.get("/newsScrape")

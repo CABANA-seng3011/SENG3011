@@ -1,3 +1,11 @@
+import pytest
+
+########################################################################################################
+# /search ROUTES
+# THE FOLLOWING TESTS CHECK THE ROUTES:
+# /searchTicker /searchName
+########################################################################################################
+
 def test_search_ticker(client):
     payload = {"query": "AAPL"}
     response = client.get("/searchTicker?ticker=AAPL")
