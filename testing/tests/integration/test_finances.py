@@ -15,7 +15,7 @@ def test_finances_graph(client):
     data = response.get_json()
     
     assert isinstance(data, dict)
-    assert "graphData" in data, "Missing 'graphData' in /financesGraph response"
+    assert "closingPriceHistory" in data
 
 def test_finances_overview(client):
     response = client.get("/financesOverview/AAPL")
@@ -29,14 +29,14 @@ def test_finances_overview(client):
 
 def test_finances_historical(client):
     payload = {"ticker": "AAPL"}
-    response = client.get("/financesHistorical/AAPL")
+    response = client.get("/financesHistorical/AAPL?start_date=2025-04-02&end_date=2025-04-15&interval=1d")
     
     assert response.status_code == 200
     assert response.is_json
     data = response.get_json()
     
     assert isinstance(data, dict)
-    assert "historical" in data or "prices" in data, "Missing expected keys in /financesHistorical"
+    assert "historical" in data and "symbol" in data
 
 def test_finances_price(client):
     payload = {"ticker": "AAPL"}
@@ -58,4 +58,4 @@ def test_finances_options(client):
     data = response.get_json()
     
     assert isinstance(data, dict)
-    assert "options" in data or "chains" in data, "Missing options data in /financesOptions"
+    assert "calls" in data

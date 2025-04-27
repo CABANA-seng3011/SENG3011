@@ -10,7 +10,7 @@ def test_search_ticker(client):
     assert data, "Empty response from /searchTicker"
 
 def test_search_name(client):
-    response = client.post("/searchName?name=Apple")
+    response = client.get("/searchName?name=Apple")
     
     assert response.status_code == 200
     assert response.is_json
