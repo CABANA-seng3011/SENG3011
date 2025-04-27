@@ -32,7 +32,7 @@ def test_get_nasdaq100_valid_columns(mock_run_sql, client):
 
     assert response.status_code == 200
     data = json.loads(response.json)
-    assert "Synopsys Inc" in data
+    assert data["events"][0]["company_name"] == "Synopsys Inc"
 
 @patch("index.run_sql")
 def test_get_nasdaq100_sql_exception(mock_run_sql, client):
@@ -79,7 +79,7 @@ def test_score_valid_company_category(mock_run_sql, client):
 
     assert response.status_code == 200
     data = json.loads(response.json)
-    assert "Starbucks Corp" in data
+    ata["events"][0]["company_name"] == "Starbucks Corp"
 
 @patch("index.run_sql")
 def test_score_all_scores(mock_run_sql, client):
