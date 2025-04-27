@@ -9,13 +9,6 @@ from index import app
 # THE /GET ROUTE IS USED TO RETRIEVE DATA FROM THE DATABASE BASED ON THE PROVIDED PARAMETERS
 # THE TESTS CHECK FOR VALID AND INVALID PARAMETERS, AS WELL AS HANDLING OF SQL EXCEPTIONS
 ########################################################################################################
-
-@pytest.fixture
-def client():
-    """Fixture to create a test client for the Flask app."""
-    app.config["TESTING"] = True
-    with app.test_client() as client:
-        yield client
         
 def test_get_invalid_columns(client):
     """Test the /get route with invalid columns."""

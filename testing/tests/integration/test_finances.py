@@ -1,3 +1,11 @@
+import pytest
+from unittest.mock import patch
+
+########################################################################################################
+# /FINACNES ROUTE
+# THE FOLLOWING TESTS CHECK THE /FINANCES ROUTES
+########################################################################################################
+
 def test_finances_graph(client):
     payload = {"ticker": "AAPL", "metric": "revenue"}
     response = client.post("/financesGraph", json=payload)

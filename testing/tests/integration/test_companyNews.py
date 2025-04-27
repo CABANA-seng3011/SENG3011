@@ -1,15 +1,7 @@
 import pytest
 from unittest.mock import patch
 from flask import Flask, jsonify
-from index import app  # Adjust if your app is imported differently
 from datetime import datetime
-
-@pytest.fixture
-def client():
-    """Fixture to create a test client for the Flask app."""
-    app.config["TESTING"] = True
-    with app.test_client() as client:
-        yield client
 
 def test_missing_company_name(client):
     """Test when no company name is provided."""
