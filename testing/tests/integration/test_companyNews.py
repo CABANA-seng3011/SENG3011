@@ -74,7 +74,7 @@ def test_company_news_success(mock_create_model, mock_query_company, mock_valid_
 #########################################
 
 def test_news_sentiment(client):
-    payload = {"stockcode": "AAPL"}
+    payload = {"stockCode": "AAPL"}
     response = client.post("/newsSentiment", json=payload)
     
     assert response.status_code == 200
@@ -82,4 +82,4 @@ def test_news_sentiment(client):
     data = response.get_json()
     
     assert isinstance(data, dict)
-    assert "articles" in data or "sentiment" in data, "Missing expected keys in /newsSentiment"
+    assert "stockCode" in data or "summary" in data
