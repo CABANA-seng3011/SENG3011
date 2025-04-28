@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - noor/s2_testing
+      - noor/testing
       - STAGING_ENV
   pull_request:
     branches:

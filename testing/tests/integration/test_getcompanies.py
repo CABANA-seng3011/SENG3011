@@ -2,12 +2,10 @@ import pytest
 from unittest.mock import patch
 from index import app
 
-@pytest.fixture
-def client():
-    """Fixture to create a test client for the Flask app."""
-    app.config["TESTING"] = True
-    with app.test_client() as client:
-        yield client
+##########################################################################
+# /GETCOMPANIES ROUTE
+# THE FOLLOWING TESTS CHECK THE /GETCOMPANIES ROUTE
+##########################################################################
 
 @patch("index.run_sql_raw")
 def test_getCompanies_valid_industry(mock_run_sql, client):
