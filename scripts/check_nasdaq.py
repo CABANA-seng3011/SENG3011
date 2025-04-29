@@ -2,7 +2,7 @@
 #
 # check_nasdaq.py
 #
-# This script goes through the nasdaq-100 table and outputs:
+# This script goes through the nasdaq-100 table and output:
 # - Companies with > 96 metrics (Too many metrics)
 # - Metrics that not all companies have data on
 #
